@@ -15,6 +15,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 
 public class Controller {
@@ -65,15 +66,25 @@ public class Controller {
                     return true;
                 }
 
-                String lowerCaseFilter = newValue.toLowerCase();
+                String[] values = newValue.toLowerCase().split(" ");
+                List<String> wordList = Arrays.asList(values);
 
-                if (run.getRunner().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                String lowerCaseFilter = newValue.toLowerCase();
+                if (run.getRunner().toLowerCase().contains(lowerCaseFilter)) {
                     return true;
-                } else if (run.getRunName().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                } else if (wordList.stream().allMatch(Arrays.stream(run.getRunName().toLowerCase().split(" ")).toList()::contains)) {
                     return true;
                 } else {
                     return false;
                 }
+
+//                if (run.getRunner().toLowerCase().contains(lowerCaseFilter)) {
+//                    return true;
+//                } else if (run.getRunName().toLowerCase().contains(lowerCaseFilter)) {
+//                    return true;
+//                } else {
+//                    return false;
+//                }
             });
         });
 
