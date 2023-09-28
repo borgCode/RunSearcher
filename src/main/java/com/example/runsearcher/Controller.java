@@ -69,8 +69,7 @@ public class Controller {
                 String[] values = newValue.toLowerCase().split(" ");
                 List<String> wordList = Arrays.asList(values);
 
-                String lowerCaseFilter = newValue.toLowerCase();
-                if (run.getRunner().toLowerCase().contains(lowerCaseFilter)) {
+                if (wordList.stream().allMatch(Arrays.stream(run.getRunner().toLowerCase().split(" ")).toList()::contains)) {
                     return true;
                 } else if (wordList.stream().allMatch(Arrays.stream(run.getRunName().toLowerCase().split(" ")).toList()::contains)) {
                     return true;
@@ -78,13 +77,6 @@ public class Controller {
                     return false;
                 }
 
-//                if (run.getRunner().toLowerCase().contains(lowerCaseFilter)) {
-//                    return true;
-//                } else if (run.getRunName().toLowerCase().contains(lowerCaseFilter)) {
-//                    return true;
-//                } else {
-//                    return false;
-//                }
             });
         });
 

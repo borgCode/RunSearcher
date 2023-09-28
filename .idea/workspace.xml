@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="simple filtered list function">
+    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="multiple tags filteredlist">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/Controller.java" afterDir="false" />
     </list>
@@ -76,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1695824475539</updated>
       <workItem from="1695824476603" duration="5988000" />
-      <workItem from="1695883169225" duration="7896000" />
+      <workItem from="1695883169225" duration="13719000" />
     </task>
     <task id="LOCAL-00001" summary="simple filtered list function">
       <option name="closed" value="true" />
@@ -86,7 +86,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695887398917</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="multiple tags filteredlist">
+      <option name="closed" value="true" />
+      <created>1695892748522</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695892748522</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,6 +102,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="simple filtered list function" />
-    <option name="LAST_COMMIT_MESSAGE" value="simple filtered list function" />
+    <MESSAGE value="multiple tags filteredlist" />
+    <option name="LAST_COMMIT_MESSAGE" value="multiple tags filteredlist" />
   </component>
 </project>
