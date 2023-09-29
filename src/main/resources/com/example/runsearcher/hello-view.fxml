@@ -36,11 +36,11 @@
    <children>
       <TextField fx:id="searchBox" prefHeight="26.0" prefWidth="260.0" GridPane.columnIndex="1" GridPane.columnSpan="4" />
       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="155.0" text="Input search tags" />
-      <TableView fx:id="tableView" prefHeight="675.0" prefWidth="1066.0" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="10">
+      <TableView fx:id="tableView" editable="true" prefHeight="675.0" prefWidth="1066.0" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="10">
         <columns>
           <TableColumn fx:id="runnerColumn" editable="false" prefWidth="200.0" text="Runner" />
           <TableColumn fx:id="runColumn" editable="false" prefWidth="443.1999969482422" text="Run Name" />
-            <TableColumn fx:id="linkColumn" editable="false" prefWidth="483.199951171875" text="Run link" />
+            <TableColumn fx:id="linkColumn" prefWidth="483.199951171875" sortable="false" text="Run link" />
         </columns>
       </TableView>
       <GridPane prefHeight="61.0" prefWidth="956.0" GridPane.columnSpan="5" GridPane.rowIndex="1" GridPane.rowSpan="2">

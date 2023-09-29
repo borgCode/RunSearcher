@@ -9,12 +9,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.*;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -75,8 +74,45 @@ public class Controller {
         tableView.getItems().setAll((getRuns()));
         filterRuns();
 
+        tableView.getSelectionModel().setCellSelectionEnabled(true);
+        tableView.setOnKeyPressed(e -> {
+            if (e.getCode() == KeyCode.C && e.isControlDown()) {
+                int row = tableView.getSelectionModel().getSelectedIndex();
+                Run run = tableView.getItems().get(row);
+                final ClipboardContent clipboardContent = new ClipboardContent();
+                if (tableView.getSelectionModel().isSelected(row, runnerColumn)) {
+                    clipboardContent.putString(run.getRunner());
+                } else if (tableView.getSelectionModel().isSelected(row, runColumn)) {
+                    clipboardContent.putString(run.getRunName());
+                } else if (tableView.getSelectionModel().isSelected(row, linkColumn)) {
+                    clipboardContent.putString(run.getRunLink());
+                }
+                Clipboard.getSystemClipboard().setContent(clipboardContent);
+            }
+        });
+
+
     }
 
+
+    public void handleUserSelection(ActionEvent event) {
+        tableView.getScene().getAccelerators().put(new KeyCodeCombination(KeyCode.C, KeyCombination.CONTROL_DOWN), new Runnable() {
+            @Override
+            public void run() {
+                int selectedCell = tableView.getSelectionModel().getSelectedIndex();
+                Run data = tableView.getItems().get(selectedCell);
+                final Clipboard clipboard = Clipboard.getSystemClipboard();
+                final ClipboardContent content = new ClipboardContent();
+                if (tableView.getSelectionModel().isSelected(selectedCell)) {
+                    System.out.println(data.getRunLink());
+                    content.putString(data.getRunLink());
+                } else {
+                    System.out.println(data.getRunner());
+                    content.putString(data.getRunLink());
+                }
+            }
+        });
+    }
 
     public ObservableList<Run> getRuns() {
         ObservableList<Run> runs = FXCollections.observableArrayList();
