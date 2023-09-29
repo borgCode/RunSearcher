@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -25,6 +27,8 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -32,12 +36,126 @@
    <children>
       <TextField fx:id="searchBox" prefHeight="26.0" prefWidth="260.0" GridPane.columnIndex="1" GridPane.columnSpan="4" />
       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="155.0" text="Input search tags" />
-      <TableView fx:id="tableView" prefHeight="675.0" prefWidth="1066.0" GridPane.columnSpan="5" GridPane.rowIndex="1" GridPane.rowSpan="10">
+      <TableView fx:id="tableView" prefHeight="675.0" prefWidth="1066.0" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="10">
         <columns>
           <TableColumn fx:id="runnerColumn" editable="false" prefWidth="200.0" text="Runner" />
           <TableColumn fx:id="runColumn" editable="false" prefWidth="443.1999969482422" text="Run Name" />
             <TableColumn fx:id="linkColumn" editable="false" prefWidth="483.199951171875" text="Run link" />
         </columns>
       </TableView>
+      <GridPane prefHeight="61.0" prefWidth="956.0" GridPane.columnSpan="5" GridPane.rowIndex="1" GridPane.rowSpan="2">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="95.0" prefWidth="185.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="110.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="110.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="110.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="110.0" prefWidth="95.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="110.0" prefWidth="95.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="80.0" prefWidth="95.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.0" minWidth="110.0" prefWidth="95.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="110.0" prefWidth="95.0" />
+            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="80.0" minWidth="80.0" prefWidth="95.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <CheckBox fx:id="hadesCheckBox" mnemonicParsing="false" text="Hades" GridPane.columnIndex="5" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="15.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox fx:id="cupheadCheckBox" mnemonicParsing="false" text="Cuphead" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="15.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox fx:id="darkSoulsCheckBox" mnemonicParsing="false" text="Dark Souls" GridPane.columnIndex="2">
+               <padding>
+                  <Insets top="25.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="zeldaCheckBox" mnemonicParsing="false" text="Zelda" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="15.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox fx:id="dishonoredCheckBox" mnemonicParsing="false" text="Dishonored" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="15.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox fx:id="darkSoulsTwoCheckBox" mnemonicParsing="false" text="Dark Souls 2" GridPane.columnIndex="3">
+               <padding>
+                  <Insets top="25.0" />
+               </padding>
+            </CheckBox>
+            <Label prefHeight="21.0" prefWidth="114.0" text="Filter by game:" GridPane.rowIndex="2" GridPane.rowSpan="2">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <CheckBox fx:id="darkSoulsThreeCheckBox" mnemonicParsing="false" text="Dark Souls 3" GridPane.columnIndex="4">
+               <padding>
+                  <Insets top="25.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="bloodborneCheckBox" mnemonicParsing="false" text="Bloodborne" GridPane.columnIndex="5">
+               <padding>
+                  <Insets top="25.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="hollowKnightCheckBox" mnemonicParsing="false" text="Hollow Knight" GridPane.columnIndex="4" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="15.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox fx:id="crashCheckBox" mnemonicParsing="false" text="Crash" GridPane.columnIndex="9">
+               <padding>
+                  <Insets top="25.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="celesteCheckBox" mnemonicParsing="false" text="Celeste" GridPane.columnIndex="6" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="15.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox fx:id="multipleCheckBox" mnemonicParsing="false" text="Multiple" GridPane.columnIndex="8" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="15.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox fx:id="blasphemousCheckBox" mnemonicParsing="false" text="Blasphemous" GridPane.columnIndex="7" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="15.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox fx:id="residentEvilCheckBox" mnemonicParsing="false" text="Resident Evil" GridPane.columnIndex="8">
+               <padding>
+                  <Insets top="25.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="eldenRingCheckBox" mnemonicParsing="false" text="Elden Ring" GridPane.columnIndex="7">
+               <padding>
+                  <Insets top="25.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="sekiroCheckBox" mnemonicParsing="false" text="Sekiro" GridPane.columnIndex="6">
+               <padding>
+                  <Insets top="25.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="demonsSoulsCheckBox" mnemonicParsing="false" text="Demon's Souls" GridPane.columnIndex="1">
+               <padding>
+                  <Insets top="25.0" />
+               </padding>
+            </CheckBox>
+         </children>
+      </GridPane>
    </children>
 </GridPane>
