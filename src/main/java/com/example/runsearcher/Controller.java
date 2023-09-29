@@ -20,33 +20,53 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Controller {
 
-    @FXML private TextField searchBox;
-    @FXML private CheckBox demonsSoulsCheckBox;
-    @FXML private CheckBox darkSoulsCheckBox;
-    @FXML private CheckBox darkSoulsTwoCheckBox;
-    @FXML private CheckBox darkSoulsThreeCheckBox;
-    @FXML private CheckBox bloodborneCheckBox;
-    @FXML private CheckBox sekiroCheckBox;
-    @FXML private CheckBox eldenRingCheckBox;
-    @FXML private CheckBox residentEvilCheckBox;
-    @FXML private CheckBox crashCheckBox;
-    @FXML private CheckBox dishonoredCheckBox;
-    @FXML private CheckBox zeldaCheckBox;
-    @FXML private CheckBox cupheadCheckBox;
-    @FXML private CheckBox hollowKnightCheckBox;
-    @FXML private CheckBox hadesCheckBox;
-    @FXML private CheckBox celesteCheckBox;
-    @FXML private CheckBox blasphemousCheckBox;
-    @FXML private CheckBox multipleCheckBox;
-    @FXML private TableView<Run> tableView;
-    @FXML private TableColumn<Run, String> runnerColumn;
-    @FXML private TableColumn<Run, String> runColumn;
-    @FXML private TableColumn<Run, String> linkColumn;
+    @FXML
+    private TextField searchBox;
+    @FXML
+    private CheckBox demonsSoulsCheckBox;
+    @FXML
+    private CheckBox darkSoulsCheckBox;
+    @FXML
+    private CheckBox darkSoulsTwoCheckBox;
+    @FXML
+    private CheckBox darkSoulsThreeCheckBox;
+    @FXML
+    private CheckBox bloodborneCheckBox;
+    @FXML
+    private CheckBox sekiroCheckBox;
+    @FXML
+    private CheckBox eldenRingCheckBox;
+    @FXML
+    private CheckBox residentEvilCheckBox;
+    @FXML
+    private CheckBox crashCheckBox;
+    @FXML
+    private CheckBox dishonoredCheckBox;
+    @FXML
+    private CheckBox zeldaCheckBox;
+    @FXML
+    private CheckBox cupheadCheckBox;
+    @FXML
+    private CheckBox hollowKnightCheckBox;
+    @FXML
+    private CheckBox hadesCheckBox;
+    @FXML
+    private CheckBox celesteCheckBox;
+    @FXML
+    private CheckBox blasphemousCheckBox;
+    @FXML
+    private CheckBox multipleCheckBox;
+    @FXML
+    private TableView<Run> tableView;
+    @FXML
+    private TableColumn<Run, String> runnerColumn;
+    @FXML
+    private TableColumn<Run, String> runColumn;
+    @FXML
+    private TableColumn<Run, String> linkColumn;
 
     public void initialize() {
         runnerColumn.setCellValueFactory(new PropertyValueFactory<>("runner"));
@@ -89,8 +109,11 @@ public class Controller {
         demonsSoulsCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                if (t1) {
+                    unSelectAll(demonsSoulsCheckBox);
+                }
                 filteredByCheckBox.setPredicate(run -> {
-                    if (demonsSoulsCheckBox.isSelected() == false) {
+                    if (!demonsSoulsCheckBox.isSelected()) {
                         return true;
                     }
                     if (run.getRunName().toLowerCase()
@@ -107,8 +130,11 @@ public class Controller {
         darkSoulsCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                if (t1) {
+                    unSelectAll(darkSoulsCheckBox);
+                }
                 filteredByCheckBox.setPredicate(run -> {
-                    if (darkSoulsCheckBox.isSelected() == false) {
+                    if (!darkSoulsCheckBox.isSelected()) {
                         return true;
                     }
                     if (run.getRunName().toLowerCase()
@@ -125,8 +151,11 @@ public class Controller {
         darkSoulsTwoCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                if (t1) {
+                    unSelectAll(darkSoulsTwoCheckBox);
+                }
                 filteredByCheckBox.setPredicate(run -> {
-                    if (darkSoulsTwoCheckBox.isSelected() == false) {
+                    if (!darkSoulsTwoCheckBox.isSelected()) {
                         return true;
                     }
 
@@ -144,8 +173,11 @@ public class Controller {
         darkSoulsThreeCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                if (t1) {
+                    unSelectAll(darkSoulsThreeCheckBox);
+                }
                 filteredByCheckBox.setPredicate(run -> {
-                    if (darkSoulsThreeCheckBox.isSelected() == false) {
+                    if (!darkSoulsThreeCheckBox.isSelected()) {
                         return true;
                     }
                     if (run.getRunName().toLowerCase()
@@ -163,8 +195,11 @@ public class Controller {
         bloodborneCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                if (t1) {
+                    unSelectAll(bloodborneCheckBox);
+                }
                 filteredByCheckBox.setPredicate(run -> {
-                    if (bloodborneCheckBox.isSelected() == false) {
+                    if (!bloodborneCheckBox.isSelected()) {
                         return true;
                     }
                     if (run.getRunName().toLowerCase()
@@ -182,8 +217,11 @@ public class Controller {
         sekiroCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                if (t1) {
+                    unSelectAll(sekiroCheckBox);
+                }
                 filteredByCheckBox.setPredicate(run -> {
-                    if (sekiroCheckBox.isSelected() == false) {
+                    if (!sekiroCheckBox.isSelected()) {
                         return true;
                     }
                     if (run.getRunName().toLowerCase()
@@ -201,8 +239,11 @@ public class Controller {
         eldenRingCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                if (t1) {
+                    unSelectAll(eldenRingCheckBox);
+                }
                 filteredByCheckBox.setPredicate(run -> {
-                    if (eldenRingCheckBox.isSelected() == false) {
+                    if (!eldenRingCheckBox.isSelected()) {
                         return true;
                     }
                     if (run.getRunName().toLowerCase()
@@ -220,8 +261,11 @@ public class Controller {
         residentEvilCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                if (t1) {
+                    unSelectAll(residentEvilCheckBox);
+                }
                 filteredByCheckBox.setPredicate(run -> {
-                    if (residentEvilCheckBox.isSelected() == false) {
+                    if (!residentEvilCheckBox.isSelected()) {
                         return true;
                     }
                     if (run.getRunName().toLowerCase()
@@ -238,8 +282,11 @@ public class Controller {
         crashCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                if (t1) {
+                    unSelectAll(crashCheckBox);
+                }
                 filteredByCheckBox.setPredicate(run -> {
-                    if (crashCheckBox.isSelected() == false) {
+                    if (!crashCheckBox.isSelected()) {
                         return true;
                     }
                     if (run.getRunName().toLowerCase()
@@ -256,8 +303,11 @@ public class Controller {
         dishonoredCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                if (t1) {
+                    unSelectAll(dishonoredCheckBox);
+                }
                 filteredByCheckBox.setPredicate(run -> {
-                    if (dishonoredCheckBox.isSelected() == false) {
+                    if (!dishonoredCheckBox.isSelected()) {
                         return true;
                     }
                     if (run.getRunName().toLowerCase()
@@ -274,10 +324,14 @@ public class Controller {
         zeldaCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                if (t1) {
+                    unSelectAll(zeldaCheckBox);
+                }
                 filteredByCheckBox.setPredicate(run -> {
-                    if (zeldaCheckBox.isSelected() == false) {
+                    if (!zeldaCheckBox.isSelected()) {
                         return true;
                     }
+
                     if (run.getRunName().toLowerCase()
                             .replaceAll("’", "").replaceAll("'", "")
                             .contains("zelda")) {
@@ -292,8 +346,11 @@ public class Controller {
         cupheadCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                if (t1) {
+                    unSelectAll(cupheadCheckBox);
+                }
                 filteredByCheckBox.setPredicate(run -> {
-                    if (cupheadCheckBox.isSelected() == false) {
+                    if (!cupheadCheckBox.isSelected()) {
                         return true;
                     }
                     if (run.getRunName().toLowerCase()
@@ -310,8 +367,11 @@ public class Controller {
         hollowKnightCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                if (t1) {
+                    unSelectAll(hollowKnightCheckBox);
+                }
                 filteredByCheckBox.setPredicate(run -> {
-                    if (hollowKnightCheckBox.isSelected() == false) {
+                    if (!hollowKnightCheckBox.isSelected()) {
                         return true;
                     }
                     if (run.getRunName().toLowerCase()
@@ -328,8 +388,11 @@ public class Controller {
         hadesCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                if (t1) {
+                    unSelectAll(hadesCheckBox);
+                }
                 filteredByCheckBox.setPredicate(run -> {
-                    if (hadesCheckBox.isSelected() == false) {
+                    if (!hadesCheckBox.isSelected()) {
                         return true;
                     }
                     if (run.getRunName().toLowerCase()
@@ -346,8 +409,11 @@ public class Controller {
         celesteCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                if (t1) {
+                    unSelectAll(celesteCheckBox);
+                }
                 filteredByCheckBox.setPredicate(run -> {
-                    if (celesteCheckBox.isSelected() == false) {
+                    if (!celesteCheckBox.isSelected()) {
                         return true;
                     }
                     if (run.getRunName().toLowerCase()
@@ -364,8 +430,11 @@ public class Controller {
         blasphemousCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                if (t1) {
+                    unSelectAll(blasphemousCheckBox);
+                }
                 filteredByCheckBox.setPredicate(run -> {
-                    if (demonsSoulsCheckBox.isSelected() == false) {
+                    if (!blasphemousCheckBox.isSelected()) {
                         return true;
                     }
                     if (run.getRunName().toLowerCase()
@@ -383,8 +452,11 @@ public class Controller {
         multipleCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                if (t1) {
+                    unSelectAll(multipleCheckBox);
+                }
                 filteredByCheckBox.setPredicate(run -> {
-                    if (multipleCheckBox.isSelected() == false) {
+                    if (!multipleCheckBox.isSelected()) {
                         return true;
                     }
                     if (run.getRunName().toLowerCase()
@@ -425,17 +497,20 @@ public class Controller {
             });
         });
 
-
-
         SortedList<Run> sortedData = new SortedList<>(filteredByText);
         sortedData.comparatorProperty().bind(tableView.comparatorProperty());
-
         tableView.setItems(sortedData);
-
     }
 
-
-
-
-
+    private void unSelectAll(CheckBox checkBox) {
+        for (CheckBox box : Arrays.asList(demonsSoulsCheckBox, darkSoulsCheckBox, darkSoulsTwoCheckBox,
+                darkSoulsThreeCheckBox, sekiroCheckBox, eldenRingCheckBox, bloodborneCheckBox,
+                residentEvilCheckBox, crashCheckBox, dishonoredCheckBox, celesteCheckBox,
+                hollowKnightCheckBox, zeldaCheckBox, blasphemousCheckBox, multipleCheckBox,
+                hadesCheckBox, cupheadCheckBox)) {
+            if (box != checkBox) {
+                box.setSelected(false);
+            }
+        }
+    }
 }

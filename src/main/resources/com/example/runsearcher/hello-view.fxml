@@ -76,9 +76,9 @@
                </GridPane.margin>
             </CheckBox>
             <CheckBox fx:id="darkSoulsCheckBox" mnemonicParsing="false" text="Dark Souls" GridPane.columnIndex="2">
-               <padding>
+               <GridPane.margin>
                   <Insets top="25.0" />
-               </padding>
+               </GridPane.margin>
             </CheckBox>
             <CheckBox fx:id="zeldaCheckBox" mnemonicParsing="false" text="Zelda" GridPane.columnIndex="2" GridPane.rowIndex="5">
                <GridPane.margin>
@@ -91,9 +91,9 @@
                </GridPane.margin>
             </CheckBox>
             <CheckBox fx:id="darkSoulsTwoCheckBox" mnemonicParsing="false" text="Dark Souls 2" GridPane.columnIndex="3">
-               <padding>
+               <GridPane.margin>
                   <Insets top="25.0" />
-               </padding>
+               </GridPane.margin>
             </CheckBox>
             <Label prefHeight="21.0" prefWidth="114.0" text="Filter by game:" GridPane.rowIndex="2" GridPane.rowSpan="2">
                <padding>
@@ -101,14 +101,14 @@
                </padding>
             </Label>
             <CheckBox fx:id="darkSoulsThreeCheckBox" mnemonicParsing="false" text="Dark Souls 3" GridPane.columnIndex="4">
-               <padding>
+               <GridPane.margin>
                   <Insets top="25.0" />
-               </padding>
+               </GridPane.margin>
             </CheckBox>
             <CheckBox fx:id="bloodborneCheckBox" mnemonicParsing="false" text="Bloodborne" GridPane.columnIndex="5">
-               <padding>
+               <GridPane.margin>
                   <Insets top="25.0" />
-               </padding>
+               </GridPane.margin>
             </CheckBox>
             <CheckBox fx:id="hollowKnightCheckBox" mnemonicParsing="false" text="Hollow Knight" GridPane.columnIndex="4" GridPane.rowIndex="5">
                <GridPane.margin>
@@ -116,9 +116,9 @@
                </GridPane.margin>
             </CheckBox>
             <CheckBox fx:id="crashCheckBox" mnemonicParsing="false" text="Crash" GridPane.columnIndex="9">
-               <padding>
+               <GridPane.margin>
                   <Insets top="25.0" />
-               </padding>
+               </GridPane.margin>
             </CheckBox>
             <CheckBox fx:id="celesteCheckBox" mnemonicParsing="false" text="Celeste" GridPane.columnIndex="6" GridPane.rowIndex="5">
                <GridPane.margin>
@@ -136,24 +136,24 @@
                </GridPane.margin>
             </CheckBox>
             <CheckBox fx:id="residentEvilCheckBox" mnemonicParsing="false" text="Resident Evil" GridPane.columnIndex="8">
-               <padding>
+               <GridPane.margin>
                   <Insets top="25.0" />
-               </padding>
+               </GridPane.margin>
             </CheckBox>
             <CheckBox fx:id="eldenRingCheckBox" mnemonicParsing="false" text="Elden Ring" GridPane.columnIndex="7">
-               <padding>
+               <GridPane.margin>
                   <Insets top="25.0" />
-               </padding>
+               </GridPane.margin>
             </CheckBox>
             <CheckBox fx:id="sekiroCheckBox" mnemonicParsing="false" text="Sekiro" GridPane.columnIndex="6">
-               <padding>
+               <GridPane.margin>
                   <Insets top="25.0" />
-               </padding>
+               </GridPane.margin>
             </CheckBox>
             <CheckBox fx:id="demonsSoulsCheckBox" mnemonicParsing="false" text="Demon's Souls" GridPane.columnIndex="1">
-               <padding>
+               <GridPane.margin>
                   <Insets top="25.0" />
-               </padding>
+               </GridPane.margin>
             </CheckBox>
          </children>
       </GridPane>
