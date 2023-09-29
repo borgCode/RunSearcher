@@ -20,6 +20,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Controller {
 
@@ -79,20 +81,315 @@ public class Controller {
 
     private void filterRuns() {
 
-        FilteredList<Run> filteredData = new FilteredList<>(getRuns(), b -> true);
+
+        FilteredList<Run> filteredByCheckBox = new FilteredList<>(getRuns(), b -> true);
+        FilteredList<Run> filteredByText = new FilteredList<>(filteredByCheckBox, b -> true);
 
 
         demonsSoulsCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
-                filteredData.setPredicate(run -> {
+                filteredByCheckBox.setPredicate(run -> {
                     if (demonsSoulsCheckBox.isSelected() == false) {
                         return true;
                     }
-                    String filter = "demons souls";
                     if (run.getRunName().toLowerCase()
                             .replaceAll("’", "").replaceAll("'", "")
-                            .contains(filter)) {
+                            .contains("demons souls")) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+
+                });
+            }
+        });
+        darkSoulsCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                filteredByCheckBox.setPredicate(run -> {
+                    if (darkSoulsCheckBox.isSelected() == false) {
+                        return true;
+                    }
+                    if (run.getRunName().toLowerCase()
+                            .replaceAll("’", "").replaceAll("'", "")
+                            .matches(".*dark souls(?! ii| trilogy).*")) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+
+                });
+            }
+        });
+        darkSoulsTwoCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                filteredByCheckBox.setPredicate(run -> {
+                    if (darkSoulsTwoCheckBox.isSelected() == false) {
+                        return true;
+                    }
+
+                    if (run.getRunName().toLowerCase()
+                            .replaceAll("’", "").replaceAll("'", "")
+                            .matches(".*dark souls ii(?!i).*")) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+
+                });
+            }
+        });
+        darkSoulsThreeCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                filteredByCheckBox.setPredicate(run -> {
+                    if (darkSoulsThreeCheckBox.isSelected() == false) {
+                        return true;
+                    }
+                    if (run.getRunName().toLowerCase()
+                            .replaceAll("’", "").replaceAll("'", "")
+                            .matches(".*dark souls iii.*")) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+
+                });
+            }
+        });
+
+        bloodborneCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                filteredByCheckBox.setPredicate(run -> {
+                    if (bloodborneCheckBox.isSelected() == false) {
+                        return true;
+                    }
+                    if (run.getRunName().toLowerCase()
+                            .replaceAll("’", "").replaceAll("'", "")
+                            .contains("bloodborne")) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+
+                });
+            }
+        });
+
+        sekiroCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                filteredByCheckBox.setPredicate(run -> {
+                    if (sekiroCheckBox.isSelected() == false) {
+                        return true;
+                    }
+                    if (run.getRunName().toLowerCase()
+                            .replaceAll("’", "").replaceAll("'", "")
+                            .contains("sekiro")) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+
+                });
+            }
+        });
+
+        eldenRingCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                filteredByCheckBox.setPredicate(run -> {
+                    if (eldenRingCheckBox.isSelected() == false) {
+                        return true;
+                    }
+                    if (run.getRunName().toLowerCase()
+                            .replaceAll("’", "").replaceAll("'", "")
+                            .contains("elden ring")) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+
+                });
+            }
+        });
+
+        residentEvilCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                filteredByCheckBox.setPredicate(run -> {
+                    if (residentEvilCheckBox.isSelected() == false) {
+                        return true;
+                    }
+                    if (run.getRunName().toLowerCase()
+                            .replaceAll("’", "").replaceAll("'", "")
+                            .contains("resident evil")) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+
+                });
+            }
+        });
+        crashCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                filteredByCheckBox.setPredicate(run -> {
+                    if (crashCheckBox.isSelected() == false) {
+                        return true;
+                    }
+                    if (run.getRunName().toLowerCase()
+                            .replaceAll("’", "").replaceAll("'", "")
+                            .contains("crash")) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+
+                });
+            }
+        });
+        dishonoredCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                filteredByCheckBox.setPredicate(run -> {
+                    if (dishonoredCheckBox.isSelected() == false) {
+                        return true;
+                    }
+                    if (run.getRunName().toLowerCase()
+                            .replaceAll("’", "").replaceAll("'", "")
+                            .contains("dishonored")) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+
+                });
+            }
+        });
+        zeldaCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                filteredByCheckBox.setPredicate(run -> {
+                    if (zeldaCheckBox.isSelected() == false) {
+                        return true;
+                    }
+                    if (run.getRunName().toLowerCase()
+                            .replaceAll("’", "").replaceAll("'", "")
+                            .contains("zelda")) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+
+                });
+            }
+        });
+        cupheadCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                filteredByCheckBox.setPredicate(run -> {
+                    if (cupheadCheckBox.isSelected() == false) {
+                        return true;
+                    }
+                    if (run.getRunName().toLowerCase()
+                            .replaceAll("’", "").replaceAll("'", "")
+                            .contains("cuphead")) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+
+                });
+            }
+        });
+        hollowKnightCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                filteredByCheckBox.setPredicate(run -> {
+                    if (hollowKnightCheckBox.isSelected() == false) {
+                        return true;
+                    }
+                    if (run.getRunName().toLowerCase()
+                            .replaceAll("’", "").replaceAll("'", "")
+                            .contains("hollow knight")) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+
+                });
+            }
+        });
+        hadesCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                filteredByCheckBox.setPredicate(run -> {
+                    if (hadesCheckBox.isSelected() == false) {
+                        return true;
+                    }
+                    if (run.getRunName().toLowerCase()
+                            .replaceAll("’", "").replaceAll("'", "")
+                            .contains("hades")) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+
+                });
+            }
+        });
+        celesteCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                filteredByCheckBox.setPredicate(run -> {
+                    if (celesteCheckBox.isSelected() == false) {
+                        return true;
+                    }
+                    if (run.getRunName().toLowerCase()
+                            .replaceAll("’", "").replaceAll("'", "")
+                            .contains("celeste")) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+
+                });
+            }
+        });
+        blasphemousCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                filteredByCheckBox.setPredicate(run -> {
+                    if (demonsSoulsCheckBox.isSelected() == false) {
+                        return true;
+                    }
+                    if (run.getRunName().toLowerCase()
+                            .replaceAll("’", "").replaceAll("'", "")
+                            .contains("blasphemous")) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+
+                });
+            }
+        });
+
+        multipleCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                filteredByCheckBox.setPredicate(run -> {
+                    if (multipleCheckBox.isSelected() == false) {
+                        return true;
+                    }
+                    if (run.getRunName().toLowerCase()
+                            .replaceAll("’", "").replaceAll("'", "")
+                            .matches(".*(trilogy|soulsborne|marathon).*")) {
                         return true;
                     } else {
                         return false;
@@ -103,7 +400,7 @@ public class Controller {
         });
 
         searchBox.textProperty().addListener((observable, oldValue, newValue) -> {
-            filteredData.setPredicate(run -> {
+            filteredByText.setPredicate(run -> {
                 if (newValue == null || newValue.isEmpty()) {
                     return true;
                 }
@@ -129,14 +426,15 @@ public class Controller {
         });
 
 
-        SortedList<Run> sortedData = new SortedList<>(filteredData);
+
+        SortedList<Run> sortedData = new SortedList<>(filteredByText);
         sortedData.comparatorProperty().bind(tableView.comparatorProperty());
 
         tableView.setItems(sortedData);
 
     }
 
-    public void change
+
 
 
 
