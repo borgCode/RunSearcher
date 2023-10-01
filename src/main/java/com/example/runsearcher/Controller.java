@@ -15,8 +15,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.*;
 
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.Arrays;
 import java.util.List;
 
@@ -118,10 +117,10 @@ public class Controller {
         ObservableList<Run> runs = FXCollections.observableArrayList();
         List<String[]> data;
 
-        try {
-            FileReader fileReader = new FileReader("src/runs.csv");
-            CSVReader csvReader = new CSVReaderBuilder(fileReader).withSkipLines(1).build();
-            data = csvReader.readAll();
+        try (InputStream in = getClass().getResourceAsStream("/runs.csv");
+            BufferedReader reader = new BufferedReader(new InputStreamReader(in))) {
+                CSVReader csvReader = new CSVReaderBuilder(reader).withSkipLines(1).build();
+                data =csvReader.readAll();
         } catch (IOException | CsvException e) {
             throw new RuntimeException(e);
         }

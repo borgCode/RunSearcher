@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="RunSearcher:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="implementd copy functionality">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/Launcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/runs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/runs.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/RunSearcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/runs.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +31,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -47,11 +56,16 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/46735/IdeaProjects/RunSearcher/src&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/46735/Downloads/openjfx-21_windows-x64_bin-sdk/javafx-sdk-21/lib&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -60,17 +74,31 @@
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\resources" />
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.runsearcher.Main" />
+    <configuration name="RunSearcher" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.runsearcher.RunSearcher" />
       <module name="RunSearcher" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RunSearcher.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/RunSearcher_jar/RunSearcher.jar" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.RunSearcher" />
+      <item itemvalue="JAR Application.RunSearcher.jar" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR Application.RunSearcher.jar" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -84,7 +112,11 @@
       <workItem from="1695883169225" duration="13727000" />
       <workItem from="1695899947607" duration="6625000" />
       <workItem from="1695971653121" duration="23810000" />
-      <workItem from="1696000904166" duration="306000" />
+      <workItem from="1696000904166" duration="6325000" />
+      <workItem from="1696007475463" duration="527000" />
+      <workItem from="1696078888876" duration="181000" />
+      <workItem from="1696104204332" duration="76000" />
+      <workItem from="1696144702164" duration="5078000" />
     </task>
     <task id="LOCAL-00001" summary="simple filtered list function">
       <option name="closed" value="true" />
@@ -142,11 +174,30 @@
       <option name="project" value="LOCAL" />
       <updated>1695993750900</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="implementd copy functionality">
+      <option name="closed" value="true" />
+      <created>1696001402137</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696001402137</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="simple filtered list function" />
