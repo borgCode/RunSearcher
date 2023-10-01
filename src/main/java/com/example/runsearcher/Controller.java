@@ -100,7 +100,6 @@ public class Controller {
             public void run() {
                 int selectedCell = tableView.getSelectionModel().getSelectedIndex();
                 Run data = tableView.getItems().get(selectedCell);
-                final Clipboard clipboard = Clipboard.getSystemClipboard();
                 final ClipboardContent content = new ClipboardContent();
                 if (tableView.getSelectionModel().isSelected(selectedCell)) {
                     System.out.println(data.getRunLink());
@@ -514,15 +513,18 @@ public class Controller {
 
                 String[] values = newValue.toLowerCase().split(" ");
                 List<String> wordList = Arrays.stream(values)
-                        .map(s -> s.replaceAll("’", "").replaceAll("'", ""))
+                        .map(s -> s
+                                .replaceAll("’", "").replaceAll("'", "").replaceAll("/", " "))
                         .toList();
 
-                if (wordList.stream().allMatch(Arrays.stream(run.getRunner().toLowerCase()
+                String lowerCaseFilter = newValue.toLowerCase().replaceAll("’", "").replaceAll("'", "");
+
+                if (run.getRunner().toLowerCase()
                         .replaceAll("’", "").replaceAll("'", "")
-                        .split(" ")).toList()::contains)) {
+                        .contains(lowerCaseFilter)) {
                     return true;
                 } else if (wordList.stream().allMatch(Arrays.stream(run.getRunName().toLowerCase()
-                        .replaceAll("’", "").replaceAll("'", "")
+                        .replaceAll("’", "").replaceAll("'", "").replaceAll("/", " ")
                         .split(" ")).toList()::contains)) {
                     return true;
                 } else {
