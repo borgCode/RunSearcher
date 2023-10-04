@@ -3,11 +3,13 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.runsearcher.Controller">
@@ -32,15 +34,18 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints />
   </rowConstraints>
    <children>
       <TextField fx:id="searchBox" prefHeight="26.0" prefWidth="260.0" GridPane.columnIndex="1" GridPane.columnSpan="4" />
       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="155.0" text="Search" />
-      <TableView fx:id="tableView" editable="true" prefHeight="675.0" prefWidth="1066.0" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="10">
+      <TableView fx:id="tableView" editable="true" prefHeight="675.0" prefWidth="1066.0" GridPane.columnSpan="5" GridPane.rowIndex="7" GridPane.rowSpan="7">
         <columns>
-          <TableColumn fx:id="runnerColumn" editable="false" prefWidth="200.0" text="Runner" />
-          <TableColumn fx:id="runColumn" editable="false" prefWidth="443.1999969482422" text="Run Name" />
-            <TableColumn fx:id="linkColumn" editable="false" prefWidth="483.199951171875" sortable="false" text="Run link" />
+          <TableColumn fx:id="runnerColumn" editable="false" prefWidth="123.19998168945312" text="Runner" />
+            <TableColumn fx:id="gameColumn" prefWidth="219.199951171875" text="Game" />
+            <TableColumn fx:id="categoryColumn" prefWidth="187.0" text="Category" />
+          <TableColumn fx:id="runColumn" editable="false" prefWidth="351.0" text="Run Name" />
+            <TableColumn fx:id="linkColumn" editable="false" prefWidth="245.0" sortable="false" text="Run link" />
         </columns>
       </TableView>
       <GridPane prefHeight="61.0" prefWidth="956.0" GridPane.columnSpan="5" GridPane.rowIndex="1" GridPane.rowSpan="2">
@@ -65,97 +70,1334 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <CheckBox fx:id="hadesCheckBox" mnemonicParsing="false" text="Hades" GridPane.columnIndex="5" GridPane.rowIndex="5">
+            <RadioButton fx:id="hadesRadioButton" mnemonicParsing="false" text="Hades" GridPane.columnIndex="5" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets bottom="15.0" />
                </GridPane.margin>
-            </CheckBox>
-            <CheckBox fx:id="cupheadCheckBox" mnemonicParsing="false" text="Cuphead" GridPane.columnIndex="3" GridPane.rowIndex="5">
+            </RadioButton>
+            <RadioButton fx:id="cupheadRadioButton" mnemonicParsing="false" text="Cuphead" GridPane.columnIndex="3" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets bottom="15.0" />
                </GridPane.margin>
-            </CheckBox>
-            <CheckBox fx:id="darkSoulsCheckBox" mnemonicParsing="false" text="Dark Souls" GridPane.columnIndex="2">
+            </RadioButton>
+            <RadioButton fx:id="darkSoulsRadioButton" mnemonicParsing="false" text="Dark Souls" GridPane.columnIndex="2">
                <GridPane.margin>
                   <Insets top="25.0" />
                </GridPane.margin>
-            </CheckBox>
-            <CheckBox fx:id="zeldaCheckBox" mnemonicParsing="false" text="Zelda" GridPane.columnIndex="2" GridPane.rowIndex="5">
+            </RadioButton>
+            <RadioButton fx:id="zeldaRadioButton" mnemonicParsing="false" text="Zelda" GridPane.columnIndex="2" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets bottom="15.0" />
                </GridPane.margin>
-            </CheckBox>
-            <CheckBox fx:id="dishonoredCheckBox" mnemonicParsing="false" text="Dishonored" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            </RadioButton>
+            <RadioButton fx:id="dishonoredRadioButton" mnemonicParsing="false" text="Dishonored" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets bottom="15.0" />
                </GridPane.margin>
-            </CheckBox>
-            <CheckBox fx:id="darkSoulsTwoCheckBox" mnemonicParsing="false" text="Dark Souls 2" GridPane.columnIndex="3">
+            </RadioButton>
+            <RadioButton fx:id="darkSoulsTwoRadioButton" mnemonicParsing="false" text="Dark Souls II" GridPane.columnIndex="3">
                <GridPane.margin>
                   <Insets top="25.0" />
                </GridPane.margin>
-            </CheckBox>
+            </RadioButton>
             <Label prefHeight="21.0" prefWidth="114.0" text="Filter by game:" GridPane.rowIndex="2" GridPane.rowSpan="2">
                <padding>
                   <Insets left="10.0" />
                </padding>
             </Label>
-            <CheckBox fx:id="darkSoulsThreeCheckBox" mnemonicParsing="false" text="Dark Souls 3" GridPane.columnIndex="4">
+            <RadioButton fx:id="darkSoulsThreeRadioButton" mnemonicParsing="false" text="Dark Souls III" GridPane.columnIndex="4">
                <GridPane.margin>
                   <Insets top="25.0" />
                </GridPane.margin>
-            </CheckBox>
-            <CheckBox fx:id="bloodborneCheckBox" mnemonicParsing="false" text="Bloodborne" GridPane.columnIndex="5">
+            </RadioButton>
+            <RadioButton fx:id="bloodborneRadioButton" mnemonicParsing="false" text="Bloodborne" GridPane.columnIndex="5">
                <GridPane.margin>
                   <Insets top="25.0" />
                </GridPane.margin>
-            </CheckBox>
-            <CheckBox fx:id="hollowKnightCheckBox" mnemonicParsing="false" text="Hollow Knight" GridPane.columnIndex="4" GridPane.rowIndex="5">
+            </RadioButton>
+            <RadioButton fx:id="hollowKnightRadioButton" mnemonicParsing="false" text="Hollow Knight" GridPane.columnIndex="4" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets bottom="15.0" />
                </GridPane.margin>
-            </CheckBox>
-            <CheckBox fx:id="crashCheckBox" mnemonicParsing="false" text="Crash" GridPane.columnIndex="9">
+            </RadioButton>
+            <RadioButton fx:id="crashRadioButton" mnemonicParsing="false" text="Crash" GridPane.columnIndex="9">
                <GridPane.margin>
                   <Insets top="25.0" />
                </GridPane.margin>
-            </CheckBox>
-            <CheckBox fx:id="celesteCheckBox" mnemonicParsing="false" text="Celeste" GridPane.columnIndex="6" GridPane.rowIndex="5">
+            </RadioButton>
+            <RadioButton fx:id="celesteRadioButton" mnemonicParsing="false" text="Celeste" GridPane.columnIndex="6" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets bottom="15.0" />
                </GridPane.margin>
-            </CheckBox>
-            <CheckBox fx:id="multipleCheckBox" mnemonicParsing="false" text="Multiple" GridPane.columnIndex="8" GridPane.rowIndex="5">
+            </RadioButton>
+            <RadioButton fx:id="multipleRadioButton" mnemonicParsing="false" text="Multiple" GridPane.columnIndex="8" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets bottom="15.0" />
                </GridPane.margin>
-            </CheckBox>
-            <CheckBox fx:id="blasphemousCheckBox" mnemonicParsing="false" text="Blasphemous" GridPane.columnIndex="7" GridPane.rowIndex="5">
+            </RadioButton>
+            <RadioButton fx:id="blasphemousRadioButton" mnemonicParsing="false" text="Blasphemous" GridPane.columnIndex="7" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets bottom="15.0" />
                </GridPane.margin>
-            </CheckBox>
-            <CheckBox fx:id="residentEvilCheckBox" mnemonicParsing="false" text="Resident Evil" GridPane.columnIndex="8">
+            </RadioButton>
+            <RadioButton fx:id="residentEvilRadioButton" mnemonicParsing="false" text="Resident Evil" GridPane.columnIndex="8">
                <GridPane.margin>
                   <Insets top="25.0" />
                </GridPane.margin>
-            </CheckBox>
-            <CheckBox fx:id="eldenRingCheckBox" mnemonicParsing="false" text="Elden Ring" GridPane.columnIndex="7">
+            </RadioButton>
+            <RadioButton fx:id="eldenRingRadioButton" mnemonicParsing="false" text="Elden Ring" GridPane.columnIndex="7">
                <GridPane.margin>
                   <Insets top="25.0" />
                </GridPane.margin>
-            </CheckBox>
-            <CheckBox fx:id="sekiroCheckBox" mnemonicParsing="false" text="Sekiro" GridPane.columnIndex="6">
+            </RadioButton>
+            <RadioButton fx:id="sekiroRadioButton" mnemonicParsing="false" text="Sekiro" GridPane.columnIndex="6">
                <GridPane.margin>
                   <Insets top="25.0" />
                </GridPane.margin>
-            </CheckBox>
-            <CheckBox fx:id="demonsSoulsCheckBox" mnemonicParsing="false" text="Demon's Souls" GridPane.columnIndex="1">
+            </RadioButton>
+            <RadioButton fx:id="demonsSoulsRadioButton" mnemonicParsing="false" text="Demon's Souls" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets top="25.0" />
                </GridPane.margin>
-            </CheckBox>
+            </RadioButton>
          </children>
       </GridPane>
+      <HBox fx:id="demonsSoulsCategoryBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
+         <children>
+            <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="demonsSoulsAny" mnemonicParsing="false" text="Any%">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="demonsSoulsAB" mnemonicParsing="false" text="All Bosses">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="demonsSoulsAA" mnemonicParsing="false" text="All Achievements">
+               <padding>
+                  <Insets left="15.0" top="20.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="demonsSoulsRestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
+         <children>
+            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <CheckBox mnemonicParsing="false" text="SL1" />
+            <CheckBox mnemonicParsing="false" text="No Damage">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox mnemonicParsing="false" text="No Upgrades">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox mnemonicParsing="false" text="Sorcery Only">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox mnemonicParsing="false" text="No Magic">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox mnemonicParsing="false" text="NG+">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </CheckBox>
+         </children>
+      </HBox>
+      <HBox fx:id="darkSoulsCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
+         <children>
+            <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="darkSoulsAny" mnemonicParsing="false" text="Any%">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="darkSoulsAMGB" mnemonicParsing="false" text="All Main Game Bosses">
+               <padding>
+                  <Insets left="15.0" top="20.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="darkSoulsAB" mnemonicParsing="false" text="All Bosses">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="darkSoulsAA" mnemonicParsing="false" text="All Achievements">
+               <padding>
+                  <Insets left="15.0" top="20.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="darkSoulsRestrictionsBox" layoutX="10.0" layoutY="164.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
+         <children>
+            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <CheckBox mnemonicParsing="false" text="SL1" />
+                  <CheckBox mnemonicParsing="false" text="No Damage" GridPane.columnIndex="1">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="No Upgrades" GridPane.columnIndex="2">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Sorcery Only" GridPane.columnIndex="3">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="No Magic" GridPane.columnIndex="6">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="NG+" GridPane.rowIndex="1" />
+                  <CheckBox mnemonicParsing="false" text="NG+6" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Pyro Only" GridPane.columnIndex="4">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Miracles Only" GridPane.columnIndex="5">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <HBox fx:id="darkSoulsTwoCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
+         <children>
+            <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="darkSoulsTwoAny" mnemonicParsing="false" text="Any%">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="darkSoulsTwoAMGB" mnemonicParsing="false" text="All Main Game Bosses">
+               <padding>
+                  <Insets left="15.0" top="20.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="darkSoulsTwoAB" mnemonicParsing="false" text="All Bosses">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="darkSoulsTwoAA" mnemonicParsing="false" text="All Achievements">
+               <padding>
+                  <Insets left="15.0" top="20.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="darkSoulsTwoRestrictionsBox" layoutX="10.0" layoutY="164.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
+         <children>
+            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <CheckBox mnemonicParsing="false" text="SL1" />
+                  <CheckBox mnemonicParsing="false" text="No Damage" GridPane.columnIndex="1">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="No Upgrades" GridPane.columnIndex="2">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Sorcery Only" GridPane.columnIndex="3">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="No Magic" GridPane.columnIndex="6">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="NG+" GridPane.rowIndex="1" />
+                  <CheckBox mnemonicParsing="false" text="NG+6" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Pyro Only" GridPane.columnIndex="4">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Miracles Only" GridPane.columnIndex="5">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <HBox fx:id="darkSoulsThreeCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
+         <children>
+            <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="darkSoulsThreeAny" mnemonicParsing="false" text="Any%">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="darkSoulsThreeAMGB" mnemonicParsing="false" text="All Main Game Bosses">
+               <padding>
+                  <Insets left="15.0" top="20.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="darkSoulsThreeAB" mnemonicParsing="false" text="All Bosses">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="darkSoulsThreeAA" mnemonicParsing="false" text="All Achievements">
+               <padding>
+                  <Insets left="15.0" top="20.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="darkSoulsThreeRestrictionsBox" layoutX="10.0" layoutY="164.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
+         <children>
+            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <CheckBox mnemonicParsing="false" text="SL1" />
+                  <CheckBox mnemonicParsing="false" text="No Damage" GridPane.columnIndex="1">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="No Upgrades" GridPane.columnIndex="2">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Sorcery Only" GridPane.columnIndex="3">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="No Magic" GridPane.columnIndex="6">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="NG+" GridPane.rowIndex="1" />
+                  <CheckBox mnemonicParsing="false" text="NG+6" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Pyro Only" GridPane.columnIndex="4">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Miracles Only" GridPane.columnIndex="5">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <HBox fx:id="bloodborneCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
+         <children>
+            <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="bloodborneAny" mnemonicParsing="false" text="Any%">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="bloodborneAMGB" mnemonicParsing="false" text="All Main Game Bosses">
+               <padding>
+                  <Insets left="15.0" top="20.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="bloodborneAB" mnemonicParsing="false" text="All Bosses">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="bloodborneABC" mnemonicParsing="false" text="All Bosses + Chalices">
+               <padding>
+                  <Insets left="15.0" top="20.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="bloodborneAA" mnemonicParsing="false" text="All Achievements">
+               <padding>
+                  <Insets left="15.0" top="20.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="bloodborneRestrictionsBox" layoutX="10.0" layoutY="164.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
+         <children>
+            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <CheckBox mnemonicParsing="false" text="SL1" />
+                  <CheckBox mnemonicParsing="false" text="No Damage" GridPane.columnIndex="1">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="No Upgrades" GridPane.columnIndex="2">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Sorcery Only" GridPane.columnIndex="3">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="No Magic" GridPane.columnIndex="6">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="NG+" GridPane.rowIndex="1" />
+                  <CheckBox mnemonicParsing="false" text="NG+6" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Pyro Only" GridPane.columnIndex="4">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Miracles Only" GridPane.columnIndex="5">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <HBox fx:id="sekiroCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
+         <children>
+            <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="10.0" prefWidth="170.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.20000305175785" minWidth="10.0" prefWidth="113.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="114.0" minWidth="10.0" prefWidth="104.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="21.0" minWidth="0.0" prefWidth="3.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.0" minWidth="10.0" prefWidth="98.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="144.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <RadioButton fx:id="sekiroShura" mnemonicParsing="false" text="Shura">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding></RadioButton>
+                  <RadioButton fx:id="sekiroIS" mnemonicParsing="false" text="Immortal Severance" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="sekiroPuri" mnemonicParsing="false" prefHeight="30.0" prefWidth="107.0" text="Purification" GridPane.columnIndex="3">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </RadioButton>
+                  <RadioButton fx:id="sekiroAM" mnemonicParsing="false" text="All Memories" GridPane.columnIndex="5">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></RadioButton>
+                  <RadioButton fx:id="sekiroABM" mnemonicParsing="false" text="All Beads &amp; Memories" GridPane.columnIndex="6">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></RadioButton>
+                  <RadioButton fx:id="sekiroABMB" mnemonicParsing="false" text="All Bosses + Minibosses" GridPane.columnIndex="8">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></RadioButton>
+                  <RadioButton fx:id="sekiroMJ" mnemonicParsing="false" prefHeight="30.0" prefWidth="137.0" text="Mortal Journey" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding></RadioButton>
+                  <RadioButton fx:id="sekiroAA" mnemonicParsing="false" text="All Achievements" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="sekiroAllEnemy" mnemonicParsing="false" text="All Enemies" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding></RadioButton>
+                  <RadioButton fx:id="sekiroAMG" mnemonicParsing="false" prefHeight="30.0" prefWidth="202.0" text="All Memories &amp; Gauntlets" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></RadioButton>
+                  <RadioButton fx:id="sekiroReturn" mnemonicParsing="false" text="Return" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <HBox fx:id="sekiroRestrictionsBox" layoutX="10.0" layoutY="164.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
+         <children>
+            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <CheckBox mnemonicParsing="false" text="SL1" />
+                  <CheckBox mnemonicParsing="false" text="No Damage" GridPane.columnIndex="1">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="No Upgrades" GridPane.columnIndex="2">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Sorcery Only" GridPane.columnIndex="3">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="No Magic" GridPane.columnIndex="6">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="NG+" GridPane.rowIndex="1" />
+                  <CheckBox mnemonicParsing="false" text="NG+6" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Pyro Only" GridPane.columnIndex="4">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Miracles Only" GridPane.columnIndex="5">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <HBox fx:id="eldenRingCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
+         <children>
+            <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="eldenRingAny" mnemonicParsing="false" text="Any%">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="eldenRingAGR" mnemonicParsing="false" text="All Great Runes">
+               <padding>
+                  <Insets left="15.0" top="20.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="eldenRingAR" mnemonicParsing="false" text="All Remembrances">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="eldenRingAB" mnemonicParsing="false" text="All Bosses">
+               <padding>
+                  <Insets left="15.0" top="20.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="eldenRingAA" mnemonicParsing="false" text="All Achievements">
+               <padding>
+                  <Insets left="15.0" top="20.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="eldenRingRestrictionsBox" layoutX="10.0" layoutY="164.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
+         <children>
+            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <CheckBox mnemonicParsing="false" text="SL1" />
+                  <CheckBox mnemonicParsing="false" text="No Damage" GridPane.columnIndex="1">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="No Upgrades" GridPane.columnIndex="2">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Sorcery Only" GridPane.columnIndex="3">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="No Magic" GridPane.columnIndex="6">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="NG+" GridPane.rowIndex="1" />
+                  <CheckBox mnemonicParsing="false" text="NG+6" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Pyro Only" GridPane.columnIndex="4">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Miracles Only" GridPane.columnIndex="5">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <HBox fx:id="residentEvilSubGameBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3">
+         <children>
+            <Label text="FIlter by game">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="residentEvil0Button" mnemonicParsing="false" prefHeight="30.0" prefWidth="114.0" text="Resident Evil 0">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets left="3.0" top="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil1Button" mnemonicParsing="false" text="Resident Evil">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil2Button" mnemonicParsing="false" text="Resident Evil 2">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil3Button" mnemonicParsing="false" text="Resident Evil 3">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil4Button" mnemonicParsing="false" text="Resident Evil 4">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil7Button" mnemonicParsing="false" text="Resident Evil 7">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvilVillageButton" mnemonicParsing="false" text="Resident Evil Village">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvilSurvivorButton" mnemonicParsing="false" text="Resident Evil Survivor">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="residentEvil0CategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+         <children>
+            <Label text="Filter by category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="residentEvil0Any" mnemonicParsing="false" text="Any%">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil0HardAny" mnemonicParsing="false" text="Hard Any%">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil0ExtraModes" mnemonicParsing="false" text="Extra Modes">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil0NGPlus" mnemonicParsing="false" text="NG+">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="residentEvil1CategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+         <children>
+            <Label text="Filter by category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="residentEvil1Normal" mnemonicParsing="false" text="Normal">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil1Hard" mnemonicParsing="false" text="Hard">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil1RealSurvivor" mnemonicParsing="false" text="Real Survivor">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil1InvisibleEnemy" mnemonicParsing="false" text="Invisible Enemy">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil1Original" mnemonicParsing="false" text="Original">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil1Arrange" mnemonicParsing="false" text="Arrange">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="residentEvil2CategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+         <children>
+            <Label text="Filter by category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="residentEvil2Any" mnemonicParsing="false" text="Any%">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil2Hard" mnemonicParsing="false" text="Hard">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil2True" mnemonicParsing="false" text="True Ending">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil2AllScenarios" mnemonicParsing="false" text="All Scenarios">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil2ExtraMode" mnemonicParsing="false" text="Extra Modes">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil2Normal" mnemonicParsing="false" text="Normal">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="residentEvil3CategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+         <children>
+            <Label text="Filter by category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="residentEvil3Hard" mnemonicParsing="false" text="Hard">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil3Nightmare" mnemonicParsing="false" text="Nightmare">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil3Inferno" mnemonicParsing="false" text="Inferno">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil3Nemesis" mnemonicParsing="false" text="Nemesis%">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil3AllBosses" mnemonicParsing="false" text="All Bosses">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="residentEvil4CategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+         <children>
+            <Label text="Filter by category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="residentEvil4Pro" mnemonicParsing="false" text="Professional">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil4Extra" mnemonicParsing="false" text="Extra Modes">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil4NoMerchant" mnemonicParsing="false" text="No Merchant">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="residentEvil7CategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+         <children>
+            <Label text="Filter by category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="residentEvil7Normal" mnemonicParsing="false" text="Normal">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil7Madhouse" mnemonicParsing="false" text="Madhouse">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil7Extra" mnemonicParsing="false" text="Extra Modes">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="residentEvilVillageCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+         <children>
+            <Label text="Filter by category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="residentEvilVillageHard" mnemonicParsing="false" text="Hard">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvilVillageVillage" mnemonicParsing="false" text="Village of Shadows">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvilVillageDuke" mnemonicParsing="false" text="No Duke">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvilVillageExtra" mnemonicParsing="false" text="Extra Modes">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="residentEvilSurvivorCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+         <children>
+            <Label text="Filter by category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="residentEvilSurvivorAny" mnemonicParsing="false" text="Any%">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="residentEvilSurvivorS" mnemonicParsing="false" text="S-Rank">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="crashCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+         <children>
+            <Label text="Filter by category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="crashAny" mnemonicParsing="false" text="Any%">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="crashSecretEnding" mnemonicParsing="false" text="Secret Ending">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="crashAllLevels" mnemonicParsing="false" text="All Levels">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="crashAllGems" mnemonicParsing="false" text="All Gems">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="crash105" mnemonicParsing="false" text="105%">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="crashTwoCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+         <children>
+            <Label text="Filter by category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="crashTwoAny" mnemonicParsing="false" text="Any%">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="crashTwoAllLevels" mnemonicParsing="false" text="All Levels">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="crashTwoAllGems" mnemonicParsing="false" text="All Gems">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="crashTwo102" mnemonicParsing="false" text="102%">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="crashThreeCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+         <children>
+            <Label text="Filter by category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="crashThreeAny" mnemonicParsing="false" text="Any%">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="crashThree108" mnemonicParsing="false" text="108%">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="crashFourCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+         <children>
+            <Label text="Filter by category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="crashFourAny" mnemonicParsing="false" text="Any%">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="crashFourAllTimelines" mnemonicParsing="false" text="All Timelines">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="crashFourAllClearGems" mnemonicParsing="false" text="All Clear Gems">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="crashFour106" mnemonicParsing="false" text="106%">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="dishonoredCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+         <children>
+            <Label text="Filter by category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="dishonoredAny" mnemonicParsing="false" text="Any%">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="dishonoredDLC" mnemonicParsing="false" text="DLC'S">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="dishonoredAllMissions" mnemonicParsing="false" text="All Missions">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="dishonoredAllCollectibles" mnemonicParsing="false" text="All Collectibles">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="dishonoredTwoCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+         <children>
+            <Label text="Filter by category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="dishonoredTwoAny" mnemonicParsing="false" text="Any%">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="dishonoredTwoAllCollectibles" mnemonicParsing="false" text="All Collectibles">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="dishonoredDotoCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+         <children>
+            <Label text="Filter by category:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="dishonoredDotoAny" mnemonicParsing="false" text="Any%">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="dishonoredDotoAllContracts" mnemonicParsing="false" text="All Contracts">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="dishonoredDotoAllCollectibles" mnemonicParsing="false" text="All Collectibles">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="dishonoredDotoAA" mnemonicParsing="false" text="All Achievements">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="crashSubGameBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3">
+         <children>
+            <Label text="FIlter by game">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="crash1Button" mnemonicParsing="false" prefHeight="30.0" prefWidth="114.0" text="Crash Bandicoot">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets left="3.0" top="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="crashTwoButton" mnemonicParsing="false" text="Crash Bandicoot 2">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="crashThreeButton" mnemonicParsing="false" text="Crash Bandicoot 3">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="crashFourButton" mnemonicParsing="false" text="Crash Bandicoot 4">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="dishonoredSubGameBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3">
+         <children>
+            <Label text="FIlter by game">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </Label>
+            <RadioButton fx:id="dishonoredOneButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="114.0" text="Dishonored">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets left="3.0" top="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="dishonoredTwoButton" mnemonicParsing="false" text="Dishonored 2">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="dishonoredDotoButton" mnemonicParsing="false" text="Dishonored: Death of the Outsider">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
    </children>
 </GridPane>
