@@ -3,6 +3,8 @@ package com.example.runsearcher;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import com.opencsv.exceptions.CsvException;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -123,7 +125,8 @@ public class Controller {
     private RadioButton sekiroShura;
     @FXML
     private RadioButton sekiroIS;
-    @FXML private RadioButton sekiroReturn;
+    @FXML
+    private RadioButton sekiroReturn;
     @FXML
     private RadioButton sekiroPuri;
     @FXML
@@ -157,138 +160,348 @@ public class Controller {
     @FXML
     private HBox eldenRingRestrictionsBox;
 
-    @FXML private HBox residentEvilSubGameBox;
-    @FXML private RadioButton residentEvil0Button;
-    @FXML private HBox residentEvil0CategoryBox;
-    @FXML private HBox residentEvil0RestrictionsBox;
-    @FXML private RadioButton residentEvil0Any;
-    @FXML private RadioButton residentEvil0HardAny;
-    @FXML private RadioButton residentEvil0ExtraModes;
-    @FXML private RadioButton residentEvil0NGPlus;
+    @FXML
+    private HBox residentEvilSubGameBox;
+    @FXML
+    private RadioButton residentEvil0Button;
+    @FXML
+    private HBox residentEvil0CategoryBox;
+    @FXML
+    private HBox residentEvil0RestrictionsBox;
+    @FXML
+    private RadioButton residentEvil0Any;
+    @FXML
+    private RadioButton residentEvil0HardAny;
+    @FXML
+    private RadioButton residentEvil0ExtraModes;
+    @FXML
+    private RadioButton residentEvil0NGPlus;
 
-    @FXML private RadioButton residentEvil1Button;
-    @FXML private RadioButton residentEvil1Normal;
-    @FXML private RadioButton residentEvil1Hard;
-    @FXML private RadioButton residentEvil1RealSurvivor;
-    @FXML private RadioButton residentEvil1InvisibleEnemy;
-    @FXML private RadioButton residentEvil1Original;
-    @FXML private RadioButton residentEvil1Arrange;
-    @FXML private HBox residentEvil1CategoryBox;
-    @FXML private HBox residentEvil1RestrictionsBox;
+    @FXML
+    private RadioButton residentEvil1Button;
+    @FXML
+    private RadioButton residentEvil1Normal;
+    @FXML
+    private RadioButton residentEvil1Hard;
+    @FXML
+    private RadioButton residentEvil1RealSurvivor;
+    @FXML
+    private RadioButton residentEvil1InvisibleEnemy;
+    @FXML
+    private RadioButton residentEvil1Original;
+    @FXML
+    private RadioButton residentEvil1Arrange;
+    @FXML
+    private HBox residentEvil1CategoryBox;
+    @FXML
+    private HBox residentEvil1RestrictionsBox;
 
-    @FXML private RadioButton residentEvil2Button;
-    @FXML private HBox residentEvil2CategoryBox;
-    @FXML private HBox residentEvil2RestrictionsBox;
-    @FXML private RadioButton residentEvil2Any;
-    @FXML private RadioButton residentEvil2Hard;
-    @FXML private RadioButton residentEvil2True;
-    @FXML private RadioButton residentEvil2AllScenarios;
-    @FXML private RadioButton residentEvil2ExtraMode;
-    @FXML private RadioButton residentEvil2Normal;
-    @FXML private RadioButton residentEvil3Button;
-    @FXML private HBox residentEvil3CategoryBox;
-    @FXML private HBox residentEvil3RestrictionsBox;
+    @FXML
+    private RadioButton residentEvil2Button;
+    @FXML
+    private HBox residentEvil2CategoryBox;
+    @FXML
+    private HBox residentEvil2RestrictionsBox;
+    @FXML
+    private RadioButton residentEvil2Any;
+    @FXML
+    private RadioButton residentEvil2Hard;
+    @FXML
+    private RadioButton residentEvil2True;
+    @FXML
+    private RadioButton residentEvil2AllScenarios;
+    @FXML
+    private RadioButton residentEvil2ExtraMode;
+    @FXML
+    private RadioButton residentEvil2Normal;
+    @FXML
+    private RadioButton residentEvil3Button;
+    @FXML
+    private HBox residentEvil3CategoryBox;
+    @FXML
+    private HBox residentEvil3RestrictionsBox;
 
-    @FXML private RadioButton residentEvil3Hard;
-    @FXML private RadioButton residentEvil3Nightmare;
-    @FXML private RadioButton residentEvil3Inferno;
-    @FXML private RadioButton residentEvil3Nemesis;
-    @FXML private RadioButton residentEvil3AllBosses;
+    @FXML
+    private RadioButton residentEvil3Hard;
+    @FXML
+    private RadioButton residentEvil3Nightmare;
+    @FXML
+    private RadioButton residentEvil3Inferno;
+    @FXML
+    private RadioButton residentEvil3Nemesis;
+    @FXML
+    private RadioButton residentEvil3AllBosses;
 
-    @FXML private RadioButton residentEvil4Button;
-    @FXML private HBox residentEvil4CategoryBox;
-    @FXML private HBox residentEvil4RestrictionsBox;
-    @FXML private RadioButton residentEvil4Pro;
-    @FXML private RadioButton residentEvil4Extra;
-    @FXML private RadioButton residentEvil4NoMerchant;
+    @FXML
+    private RadioButton residentEvil4Button;
+    @FXML
+    private HBox residentEvil4CategoryBox;
+    @FXML
+    private HBox residentEvil4RestrictionsBox;
+    @FXML
+    private RadioButton residentEvil4Pro;
+    @FXML
+    private RadioButton residentEvil4Extra;
+    @FXML
+    private RadioButton residentEvil4NoMerchant;
 
-    @FXML private RadioButton residentEvil7Button;
-    @FXML private HBox residentEvil7CategoryBox;
-    @FXML private HBox residentEvil7RestrictionsBox;
-    @FXML private RadioButton residentEvil7Normal;
-    @FXML private RadioButton residentEvil7Madhouse;
-    @FXML private RadioButton residentEvil7Extra;
-    @FXML private RadioButton residentEvilVillageButton;
-    @FXML private HBox residentEvilVillageCategoryBox;
-    @FXML private HBox residentEvilVillageRestrictionsBox;
-    @FXML private RadioButton residentEvilVillageHard;
-    @FXML private RadioButton residentEvilVillageVillage;
-    @FXML private RadioButton residentEvilVillageDuke;
-    @FXML private RadioButton residentEvilVillageExtra;
-    @FXML private RadioButton residentEvilSurvivorButton;
-    @FXML private HBox residentEvilSurvivorCategoryBox;
-    @FXML private HBox residentEvilSurvivorRestrictionsBox;
-    @FXML private RadioButton residentEvilSurvivorAny;
-    @FXML private RadioButton residentEvilSurvivorS;
-    @FXML private RadioButton crash1Button;
-    @FXML private RadioButton crashTwoButton;
-    @FXML private RadioButton crashThreeButton;
-    @FXML private RadioButton crashFourButton;
-    @FXML private HBox crashSubGameBox;
-    @FXML private HBox crashCategoryBox;
-    @FXML private HBox crashRestrictionsBox;
-    @FXML private RadioButton crashAny;
-    @FXML private RadioButton crashSecretEnding;
-    @FXML private RadioButton crashAllLevels;
-    @FXML private RadioButton crashAllGems;
-    @FXML private RadioButton crash105;
-    @FXML private HBox crashTwoCategoryBox;
-    @FXML private HBox crashTwoRestrictionsBox;
-    @FXML private RadioButton crashTwoAny;
-    @FXML private RadioButton crashTwoAllLevels;
-    @FXML private RadioButton crashTwoAllGems;
-    @FXML private RadioButton crashTwo102;
-    @FXML private HBox crashThreeCategoryBox;
-    @FXML private HBox crashThreeRestrictionsBox;
+    @FXML
+    private RadioButton residentEvil7Button;
+    @FXML
+    private HBox residentEvil7CategoryBox;
+    @FXML
+    private HBox residentEvil7RestrictionsBox;
+    @FXML
+    private RadioButton residentEvil7Normal;
+    @FXML
+    private RadioButton residentEvil7Madhouse;
+    @FXML
+    private RadioButton residentEvil7Extra;
+    @FXML
+    private RadioButton residentEvilVillageButton;
+    @FXML
+    private HBox residentEvilVillageCategoryBox;
+    @FXML
+    private HBox residentEvilVillageRestrictionsBox;
+    @FXML
+    private RadioButton residentEvilVillageHard;
+    @FXML
+    private RadioButton residentEvilVillageVillage;
+    @FXML
+    private RadioButton residentEvilVillageDuke;
+    @FXML
+    private RadioButton residentEvilVillageExtra;
+    @FXML
+    private RadioButton residentEvilSurvivorButton;
+    @FXML
+    private HBox residentEvilSurvivorCategoryBox;
+    @FXML
+    private HBox residentEvilSurvivorRestrictionsBox;
+    @FXML
+    private RadioButton residentEvilSurvivorAny;
+    @FXML
+    private RadioButton residentEvilSurvivorS;
+    @FXML
+    private RadioButton crash1Button;
+    @FXML
+    private RadioButton crashTwoButton;
+    @FXML
+    private RadioButton crashThreeButton;
+    @FXML
+    private RadioButton crashFourButton;
+    @FXML
+    private HBox crashSubGameBox;
+    @FXML
+    private HBox crashCategoryBox;
+    @FXML
+    private HBox crashRestrictionsBox;
+    @FXML
+    private RadioButton crashAny;
+    @FXML
+    private RadioButton crashSecretEnding;
+    @FXML
+    private RadioButton crashAllLevels;
+    @FXML
+    private RadioButton crashAllGems;
+    @FXML
+    private RadioButton crash105;
+    @FXML
+    private HBox crashTwoCategoryBox;
+    @FXML
+    private HBox crashTwoRestrictionsBox;
+    @FXML
+    private RadioButton crashTwoAny;
+    @FXML
+    private RadioButton crashTwoAllLevels;
+    @FXML
+    private RadioButton crashTwoAllGems;
+    @FXML
+    private RadioButton crashTwo102;
+    @FXML
+    private HBox crashThreeCategoryBox;
+    @FXML
+    private HBox crashThreeRestrictionsBox;
 
-    @FXML private RadioButton crashThreeAny;
-    @FXML private RadioButton crashThree108;
-    @FXML private HBox crashFourCategoryBox;
-    @FXML private HBox crashFourRestrictionsBox;
+    @FXML
+    private RadioButton crashThreeAny;
+    @FXML
+    private RadioButton crashThree108;
+    @FXML
+    private HBox crashFourCategoryBox;
+    @FXML
+    private HBox crashFourRestrictionsBox;
 
-    @FXML private RadioButton crashFourAny;
-    @FXML private RadioButton crashFourAllTimelines;
-    @FXML private RadioButton crashFourAllClearGems;
-    @FXML private RadioButton crashFour106;
-    @FXML private HBox dishonoredSubGameBox;
-    @FXML private HBox dishonoredCategoryBox;
-    @FXML private HBox dishonoredRestrictionsBox;
+    @FXML
+    private RadioButton crashFourAny;
+    @FXML
+    private RadioButton crashFourAllTimelines;
+    @FXML
+    private RadioButton crashFourAllClearGems;
+    @FXML
+    private RadioButton crashFour106;
+    @FXML
+    private HBox dishonoredSubGameBox;
+    @FXML
+    private HBox dishonoredCategoryBox;
+    @FXML
+    private HBox dishonoredRestrictionsBox;
 
-    @FXML private RadioButton dishonoredOneButton;
-    @FXML private RadioButton dishonoredTwoButton;
-    @FXML private RadioButton dishonoredDotoButton;
-    @FXML private RadioButton dishonoredAny;
-    @FXML private RadioButton dishonoredDLC;
-    @FXML private RadioButton dishonoredAllMissions;
-    @FXML private RadioButton dishonoredAllCollectibles;
-    @FXML private HBox dishonoredTwoCategoryBox;
-    @FXML private HBox dishonoredTwoRestrictionsBox;
+    @FXML
+    private RadioButton dishonoredOneButton;
+    @FXML
+    private RadioButton dishonoredTwoButton;
+    @FXML
+    private RadioButton dishonoredDotoButton;
+    @FXML
+    private RadioButton dishonoredAny;
+    @FXML
+    private RadioButton dishonoredDLC;
+    @FXML
+    private RadioButton dishonoredAllMissions;
+    @FXML
+    private RadioButton dishonoredAllCollectibles;
+    @FXML
+    private HBox dishonoredTwoCategoryBox;
+    @FXML
+    private HBox dishonoredTwoRestrictionsBox;
 
-    @FXML private RadioButton dishonoredTwoAny;
-    @FXML private RadioButton dishonoredTwoAllCollectibles;
-    @FXML private HBox dishonoredDotoCategoryBox;
-    @FXML private HBox dishonoredDotoRestrictionsBox;
+    @FXML
+    private RadioButton dishonoredTwoAny;
+    @FXML
+    private RadioButton dishonoredTwoAllCollectibles;
+    @FXML
+    private HBox dishonoredDotoCategoryBox;
+    @FXML
+    private HBox dishonoredDotoRestrictionsBox;
 
-    @FXML private RadioButton dishonoredDotoAny;
-    @FXML private RadioButton dishonoredDotoAllContracts;
-    @FXML private RadioButton dishonoredDotoAllCollectibles;
-    @FXML private RadioButton dishonoredDotoAA;
-    @FXML private HBox zeldaCategoryBox;
-    @FXML private HBox zeldaRestrictionsBox;
-    @FXML private HBox zeldaEvilSubGameBox;
-    @FXML private HBox cupheadCategoryBox;
-    @FXML private HBox cupheadRestrictionsBox;
-    @FXML private HBox hollowKnightCategoryBox;
-    @FXML private HBox hollowKnightRestrictionsBox;
-    @FXML private HBox celesteCategoryBox;
-    @FXML private HBox celesteRestrictionsBox;
-    @FXML private HBox hadesCategoryBox;
-    @FXML private HBox hadesRestrictionsBox;
-    @FXML private HBox blasphemousCategoryBox;
-    @FXML private HBox blasphemousRestrictionsBox;
-    @FXML private HBox multipleCategoryBox;
-    @FXML private HBox multipleRestrictionsBox;
-
+    @FXML
+    private RadioButton dishonoredDotoAny;
+    @FXML
+    private RadioButton dishonoredDotoAllContracts;
+    @FXML
+    private RadioButton dishonoredDotoAllCollectibles;
+    @FXML
+    private RadioButton dishonoredDotoAA;
+    @FXML
+    private HBox zeldaSubGameBox;
+    @FXML
+    private RadioButton zeldaBotwButton;
+    @FXML
+    private RadioButton zeldaTotkButton;
+    @FXML
+    private HBox zeldaBotwCategoryBox;
+    @FXML
+    private RadioButton zeldaBotwAny;
+    @FXML
+    private RadioButton zeldaBotwAllSlate;
+    @FXML
+    private RadioButton zeldaBotwAllBeasts;
+    @FXML
+    private RadioButton zeldaBotwAllBeatsChampions;
+    @FXML
+    private RadioButton zeldaBotwABMBVanilla;
+    @FXML
+    private RadioButton zeldaBotwABMBDLC;
+    @FXML
+    private HBox zeldaBotwRestrictionsBox;
+    @FXML
+    private HBox zeldaTotkCategoryBox;
+    @FXML
+    private RadioButton zeldaTotkAny;
+    @FXML
+    private RadioButton zeldaTotkAllAbilities;
+    @FXML
+    private RadioButton zeldaTotkAllGeoglyphs;
+    @FXML
+    private RadioButton zeldaTotkAllDungeons;
+    @FXML
+    private RadioButton zeldaTotkTrueEnding;
+    @FXML
+    private RadioButton zeldaTotkABMB;
+    @FXML
+    private HBox zeldaTotkRestrictionsBox;
+    @FXML
+    private HBox cupheadCategoryBox;
+    @FXML
+    private HBox cupheadRestrictionsBox;
+    @FXML
+    private RadioButton cupheadAny;
+    @FXML
+    private RadioButton cupheadAllFlags;
+    @FXML
+    private RadioButton cupheadAllIsles;
+    @FXML
+    private RadioButton cupheadAllIslesFull;
+    @FXML
+    private RadioButton cupheadDLCAny;
+    @FXML
+    private RadioButton cupheadDLCFull;
+    @FXML
+    private RadioButton cupheadExpertAny;
+    @FXML
+    private RadioButton cupheadExpertAllFlags;
+    @FXML
+    private RadioButton cupheadExpertAllIsles;
+    @FXML
+    private RadioButton cupheadExpertAllIslesFull;
+    @FXML
+    private RadioButton cupheadExpertDLCAny;
+    @FXML
+    private RadioButton cupheadExpertDLCFull;
+    @FXML
+    private HBox hollowKnightCategoryBox;
+    @FXML
+    private HBox hollowKnightRestrictionsBox;
+    @FXML
+    private RadioButton hollowKnightAny;
+    @FXML
+    private RadioButton hollowKnightAllSkills;
+    @FXML
+    private RadioButton hollowKnightTrueEnding;
+    @FXML
+    private RadioButton hollowKnightAMGB;
+    @FXML
+    private RadioButton hollowKnightLow;
+    @FXML
+    private RadioButton hollowKnight112;
+    @FXML
+    private RadioButton hollowKnightPantheon;
+    @FXML
+    private HBox celesteCategoryBox;
+    @FXML
+    private HBox celesteRestrictionsBox;
+    @FXML
+    private RadioButton celesteAny;
+    @FXML
+    private RadioButton celesteAllRedBerries;
+    @FXML
+    private RadioButton celesteAllBSides;
+    @FXML
+    private RadioButton celesteTrueEnding;
+    @FXML
+    private RadioButton celesteAllChaptersAndSides;
+    @FXML
+    private HBox hadesCategoryBox;
+    @FXML
+    private HBox hadesRestrictionsBox;
+    @FXML
+    private RadioButton hadesAny;
+    @FXML
+    private RadioButton hadesEM4;
+    @FXML
+    private RadioButton hadesGodOnly;
+    @FXML
+    private HBox blasphemousCategoryBox;
+    @FXML
+    private HBox blasphemousRestrictionsBox;
+    @FXML
+    private RadioButton blasphemousAny;
+    @FXML
+    private RadioButton blasphemousEndingA;
+    @FXML
+    private RadioButton blasphemousNGPlus;
+    @FXML
+    private RadioButton blasphemousLastSorrow;
     @FXML
     private TableView<Run> tableView;
     @FXML
@@ -302,7 +515,6 @@ public class Controller {
     @FXML
     private TableColumn<Run, String> linkColumn;
     private List<RadioButton> gameButtons;
-
 
 
     public void initialize() {
@@ -319,8 +531,6 @@ public class Controller {
                 crashRadioButton, dishonoredRadioButton, zeldaRadioButton,
                 cupheadRadioButton, hollowKnightRadioButton, hadesRadioButton,
                 celesteRadioButton, blasphemousRadioButton, multipleRadioButton));
-
-
 
 
         tableView.getSelectionModel().setCellSelectionEnabled(true);
@@ -485,103 +695,372 @@ public class Controller {
                 new SubGameFilter(filteredByGame, dishonoredDotoButton, dishonoredSubGames, dishonoredDotoCategoryBox, dishonoredDotoRestrictionsBox)
         );
 
+        ArrayList<RadioButton> zeldaSubGames = new ArrayList<>(
+                List.of(zeldaBotwButton, zeldaTotkButton));
+
+        zeldaRadioButton.selectedProperty().addListener(
+                new SubGameBox(filteredByGame, gameButtons, zeldaRadioButton, zeldaSubGames, zeldaSubGameBox));
+
+        zeldaBotwButton.selectedProperty().addListener(
+                new SubGameFilter(filteredByGame, zeldaBotwButton, zeldaSubGames, zeldaBotwCategoryBox, zeldaBotwRestrictionsBox)
+        );
+        zeldaTotkButton.selectedProperty().addListener(
+                new SubGameFilter(filteredByGame, zeldaTotkButton, zeldaSubGames, zeldaTotkCategoryBox, zeldaTotkRestrictionsBox)
+        );
+
+        cupheadRadioButton.selectedProperty().addListener(
+                new GameFilter(filteredByGame, cupheadRadioButton, gameButtons,
+                        cupheadCategoryBox, cupheadRestrictionsBox));
+        hollowKnightRadioButton.selectedProperty().addListener(
+                new GameFilter(filteredByGame, hollowKnightRadioButton, gameButtons,
+                        hollowKnightCategoryBox, hollowKnightRestrictionsBox));
+        hadesRadioButton.selectedProperty().addListener(
+                new GameFilter(filteredByGame, hadesRadioButton, gameButtons,
+                        hadesCategoryBox, hadesRestrictionsBox));
+        celesteRadioButton.selectedProperty().addListener(
+                new GameFilter(filteredByGame, celesteRadioButton, gameButtons,
+                        celesteCategoryBox, celesteRestrictionsBox));
+        blasphemousRadioButton.selectedProperty().addListener(
+                new GameFilter(filteredByGame, blasphemousRadioButton, gameButtons,
+                        blasphemousCategoryBox, blasphemousRestrictionsBox));
+
+        multipleRadioButton.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                if (t1) {
+                    for (RadioButton button : gameButtons) {
+                        if (button != multipleRadioButton) {
+                            button.setSelected(false);
+                        }
+                    }
+                }
 
 
+                filteredByGame.setPredicate(run -> {
+                    if (!multipleRadioButton.isSelected()) {
+                        return true;
+                    }
+                    if (run.getCategory().toLowerCase()
+                            .replaceAll("[’',()]", "").replaceAll("/", "").matches(".*(trilogy|marathon|soulsborne).*")) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
+            }
 
-//        zeldaRadioButton.selectedProperty().addListener(
-//                new GameFilter(filteredByGame, zeldaRadioButton, gameButtons,
-//                        zeldaCategoryBox, zeldaRestrictionsBox));
-//        cupheadRadioButton.selectedProperty().addListener(
-//                new GameFilter(filteredByGame, cupheadRadioButton, gameButtons,
-//                        cupheadCategoryBox, cupheadRestrictionsBox));
-//        hollowKnightRadioButton.selectedProperty().addListener(
-//                new GameFilter(filteredByGame, hollowKnightRadioButton, gameButtons,
-//                        hollowKnightCategoryBox, hollowKnightRestrictionsBox));
-//        hadesRadioButton.selectedProperty().addListener(
-//                new GameFilter(filteredByGame, hadesRadioButton, gameButtons,
-//                        hadesCategoryBox, hadesRestrictionsBox));
-//        celesteRadioButton.selectedProperty().addListener(
-//                new GameFilter(filteredByGame, celesteRadioButton, gameButtons,
-//                        celesteCategoryBox, celesteRestrictionsBox));
-//        blasphemousRadioButton.selectedProperty().addListener(
-//                new GameFilter(filteredByGame, blasphemousRadioButton, gameButtons,
-//                        blasphemousCategoryBox, blasphemousRestrictionsBox));
-//        multipleRadioButton.selectedProperty().addListener(
-//                new GameFilter(filteredByGame, multipleRadioButton, gameButtons,
-//                        multipleCategoryBox, multipleRestrictionsBox));
+        });
 
 
         //Category Filters
 
 
-        ArrayList<RadioButton> demonsSoulsCategories = new ArrayList<>(List.of(demonsSoulsAny, demonsSoulsAB, demonsSoulsAA));
-        for (RadioButton button : demonsSoulsCategories) {
-            button.selectedProperty().addListener(new CategoryFilter(filteredByGame, demonsSoulsRadioButton, button, demonsSoulsRestrictionsBox, demonsSoulsCategories));
+        ArrayList<RadioButton> demonsSoulsCategories = new ArrayList<>(
+                List.of(demonsSoulsAny, demonsSoulsAB, demonsSoulsAA));
+        for (
+                RadioButton button : demonsSoulsCategories) {
+            button.selectedProperty().addListener(new CategoryFilter(filteredByGame, demonsSoulsRadioButton, button,
+                    demonsSoulsRestrictionsBox, demonsSoulsCategories));
         }
 
-        ArrayList<RadioButton> darkSoulsCategories = new ArrayList<>(List.of(darkSoulsAny, darkSoulsAMGB, darkSoulsAB, darkSoulsAA));
-        for (RadioButton button : darkSoulsCategories) {
-            button.selectedProperty().addListener(new CategoryFilter(filteredByGame, darkSoulsRadioButton, button, darkSoulsRestrictionsBox, darkSoulsCategories));
+        ArrayList<RadioButton> darkSoulsCategories = new ArrayList<>(
+                List.of(darkSoulsAny, darkSoulsAMGB, darkSoulsAB, darkSoulsAA));
+        for (
+                RadioButton button : darkSoulsCategories) {
+            button.selectedProperty().addListener(new CategoryFilter(filteredByGame, darkSoulsRadioButton, button,
+                    darkSoulsRestrictionsBox, darkSoulsCategories));
         }
 
-        ArrayList<RadioButton> darkSoulsTwoCategories = new ArrayList<>(List.of(darkSoulsTwoAny, darkSoulsTwoAMGB, darkSoulsTwoAB, darkSoulsTwoAA));
-        for (RadioButton button : darkSoulsTwoCategories) {
-            button.selectedProperty().addListener(new CategoryFilter(filteredByGame, darkSoulsTwoRadioButton, button, darkSoulsTwoRestrictionsBox, darkSoulsTwoCategories));
+        ArrayList<RadioButton> darkSoulsTwoCategories = new ArrayList<>(
+                List.of(darkSoulsTwoAny, darkSoulsTwoAMGB, darkSoulsTwoAB, darkSoulsTwoAA));
+        for (
+                RadioButton button : darkSoulsTwoCategories) {
+            button.selectedProperty().addListener(new CategoryFilter(filteredByGame, darkSoulsTwoRadioButton, button,
+                    darkSoulsTwoRestrictionsBox, darkSoulsTwoCategories));
         }
 
-        ArrayList<RadioButton> darkSoulsThreeCategories = new ArrayList<>(List.of(darkSoulsThreeAny, darkSoulsThreeAMGB, darkSoulsThreeAB, darkSoulsThreeAA));
-        for (RadioButton button : darkSoulsThreeCategories) {
-            button.selectedProperty().addListener(new CategoryFilter(filteredByGame, darkSoulsThreeRadioButton, button, darkSoulsThreeRestrictionsBox, darkSoulsThreeCategories));
+        ArrayList<RadioButton> darkSoulsThreeCategories = new ArrayList<>(
+                List.of(darkSoulsThreeAny, darkSoulsThreeAMGB, darkSoulsThreeAB, darkSoulsThreeAA));
+        for (
+                RadioButton button : darkSoulsThreeCategories) {
+            button.selectedProperty().addListener(new CategoryFilter(filteredByGame, darkSoulsThreeRadioButton, button,
+                    darkSoulsThreeRestrictionsBox, darkSoulsThreeCategories));
         }
 
-        ArrayList<RadioButton> bloodborneCategories = new ArrayList<>(List.of(bloodborneAny, bloodborneAMGB, bloodborneAB, bloodborneABC, bloodborneAA));
-        for (RadioButton button : bloodborneCategories) {
-            button.selectedProperty().addListener(new CategoryFilter(filteredByGame, bloodborneRadioButton, button, bloodborneRestrictionsBox, bloodborneCategories));
+        ArrayList<RadioButton> bloodborneCategories = new ArrayList<>(
+                List.of(bloodborneAny, bloodborneAMGB, bloodborneAB, bloodborneABC, bloodborneAA));
+        for (
+                RadioButton button : bloodborneCategories) {
+            button.selectedProperty().addListener(new CategoryFilter(filteredByGame, bloodborneRadioButton, button,
+                    bloodborneRestrictionsBox, bloodborneCategories));
         }
 
-        ArrayList<RadioButton> sekiroCategories = new ArrayList<>(List.of(sekiroShura, sekiroIS, sekiroReturn, sekiroPuri, sekiroAM, sekiroABM, sekiroABMB, sekiroMJ, sekiroAMG, sekiroAA, sekiroAllEnemy));
-        for (RadioButton button : sekiroCategories) {
-            button.selectedProperty().addListener(new CategoryFilter(filteredByGame, sekiroRadioButton, button, sekiroRestrictionsBox, sekiroCategories));
+        ArrayList<RadioButton> sekiroCategories = new ArrayList<>(
+                List.of(sekiroShura, sekiroIS, sekiroReturn, sekiroPuri, sekiroAM, sekiroABM, sekiroABMB, sekiroMJ, sekiroAMG, sekiroAA, sekiroAllEnemy));
+        for (
+                RadioButton button : sekiroCategories) {
+            button.selectedProperty().addListener(new CategoryFilter(filteredByGame, sekiroRadioButton, button,
+                    sekiroRestrictionsBox, sekiroCategories));
         }
-        ArrayList<RadioButton> eldenRingCategories = new ArrayList<>(List.of(eldenRingAny, eldenRingAGR, eldenRingAR, eldenRingAB, eldenRingAA));
-        for (RadioButton button : eldenRingCategories) {
+
+        ArrayList<RadioButton> eldenRingCategories = new ArrayList<>(
+                List.of(eldenRingAny, eldenRingAGR, eldenRingAR, eldenRingAB, eldenRingAA));
+        for (
+                RadioButton button : eldenRingCategories) {
             button.selectedProperty().addListener(new CategoryFilter(filteredByGame, eldenRingRadioButton, button, eldenRingRestrictionsBox, eldenRingCategories));
         }
 
+        ArrayList<RadioButton> residentEvil0Categories = new ArrayList<>(
+                List.of(residentEvil0Any, residentEvil0HardAny, residentEvil0HardAny, residentEvil0NGPlus));
+        for (
+                RadioButton button : residentEvil0Categories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, residentEvil0Button, button,
+                            residentEvil0RestrictionsBox, residentEvil0Categories));
+        }
 
-        searchBox.textProperty().addListener((observable, oldValue, newValue) -> {
-            filteredByText.setPredicate(run -> {
-                if (newValue == null || newValue.isEmpty()) {
-                    return true;
-                }
+        ArrayList<RadioButton> residentEvil1Categories = new ArrayList<>(
+                List.of(residentEvil1Normal, residentEvil1Hard, residentEvil1RealSurvivor,
+                        residentEvil1InvisibleEnemy, residentEvil1Original, residentEvil1Arrange));
+        for (
+                RadioButton button : residentEvil1Categories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, residentEvil1Button, button,
+                            residentEvil1RestrictionsBox, residentEvil1Categories));
+        }
 
-                String[] values = newValue.toLowerCase().split(" ");
-                List<String> wordList = Arrays.stream(values)
-                        .map(s -> s
+        ArrayList<RadioButton> residentEvil2Categories = new ArrayList<>(
+                List.of(residentEvil2Any, residentEvil2Hard, residentEvil2True,
+                        residentEvil2AllScenarios, residentEvil2ExtraMode, residentEvil2Normal));
+        for (
+                RadioButton button : residentEvil2Categories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, residentEvil2Button, button,
+                            residentEvil2RestrictionsBox, residentEvil2Categories));
+        }
+
+        ArrayList<RadioButton> residentEvil3Categories = new ArrayList<>(
+                List.of(residentEvil3Hard, residentEvil3Nightmare, residentEvil3Inferno,
+                        residentEvil3Nemesis, residentEvil3AllBosses));
+        for (
+                RadioButton button : residentEvil3Categories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, residentEvil3Button, button,
+                            residentEvil3RestrictionsBox, residentEvil3Categories));
+        }
+
+        ArrayList<RadioButton> residentEvil4Categories = new ArrayList<>(
+                List.of(residentEvil4Pro, residentEvil4Extra, residentEvil4NoMerchant));
+        for (
+                RadioButton button : residentEvil4Categories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, residentEvil4Button, button,
+                            residentEvil4RestrictionsBox, residentEvil4Categories));
+        }
+
+        ArrayList<RadioButton> residentEvil7Categories = new ArrayList<>(
+                List.of(residentEvil7Normal, residentEvil7Madhouse, residentEvil7Extra));
+        for (
+                RadioButton button : residentEvil7Categories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, residentEvil7Button, button,
+                            residentEvil7RestrictionsBox, residentEvil7Categories));
+        }
+
+        ArrayList<RadioButton> residentEvilVillageCategories = new ArrayList<>(
+                List.of(residentEvilVillageHard, residentEvilVillageVillage,
+                        residentEvilVillageDuke, residentEvilVillageExtra));
+        for (
+                RadioButton button : residentEvilVillageCategories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, residentEvilVillageButton, button,
+                            residentEvilVillageRestrictionsBox, residentEvilVillageCategories));
+        }
+
+        ArrayList<RadioButton> residentEvilSurvivorCategories = new ArrayList<>(
+                List.of(residentEvilSurvivorAny, residentEvilSurvivorS));
+        for (
+                RadioButton button : residentEvilSurvivorCategories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, residentEvilSurvivorButton, button,
+                            residentEvilSurvivorRestrictionsBox, residentEvilSurvivorCategories));
+        }
+
+        ArrayList<RadioButton> crashOneCategories = new ArrayList<>(
+                List.of(crashAny, crashSecretEnding, crashAllLevels,
+                        crashAllGems, crash105));
+        for (
+                RadioButton button : crashOneCategories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, crash1Button, button,
+                            crashRestrictionsBox, crashOneCategories));
+        }
+
+        ArrayList<RadioButton> crashTwoCategories = new ArrayList<>(
+                List.of(crashTwoAny, crashTwoAllLevels, crashTwoAllGems, crashTwo102));
+        for (
+                RadioButton button : crashTwoCategories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, crashTwoButton, button,
+                            crashTwoRestrictionsBox, crashTwoCategories));
+        }
+
+        ArrayList<RadioButton> crashThreeCategories = new ArrayList<>(
+                List.of(crashThreeAny, crashThree108));
+        for (
+                RadioButton button : crashThreeCategories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, crashThreeButton, button,
+                            crashThreeRestrictionsBox, crashThreeCategories));
+        }
+
+        ArrayList<RadioButton> crashFourCategories = new ArrayList<>(
+                List.of(crashFourAny, crashFourAllTimelines, crashFourAllClearGems, crashFour106));
+        for (
+                RadioButton button : crashFourCategories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, crashFourButton, button,
+                            crashFourRestrictionsBox, crashFourCategories));
+        }
+
+        ArrayList<RadioButton> dishonoredCategories = new ArrayList<>(
+                List.of(dishonoredAny, dishonoredDLC, dishonoredAllMissions, dishonoredAllCollectibles));
+        for (
+                RadioButton button : dishonoredCategories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, dishonoredOneButton, button,
+                            dishonoredRestrictionsBox, dishonoredCategories));
+        }
+
+        ArrayList<RadioButton> dishonoredTwoCategories = new ArrayList<>(
+                List.of(dishonoredTwoAny, dishonoredTwoAllCollectibles));
+        for (
+                RadioButton button : dishonoredTwoCategories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, dishonoredTwoButton, button,
+                            dishonoredTwoRestrictionsBox, dishonoredTwoCategories));
+        }
+
+        ArrayList<RadioButton> dishonoredDotoCategories = new ArrayList<>(
+                List.of(dishonoredDotoAny, dishonoredDotoAllContracts,
+                        dishonoredDotoAllCollectibles, dishonoredDotoAA));
+        for (
+                RadioButton button : dishonoredDotoCategories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, dishonoredDotoButton, button,
+                            dishonoredDotoRestrictionsBox, dishonoredDotoCategories));
+        }
+
+        ArrayList<RadioButton> zeldaBotwCategories = new ArrayList<>(
+                List.of(zeldaBotwAny, zeldaBotwAllSlate, zeldaBotwAllBeasts,
+                        zeldaBotwAllBeatsChampions, zeldaBotwABMBVanilla, zeldaBotwABMBDLC));
+        for (
+                RadioButton button : zeldaBotwCategories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, zeldaBotwButton, button,
+                            zeldaBotwRestrictionsBox, zeldaBotwCategories));
+        }
+
+        ArrayList<RadioButton> zeldaTotkCategories = new ArrayList<>(
+                List.of(zeldaTotkAny, zeldaTotkAllAbilities, zeldaTotkAllGeoglyphs,
+                        zeldaTotkAllDungeons, zeldaTotkTrueEnding, zeldaTotkABMB));
+        for (
+                RadioButton button : zeldaTotkCategories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, zeldaTotkButton, button,
+                            zeldaTotkRestrictionsBox, zeldaTotkCategories));
+        }
+
+        ArrayList<RadioButton> cupheadCategories = new ArrayList<>(
+                List.of(cupheadAny, cupheadAllFlags, cupheadAllIsles,
+                        cupheadAllIslesFull, cupheadDLCAny, cupheadDLCFull,
+                        cupheadExpertAny, cupheadExpertAllFlags, cupheadExpertAllIsles,
+                        cupheadExpertAllIslesFull, cupheadExpertDLCAny, cupheadExpertDLCFull));
+        for (
+                RadioButton button : cupheadCategories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, cupheadRadioButton, button,
+                            cupheadRestrictionsBox, cupheadCategories));
+        }
+
+        ArrayList<RadioButton> hollowKnightCategories = new ArrayList<>(
+                List.of(hollowKnightAny, hollowKnightAllSkills, hollowKnightTrueEnding,
+                        hollowKnightAMGB, hollowKnightLow, hollowKnight112, hollowKnightPantheon));
+        for (
+                RadioButton button : hollowKnightCategories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, hollowKnightRadioButton, button,
+                            hollowKnightRestrictionsBox, hollowKnightCategories));
+        }
+
+        ArrayList<RadioButton> celesteCategories = new ArrayList<>(
+                List.of(celesteAny, celesteAllRedBerries, celesteAllBSides,
+                        celesteTrueEnding, celesteAllChaptersAndSides));
+        for (
+                RadioButton button : celesteCategories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, celesteRadioButton, button,
+                            celesteRestrictionsBox, celesteCategories));
+        }
+
+        ArrayList<RadioButton> hadesCategories = new ArrayList<>(
+                List.of(hadesAny, hadesEM4, hadesGodOnly));
+        for (
+                RadioButton button : hadesCategories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, hadesRadioButton, button,
+                            hadesRestrictionsBox, hadesCategories));
+        }
+
+        ArrayList<RadioButton> blasphemousCategories = new ArrayList<>(
+                List.of(blasphemousAny, blasphemousEndingA, blasphemousNGPlus,
+                        blasphemousLastSorrow));
+        for (
+                RadioButton button : blasphemousCategories) {
+            button.selectedProperty().addListener(
+                    new CategoryFilter(filteredByGame, blasphemousRadioButton, button,
+                            blasphemousRestrictionsBox, blasphemousCategories));
+        }
+
+        searchBox.textProperty().
+
+                addListener((observable, oldValue, newValue) ->
+
+                {
+                    filteredByText.setPredicate(run -> {
+                        if (newValue == null || newValue.isEmpty()) {
+                            return true;
+                        }
+
+                        String[] values = newValue.toLowerCase().split(" ");
+                        List<String> wordList = Arrays.stream(values)
+                                .map(s -> s
+                                        .replaceAll("[’',()]", "")
+                                        .replaceAll("/", " "))
+                                .toList();
+                        String lowerCaseFilter = newValue.toLowerCase().replaceAll("’", "").replaceAll("'", "");
+
+                        if (run.getRunner().toLowerCase()
+                                .replaceAll("’", "").replaceAll("'", "")
+                                .contains(lowerCaseFilter)) {
+                            return true;
+                        } else if (wordList.stream().allMatch(Arrays.stream(run.getRunName().toLowerCase()
                                 .replaceAll("[’',()]", "")
-                                .replaceAll("/", " "))
-                        .toList();
-                String lowerCaseFilter = newValue.toLowerCase().replaceAll("’", "").replaceAll("'", "");
+                                .replaceAll("/", " ")
+                                .split(" ")).toList()::contains)) {
+                            return true;
+                        } else {
+                            return false;
+                        }
 
-                if (run.getRunner().toLowerCase()
-                        .replaceAll("’", "").replaceAll("'", "")
-                        .contains(lowerCaseFilter)) {
-                    return true;
-                } else if (wordList.stream().allMatch(Arrays.stream(run.getRunName().toLowerCase()
-                        .replaceAll("[’',()]", "")
-                        .replaceAll("/", " ")
-                        .split(" ")).toList()::contains)) {
-                    return true;
-                } else {
-                    return false;
-                }
-
-            });
-        });
+                    });
+                });
 
 
         SortedList<Run> sortedData = new SortedList<>(filteredByText);
-        sortedData.comparatorProperty().bind(tableView.comparatorProperty());
+        sortedData.comparatorProperty().
+
+                bind(tableView.comparatorProperty());
         tableView.setItems(sortedData);
     }
 }
