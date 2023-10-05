@@ -17,7 +17,8 @@ public class SubGameBox implements ChangeListener<Boolean> {
 
     private String game;
 
-    public SubGameBox(FilteredList<Run> filter, List<RadioButton> gameButtons, RadioButton currentButton, List<RadioButton> subGameButtons
+    public SubGameBox(FilteredList<Run> filter, List<RadioButton> gameButtons,
+                      RadioButton currentButton, List<RadioButton> subGameButtons
             , HBox subGameBox) {
         this.filter = filter;
         this.currentButton = currentButton;
@@ -25,6 +26,7 @@ public class SubGameBox implements ChangeListener<Boolean> {
         this.subGameButtons = subGameButtons;
         this.subGameBox = subGameBox;
         game = currentButton.getText().toLowerCase().replaceAll("[’',()]", "");
+
 
     }
 
@@ -36,6 +38,9 @@ public class SubGameBox implements ChangeListener<Boolean> {
             subGameBox.setVisible(true);
         }
         if (aBoolean) {
+            for (RadioButton button : subGameButtons) {
+                button.setSelected(false);
+            }
             subGameBox.setVisible(false);
         }
         filter.setPredicate(run -> {
@@ -43,7 +48,8 @@ public class SubGameBox implements ChangeListener<Boolean> {
                 return true;
             }
             if (run.getGame().toLowerCase()
-                    .replaceAll("[’',()]", "").replaceAll("/", "").contains(game)) {
+                    .replaceAll("[’',()]", "").
+                    replaceAll("/", "").contains(game)) {
                 return true;
             } else {
                 return false;
@@ -51,7 +57,6 @@ public class SubGameBox implements ChangeListener<Boolean> {
         });
 
     }
-
 
 
     private void unSelectAllGameButtons(RadioButton currentButton) {

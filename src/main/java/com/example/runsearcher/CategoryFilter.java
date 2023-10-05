@@ -19,7 +19,8 @@ public class CategoryFilter implements ChangeListener<Boolean> {
     private String category;
 
 
-    public CategoryFilter(FilteredList<Run> filter, RadioButton gameButton, RadioButton categoryButton, HBox restrictionBox, ArrayList<RadioButton> categories) {
+    public CategoryFilter(FilteredList<Run> filter, RadioButton gameButton,
+                          RadioButton categoryButton, HBox restrictionBox, ArrayList<RadioButton> categories) {
         this.filter = filter;
         this.categoryButton = categoryButton;
         this.restrictionBox = restrictionBox;
@@ -44,7 +45,8 @@ public class CategoryFilter implements ChangeListener<Boolean> {
                 return true;
             }
             if ((run.getGame().toLowerCase()
-                    .replaceAll("[’',()]", "").replaceAll("/", "").matches(game+ "( classic| remake)?")
+                    .replaceAll("[’',()]", "").
+                    replaceAll("/", "").matches(game+ "( classic| remake)?")
             && run.getCategory().toLowerCase().contains(category))) {
                 return true;
             } else {

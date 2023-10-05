@@ -9,9 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="5 column implementation">
+    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="all game filters">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/CategoryFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/CategoryFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/GameFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/GameFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/SubGameBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/SubGameBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/SubGameFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/SubGameFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +126,8 @@
       <workItem from="1696151453839" duration="60000" />
       <workItem from="1696152866580" duration="11057000" />
       <workItem from="1696226850531" duration="11377000" />
-      <workItem from="1696308423294" duration="51699000" />
+      <workItem from="1696308423294" duration="53358000" />
+      <workItem from="1696485136527" duration="6073000" />
     </task>
     <task id="LOCAL-00001" summary="simple filtered list function">
       <option name="closed" value="true" />
@@ -236,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696435447333</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="all game filters">
+      <option name="closed" value="true" />
+      <created>1696447329971</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1696447329971</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,6 +287,7 @@
     <MESSAGE value="implementd copy functionality" />
     <MESSAGE value="load file as resource" />
     <MESSAGE value="5 column implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="5 column implementation" />
+    <MESSAGE value="all game filters" />
+    <option name="LAST_COMMIT_MESSAGE" value="all game filters" />
   </component>
 </project>

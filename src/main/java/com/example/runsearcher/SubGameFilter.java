@@ -5,6 +5,8 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.transformation.FilteredList;
 import javafx.scene.control.RadioButton;
 import javafx.scene.layout.HBox;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class SubGameFilter implements ChangeListener<Boolean> {
@@ -15,14 +17,17 @@ public class SubGameFilter implements ChangeListener<Boolean> {
     private HBox categoryBox;
     private HBox restrictionBox;
     private String game;
+    private ArrayList<RadioButton> categories;
 
-    public SubGameFilter(FilteredList<Run> filter, RadioButton currentButton, List<RadioButton> subGameButtons
-            , HBox categoryBox, HBox restrictionBox) {
+    public SubGameFilter(FilteredList<Run> filter, RadioButton currentButton,
+                         List<RadioButton> subGameButtons, HBox categoryBox,
+                         HBox restrictionBox, ArrayList<RadioButton> categories) {
         this.filter = filter;
         this.currentButton = currentButton;
         this.subGameButtons = subGameButtons;
         this.categoryBox = categoryBox;
         this.restrictionBox = restrictionBox;
+        this.categories = categories;
         game = currentButton.getText().toLowerCase().replaceAll("[’',()]", "");
 
     }
@@ -35,6 +40,9 @@ public class SubGameFilter implements ChangeListener<Boolean> {
             categoryBox.setVisible(true);
         }
         if (aBoolean) {
+            for (RadioButton button: categories) {
+                button.setSelected(false);
+            }
             categoryBox.setVisible(false);
             restrictionBox.setVisible(false);
         }
@@ -43,7 +51,8 @@ public class SubGameFilter implements ChangeListener<Boolean> {
                 return true;
             }
             if (run.getGame().toLowerCase()
-                    .replaceAll("[’',()]", "").replaceAll("/", "").matches(game + "( remake| classic)?")) {
+                    .replaceAll("[’',()]", "").
+                    replaceAll("/", "").matches(game + "( remake| classic)?")) {
                 return true;
             } else {
                 return false;

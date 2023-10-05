@@ -865,7 +865,7 @@
       </HBox>
       <HBox fx:id="residentEvilSubGameBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3">
          <children>
-            <Label text="FIlter by game">
+            <Label text="FIlter by game:">
                <padding>
                   <Insets left="10.0" top="10.0" />
                </padding>
@@ -919,27 +919,30 @@
          <children>
             <Label text="Filter by category:">
                <padding>
-                  <Insets left="5.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </Label>
             <RadioButton fx:id="residentEvil0Any" mnemonicParsing="false" text="Any%">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvil0HardAny" mnemonicParsing="false" text="Hard Any%">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvil0ExtraModes" mnemonicParsing="false" text="Extra Modes">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvil0NGPlus" mnemonicParsing="false" text="NG+">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
          </children>
@@ -948,37 +951,37 @@
          <children>
             <Label text="Filter by category:">
                <padding>
-                  <Insets left="5.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </Label>
             <RadioButton fx:id="residentEvil1Normal" mnemonicParsing="false" text="Normal">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvil1Hard" mnemonicParsing="false" text="Hard">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvil1RealSurvivor" mnemonicParsing="false" text="Real Survivor">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvil1InvisibleEnemy" mnemonicParsing="false" text="Invisible Enemy">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvil1Original" mnemonicParsing="false" text="Original">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvil1Arrange" mnemonicParsing="false" text="Arrange">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
          </children>
@@ -987,37 +990,37 @@
          <children>
             <Label text="Filter by category:">
                <padding>
-                  <Insets left="5.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </Label>
             <RadioButton fx:id="residentEvil2Any" mnemonicParsing="false" text="Any%">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvil2Hard" mnemonicParsing="false" text="Hard">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvil2True" mnemonicParsing="false" text="True Ending">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvil2AllScenarios" mnemonicParsing="false" text="All Scenarios">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvil2ExtraMode" mnemonicParsing="false" text="Extra Modes">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvil2Normal" mnemonicParsing="false" text="Normal">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
          </children>
@@ -1026,32 +1029,32 @@
          <children>
             <Label text="Filter by category:">
                <padding>
-                  <Insets left="5.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </Label>
             <RadioButton fx:id="residentEvil3Hard" mnemonicParsing="false" text="Hard">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvil3Nightmare" mnemonicParsing="false" text="Nightmare">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvil3Inferno" mnemonicParsing="false" text="Inferno">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvil3Nemesis" mnemonicParsing="false" text="Nemesis%">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvil3AllBosses" mnemonicParsing="false" text="All Bosses">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
          </children>
@@ -1060,22 +1063,22 @@
          <children>
             <Label text="Filter by category:">
                <padding>
-                  <Insets left="5.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </Label>
             <RadioButton fx:id="residentEvil4Pro" mnemonicParsing="false" text="Professional">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvil4Extra" mnemonicParsing="false" text="Extra Modes">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvil4NoMerchant" mnemonicParsing="false" text="No Merchant">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
          </children>
@@ -1084,22 +1087,22 @@
          <children>
             <Label text="Filter by category:">
                <padding>
-                  <Insets left="5.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </Label>
             <RadioButton fx:id="residentEvil7Normal" mnemonicParsing="false" text="Normal">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvil7Madhouse" mnemonicParsing="false" text="Madhouse">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvil7Extra" mnemonicParsing="false" text="Extra Modes">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
          </children>
@@ -1108,27 +1111,27 @@
          <children>
             <Label text="Filter by category:">
                <padding>
-                  <Insets left="5.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </Label>
             <RadioButton fx:id="residentEvilVillageHard" mnemonicParsing="false" text="Hard">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvilVillageVillage" mnemonicParsing="false" text="Village of Shadows">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvilVillageDuke" mnemonicParsing="false" text="No Duke">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvilVillageExtra" mnemonicParsing="false" text="Extra Modes">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
          </children>
@@ -1137,24 +1140,24 @@
          <children>
             <Label text="Filter by category:">
                <padding>
-                  <Insets left="5.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </Label>
             <RadioButton fx:id="residentEvilSurvivorAny" mnemonicParsing="false" text="Any%">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="residentEvilSurvivorS" mnemonicParsing="false" text="S-Rank">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
          </children>
       </HBox>
       <HBox fx:id="crashSubGameBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3">
          <children>
-            <Label text="FIlter by game">
+            <Label text="FIlter by game:">
                <padding>
                   <Insets left="10.0" top="10.0" />
                </padding>
@@ -1188,32 +1191,32 @@
          <children>
             <Label text="Filter by category:">
                <padding>
-                  <Insets left="5.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </Label>
             <RadioButton fx:id="crashAny" mnemonicParsing="false" text="Any%">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="crashSecretEnding" mnemonicParsing="false" text="Secret Ending">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="crashAllLevels" mnemonicParsing="false" text="All Levels">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="crashAllGems" mnemonicParsing="false" text="All Gems">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="crash105" mnemonicParsing="false" text="105%">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
          </children>
@@ -1222,27 +1225,27 @@
          <children>
             <Label text="Filter by category:">
                <padding>
-                  <Insets left="5.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </Label>
             <RadioButton fx:id="crashTwoAny" mnemonicParsing="false" text="Any%">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="crashTwoAllLevels" mnemonicParsing="false" text="All Levels">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="crashTwoAllGems" mnemonicParsing="false" text="All Gems">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="crashTwo102" mnemonicParsing="false" text="102%">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
          </children>
@@ -1251,17 +1254,17 @@
          <children>
             <Label text="Filter by category:">
                <padding>
-                  <Insets left="5.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </Label>
             <RadioButton fx:id="crashThreeAny" mnemonicParsing="false" text="Any%">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="crashThree108" mnemonicParsing="false" text="108%">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
          </children>
@@ -1270,34 +1273,34 @@
          <children>
             <Label text="Filter by category:">
                <padding>
-                  <Insets left="5.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </Label>
             <RadioButton fx:id="crashFourAny" mnemonicParsing="false" text="Any%">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="crashFourAllTimelines" mnemonicParsing="false" text="All Timelines">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="crashFourAllClearGems" mnemonicParsing="false" text="All Clear Gems">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="crashFour106" mnemonicParsing="false" text="106%">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
          </children>
       </HBox>
       <HBox fx:id="dishonoredSubGameBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3">
          <children>
-            <Label text="FIlter by game">
+            <Label text="FIlter by game:">
                <padding>
                   <Insets left="10.0" top="10.0" />
                </padding>
@@ -1326,27 +1329,27 @@
          <children>
             <Label text="Filter by category:">
                <padding>
-                  <Insets left="5.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </Label>
             <RadioButton fx:id="dishonoredAny" mnemonicParsing="false" text="Any%">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="dishonoredDLC" mnemonicParsing="false" text="DLC'S">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="dishonoredAllMissions" mnemonicParsing="false" text="All Missions">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="dishonoredAllCollectibles" mnemonicParsing="false" text="All Collectibles">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
          </children>
@@ -1355,17 +1358,17 @@
          <children>
             <Label text="Filter by category:">
                <padding>
-                  <Insets left="5.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </Label>
             <RadioButton fx:id="dishonoredTwoAny" mnemonicParsing="false" text="Any%">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="dishonoredTwoAllCollectibles" mnemonicParsing="false" text="All Collectibles">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
          </children>
@@ -1374,34 +1377,34 @@
          <children>
             <Label text="Filter by category:">
                <padding>
-                  <Insets left="5.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </Label>
             <RadioButton fx:id="dishonoredDotoAny" mnemonicParsing="false" text="Any%">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="dishonoredDotoAllContracts" mnemonicParsing="false" text="All Contracts">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="dishonoredDotoAllCollectibles" mnemonicParsing="false" text="All Collectibles">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="dishonoredDotoAA" mnemonicParsing="false" text="All Achievements">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
          </children>
       </HBox>
       <HBox fx:id="zeldaSubGameBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3">
          <children>
-            <Label text="FIlter by game">
+            <Label text="FIlter by game:">
                <padding>
                   <Insets left="10.0" top="10.0" />
                </padding>
@@ -1421,41 +1424,41 @@
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="zeldaBotwCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+      <HBox fx:id="zeldaBotwCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4" GridPane.rowSpan="2">
          <children>
             <Label text="Filter by category:">
                <padding>
-                  <Insets left="5.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </Label>
             <RadioButton fx:id="zeldaBotwAny" mnemonicParsing="false" text="Any%">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="zeldaBotwAllSlate" mnemonicParsing="false" text="All Slate Memories">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="zeldaBotwAllBeasts" mnemonicParsing="false" text="All Divine Beasts">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="zeldaBotwAllBeatsChampions" mnemonicParsing="false" text="All Divine Beasts + The Champions' Ballad">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="zeldaBotwABMBVanilla" mnemonicParsing="false" text="All Bosses + Minibosses (Vanilla)">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="zeldaBotwABMBDLC" mnemonicParsing="false" text="All Bosses + Minibosses (DLC)">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
          </children>
@@ -1464,37 +1467,37 @@
          <children>
             <Label text="Filter by category:">
                <padding>
-                  <Insets left="5.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </Label>
             <RadioButton fx:id="zeldaTotkAny" mnemonicParsing="false" text="Any%">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="zeldaTotkAllAbilities" mnemonicParsing="false" text="All Abilities">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="zeldaTotkAllGeoglyphs" mnemonicParsing="false" text="All Geoglyps">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="zeldaTotkAllDungeons" mnemonicParsing="false" text="All Dungeons">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="zeldaTotkTrueEnding" mnemonicParsing="false" text="True Ending">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="zeldaTotkABMB" mnemonicParsing="false" text="All Bosses + Minibosses">
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
          </children>

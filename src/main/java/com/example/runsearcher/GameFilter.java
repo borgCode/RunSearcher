@@ -6,6 +6,7 @@ import javafx.collections.transformation.FilteredList;
 import javafx.scene.control.RadioButton;
 import javafx.scene.layout.HBox;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GameFilter implements ChangeListener<Boolean> {
@@ -16,14 +17,16 @@ public class GameFilter implements ChangeListener<Boolean> {
     private HBox categoryBox;
     private HBox restrictionBox;
     private String game;
+    private ArrayList<RadioButton> categories;
 
     public GameFilter(FilteredList<Run> filter, RadioButton currentButton, List<RadioButton> gameButtons
-            , HBox categoryBox, HBox restrictionBox) {
+            , HBox categoryBox, HBox restrictionBox, ArrayList<RadioButton> categories) {
         this.filter = filter;
         this.currentButton = currentButton;
         this.gameButtons = gameButtons;
         this.categoryBox = categoryBox;
         this.restrictionBox = restrictionBox;
+        this.categories = categories;
         game = currentButton.getText().toLowerCase().replaceAll("[’',()]", "");
 
     }
@@ -38,13 +41,18 @@ public class GameFilter implements ChangeListener<Boolean> {
         if (aBoolean) {
             categoryBox.setVisible(false);
             restrictionBox.setVisible(false);
+            for (RadioButton button: categories) {
+                button.setSelected(false);
+            }
+
         }
         filter.setPredicate(run -> {
             if (!currentButton.isSelected()) {
                 return true;
             }
             if (run.getGame().toLowerCase()
-                            .replaceAll("[’',()]", "").replaceAll("/", "").matches(game + "( classic| remake)?")) {
+                            .replaceAll("[’',()]", "").
+                    replaceAll("/", "").matches(game + "( classic| remake)?")) {
                 return true;
             } else {
                 return false;
