@@ -29,7 +29,6 @@ public class CategoryFilter implements ChangeListener<Boolean> {
         category = categoryButton.getText().toLowerCase();
 
     }
-
     @Override
     public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
         if (t1) {

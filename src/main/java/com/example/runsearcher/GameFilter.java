@@ -28,10 +28,7 @@ public class GameFilter implements ChangeListener<Boolean> {
         this.restrictionBox = restrictionBox;
         this.categories = categories;
         game = currentButton.getText().toLowerCase().replaceAll("[’',()]", "");
-
     }
-
-
     @Override
     public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
         if (t1) {
@@ -60,9 +57,6 @@ public class GameFilter implements ChangeListener<Boolean> {
         });
 
     }
-
-
-
     private void unSelectAllGameButtons(RadioButton currentButton) {
         for (RadioButton box : gameButtons) {
             if (box != currentButton) {

@@ -70,6 +70,21 @@ public class Controller {
     @FXML
     private HBox demonsSoulsRestrictionsBox;
     @FXML
+    private CheckBox demonsSoulsNGPlus;
+    @FXML
+    private CheckBox demonsSoulsNoDamage;
+    @FXML
+    private CheckBox demonsSoulsNoMagic;
+    @FXML
+    private CheckBox demonsSoulsNoRoll;
+    @FXML
+    private CheckBox demonsSoulsNoUpgrades;
+    @FXML
+    private CheckBox demonsSoulsSL1;
+    @FXML
+    private CheckBox demonsSoulsSorceryOnly;
+    @FXML Button demonsSoulsFilterButton;
+    @FXML
     private HBox darkSoulsCategoryBox;
     @FXML
     private RadioButton darkSoulsAny;
@@ -81,6 +96,23 @@ public class Controller {
     private RadioButton darkSoulsAA;
     @FXML
     private HBox darkSoulsRestrictionsBox;
+    @FXML
+    private CheckBox darkSoulsNGPlus;
+    @FXML
+    private CheckBox darkSoulsNGPlusSix;
+    @FXML
+    private CheckBox darkSoulsNoDamage;
+    @FXML
+    private CheckBox darkSoulsPyroOnly;
+    @FXML
+    private CheckBox darkSoulsNoRoll;
+    private CheckBox darkSoulsMiraclesOnly;
+    @FXML
+    private CheckBox darkSoulsNoUpgrades;
+    @FXML
+    private CheckBox darkSoulsSL1;
+    @FXML
+    private CheckBox darkSoulsSorceryOnly;
     @FXML
     private HBox darkSoulsTwoCategoryBox;
     @FXML
@@ -94,6 +126,24 @@ public class Controller {
     @FXML
     private HBox darkSoulsTwoRestrictionsBox;
     @FXML
+    private CheckBox darkSoulsTwoNGPlus;
+    @FXML
+    private CheckBox darkSoulsTwoNoDamage;
+    @FXML
+    private CheckBox darkSoulsTwoPyroOnly;
+    @FXML
+    private CheckBox darkSoulsTwoNoRoll;
+    @FXML
+    private CheckBox darkSoulsTwoMiraclesOnly;
+    @FXML
+    private CheckBox darkSoulsTwoNoUpgrades;
+    @FXML
+    private CheckBox darkSoulsTwoSL1;
+    @FXML
+    private CheckBox darkSoulsTwoSorceryOnly;
+    @FXML
+    private CheckBox darkSoulsTwoHexOnly;
+    @FXML
     private HBox darkSoulsThreeCategoryBox;
     @FXML
     private RadioButton darkSoulsThreeAny;
@@ -105,6 +155,19 @@ public class Controller {
     private RadioButton darkSoulsThreeAA;
     @FXML
     private HBox darkSoulsThreeRestrictionsBox;
+    @FXML private CheckBox darkSoulsThreeNGPlus;
+    @FXML
+    private CheckBox darkSoulsThreeNoDamage;
+    @FXML
+    private CheckBox darkSoulsThreePyroOnly;
+    @FXML
+    private CheckBox darkSoulsThreeMiraclesOnly;
+    @FXML
+    private CheckBox darkSoulsThreeNoUpgrades;
+    @FXML
+    private CheckBox darkSoulsThreeSL1;
+    @FXML
+    private CheckBox darkSoulsThreeSorceryOnly;
     @FXML
     private HBox bloodborneCategoryBox;
     @FXML
@@ -504,6 +567,7 @@ public class Controller {
     @FXML
     private TableColumn<Run, String> linkColumn;
     private List<RadioButton> gameButtons;
+    RestrictionsMap restrictions = new RestrictionsMap();
 
 
     public void initialize() {
@@ -538,6 +602,10 @@ public class Controller {
                 Clipboard.getSystemClipboard().setContent(clipboardContent);
             }
         });
+
+
+        restrictions.populateHashMap();
+
 
         filterRuns();
 
@@ -586,7 +654,8 @@ public class Controller {
 
 
         FilteredList<Run> filteredByGame = new FilteredList<>(getRuns(), b -> true);
-        FilteredList<Run> filteredByText = new FilteredList<>(filteredByGame, b -> true);
+        FilteredList<Run> filteredByRestriction = new FilteredList<>(filteredByGame, b -> true);
+        FilteredList<Run> filteredByText = new FilteredList<>(filteredByRestriction, b -> true);
 
 
 
@@ -1041,6 +1110,13 @@ public class Controller {
 
         });
 
+        ArrayList<CheckBox> demonsRestrictions = new ArrayList<>(List.of(
+                demonsSoulsSL1, demonsSoulsNGPlus, demonsSoulsNoDamage, demonsSoulsNoMagic,
+                demonsSoulsNoRoll, demonsSoulsNoUpgrades, demonsSoulsSorceryOnly
+        ));
+
+       demonsSoulsFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, demonsRestrictions, restrictions));
+
         searchBox.textProperty().
 
                 addListener((observable, oldValue, newValue) ->
@@ -1060,6 +1136,15 @@ public class Controller {
                         String lowerCaseFilter = newValue.toLowerCase().replaceAll("’", "").replaceAll("'", "");
 
                         if (run.getRunner().toLowerCase()
+                                .replaceAll("’", "").replaceAll("'", "")
+                                .contains(lowerCaseFilter)) {
+                            return true;
+                        } else if (wordList.stream().allMatch(Arrays.stream(run.getGame().toLowerCase()
+                                .replaceAll("[’',()]", "")
+                                .replaceAll("/", " ")
+                                .split(" ")).toList()::contains)) {
+                            return true;
+                        }else if (run.getCategory().toLowerCase()
                                 .replaceAll("’", "").replaceAll("'", "")
                                 .contains(lowerCaseFilter)) {
                             return true;

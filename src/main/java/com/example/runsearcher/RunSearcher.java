@@ -18,9 +18,6 @@ public class RunSearcher extends Application {
         stage.setTitle("Hitless runs");
         stage.setScene(scene);
         stage.show();
-
-
-
     }
 
     public static void main(String[] args) {
