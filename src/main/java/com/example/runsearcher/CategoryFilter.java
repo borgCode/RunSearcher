@@ -47,7 +47,7 @@ public class CategoryFilter implements ChangeListener<Boolean> {
             if ((run.getGame().toLowerCase()
                     .replaceAll("[’',()]", "").
                     replaceAll("/", "").matches(game+ "( classic| remake)?")
-            && run.getCategory().toLowerCase().contains(category))) {
+            && run.getCategory().toLowerCase().matches(category))) {
                 return true;
             } else {
                 return false;

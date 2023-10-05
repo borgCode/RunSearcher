@@ -159,7 +159,6 @@ public class Controller {
     private RadioButton eldenRingAA;
     @FXML
     private HBox eldenRingRestrictionsBox;
-
     @FXML
     private HBox residentEvilSubGameBox;
     @FXML
@@ -176,7 +175,6 @@ public class Controller {
     private RadioButton residentEvil0ExtraModes;
     @FXML
     private RadioButton residentEvil0NGPlus;
-
     @FXML
     private RadioButton residentEvil1Button;
     @FXML
@@ -195,7 +193,6 @@ public class Controller {
     private HBox residentEvil1CategoryBox;
     @FXML
     private HBox residentEvil1RestrictionsBox;
-
     @FXML
     private RadioButton residentEvil2Button;
     @FXML
@@ -220,7 +217,6 @@ public class Controller {
     private HBox residentEvil3CategoryBox;
     @FXML
     private HBox residentEvil3RestrictionsBox;
-
     @FXML
     private RadioButton residentEvil3Hard;
     @FXML
@@ -231,7 +227,6 @@ public class Controller {
     private RadioButton residentEvil3Nemesis;
     @FXML
     private RadioButton residentEvil3AllBosses;
-
     @FXML
     private RadioButton residentEvil4Button;
     @FXML
@@ -244,7 +239,6 @@ public class Controller {
     private RadioButton residentEvil4Extra;
     @FXML
     private RadioButton residentEvil4NoMerchant;
-
     @FXML
     private RadioButton residentEvil7Button;
     @FXML
@@ -321,7 +315,6 @@ public class Controller {
     private HBox crashThreeCategoryBox;
     @FXML
     private HBox crashThreeRestrictionsBox;
-
     @FXML
     private RadioButton crashThreeAny;
     @FXML
@@ -330,7 +323,6 @@ public class Controller {
     private HBox crashFourCategoryBox;
     @FXML
     private HBox crashFourRestrictionsBox;
-
     @FXML
     private RadioButton crashFourAny;
     @FXML
@@ -345,7 +337,6 @@ public class Controller {
     private HBox dishonoredCategoryBox;
     @FXML
     private HBox dishonoredRestrictionsBox;
-
     @FXML
     private RadioButton dishonoredOneButton;
     @FXML
@@ -364,7 +355,6 @@ public class Controller {
     private HBox dishonoredTwoCategoryBox;
     @FXML
     private HBox dishonoredTwoRestrictionsBox;
-
     @FXML
     private RadioButton dishonoredTwoAny;
     @FXML
@@ -373,7 +363,6 @@ public class Controller {
     private HBox dishonoredDotoCategoryBox;
     @FXML
     private HBox dishonoredDotoRestrictionsBox;
-
     @FXML
     private RadioButton dishonoredDotoAny;
     @FXML
