@@ -4,6 +4,7 @@ package com.example.runsearcher;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -16,6 +17,10 @@ public class RunSearcher extends Application {
         stage.setMinWidth(1157);
         stage.setMaxWidth(1157);
         stage.setTitle("Hitless runs");
+
+        Image image = new Image("icon.png");
+        stage.getIcons().add(image);
+
         stage.setScene(scene);
         stage.show();
     }

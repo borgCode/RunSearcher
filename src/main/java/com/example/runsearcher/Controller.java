@@ -664,6 +664,10 @@ public class Controller {
     private HBox blasphemousCategoryBox;
     @FXML
     private HBox blasphemousRestrictionsBox;
+    @FXML private CheckBox blasphemousNoDamage;
+    @FXML private CheckBox blasphemousSkipless;
+    @FXML private CheckBox blasphemousMeleeOnly;
+    @FXML private Button blasphemousFilterButton;
     @FXML
     private RadioButton blasphemousAny;
     @FXML
@@ -841,7 +845,9 @@ public class Controller {
 
         ArrayList<CheckBox> celesteRestrictions = new ArrayList<>();
 
-        //ArrayList<CheckBox> blasphemousRestrictions = new ArrayList<>(List.of())
+        ArrayList<CheckBox> blasphemousRestrictions = new ArrayList<>(List.of(
+                blasphemousNoDamage, blasphemousSkipless, blasphemousMeleeOnly
+        ));
 
 
         //Category Filters
@@ -1293,9 +1299,10 @@ public class Controller {
                 new GameFilter(filteredByGame, celesteRadioButton, gameButtons,
                         celesteCategoryBox, celesteRestrictionsBox, celesteCategories,
                         filteredByRestriction, celesteRestrictions));
-//        blasphemousRadioButton.selectedProperty().addListener(
-//                new GameFilter(filteredByGame, blasphemousRadioButton, gameButtons,
-//                        blasphemousCategoryBox, blasphemousRestrictionsBox, blasphemousCategories));
+        blasphemousRadioButton.selectedProperty().addListener(
+                new GameFilter(filteredByGame, blasphemousRadioButton, gameButtons,
+                        blasphemousCategoryBox, blasphemousRestrictionsBox, blasphemousCategories,
+                        filteredByRestriction, blasphemousRestrictions));
 
         multipleRadioButton.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
@@ -1340,7 +1347,7 @@ public class Controller {
         //cuphead
         hollowKnightFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, hollowKnightRestrictions, restrictions));
         hadesFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, hadesRestrictions, restrictions));
-        //blasphemous
+        blasphemousFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, blasphemousRestrictions, restrictions));
 
         searchBox.textProperty().
 

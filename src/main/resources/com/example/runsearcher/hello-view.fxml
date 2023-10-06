@@ -166,7 +166,7 @@
             </RadioButton>
          </children>
       </GridPane>
-      <HBox fx:id="demonsSoulsCategoryBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
+      <HBox fx:id="demonsSoulsCategoryBox" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
          <children>
             <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
                <padding>
@@ -201,38 +201,38 @@
                </padding>
             </Label>
             <CheckBox fx:id="demonsSoulsSL1" mnemonicParsing="false" text="SL1">
-               <padding>
-                  <Insets top="15.0" />
-               </padding></CheckBox>
+               <HBox.margin>
+                  <Insets top="18.0" />
+               </HBox.margin></CheckBox>
             <CheckBox fx:id="demonsSoulsNoDamage" mnemonicParsing="false" text="No Damage">
-               <padding>
-                  <Insets left="15.0" top="15.0" />
-               </padding>
+               <HBox.margin>
+                  <Insets left="15.0" top="18.0" />
+               </HBox.margin>
             </CheckBox>
             <CheckBox fx:id="demonsSoulsNoUpgrades" mnemonicParsing="false" text="No Upgrades">
-               <padding>
-                  <Insets left="15.0" top="15.0" />
-               </padding>
+               <HBox.margin>
+                  <Insets left="15.0" top="18.0" />
+               </HBox.margin>
             </CheckBox>
             <CheckBox fx:id="demonsSoulsSorceryOnly" mnemonicParsing="false" text="Sorcery Only">
-               <padding>
-                  <Insets left="15.0" top="15.0" />
-               </padding>
+               <HBox.margin>
+                  <Insets left="15.0" top="18.0" />
+               </HBox.margin>
             </CheckBox>
             <CheckBox fx:id="demonsSoulsNoMagic" mnemonicParsing="false" text="No Magic">
-               <padding>
-                  <Insets left="15.0" top="15.0" />
-               </padding>
+               <HBox.margin>
+                  <Insets left="15.0" top="18.0" />
+               </HBox.margin>
             </CheckBox>
             <CheckBox fx:id="demonsSoulsNGPlus" mnemonicParsing="false" text="NG+">
-               <padding>
-                  <Insets left="15.0" top="15.0" />
-               </padding>
+               <HBox.margin>
+                  <Insets left="15.0" top="18.0" />
+               </HBox.margin>
             </CheckBox>
             <CheckBox fx:id="demonsSoulsNoRoll" mnemonicParsing="false" text="No Roll">
-               <padding>
-                  <Insets left="15.0" top="15.0" />
-               </padding>
+               <HBox.margin>
+                  <Insets left="15.0" top="18.0" />
+               </HBox.margin>
             </CheckBox>
             <Button fx:id="demonsSoulsFilterButton" mnemonicParsing="false" text="Filter">
                <HBox.margin>
@@ -241,7 +241,7 @@
             </Button>
          </children>
       </HBox>
-      <HBox fx:id="darkSoulsCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
+      <HBox fx:id="darkSoulsCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
          <children>
             <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
                <padding>
@@ -341,7 +341,7 @@
             </Button>
          </children>
       </HBox>
-      <HBox fx:id="darkSoulsTwoCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
+      <HBox fx:id="darkSoulsTwoCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
          <children>
             <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
                <padding>
@@ -442,7 +442,7 @@
             </Button>
          </children>
       </HBox>
-      <HBox fx:id="darkSoulsThreeCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
+      <HBox fx:id="darkSoulsThreeCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
          <children>
             <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
                <padding>
@@ -533,7 +533,7 @@
             </Button>
          </children>
       </HBox>
-      <HBox fx:id="bloodborneCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
+      <HBox fx:id="bloodborneCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
          <children>
             <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
                <padding>
@@ -638,7 +638,7 @@
             </Button>
          </children>
       </HBox>
-      <HBox fx:id="sekiroCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
+      <HBox fx:id="sekiroCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
          <children>
             <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
                <padding>
@@ -798,7 +798,7 @@
             </Button>
          </children>
       </HBox>
-      <HBox fx:id="eldenRingCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
+      <HBox fx:id="eldenRingCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
          <children>
             <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
                <padding>
@@ -898,295 +898,292 @@
             </Button>
          </children>
       </HBox>
-      <HBox fx:id="residentEvilSubGameBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3">
+      <HBox fx:id="residentEvilSubGameBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3">
          <children>
-            <Label text="FIlter by game:">
-               <padding>
-                  <Insets left="10.0" top="10.0" />
-               </padding>
-            </Label>
-            <RadioButton fx:id="residentEvil0Button" mnemonicParsing="false" prefHeight="30.0" prefWidth="114.0" text="Resident Evil 0">
-               <HBox.margin>
-                  <Insets left="15.0" />
-               </HBox.margin>
-               <padding>
-                  <Insets left="3.0" top="10.0" />
-               </padding>
-            </RadioButton>
-            <RadioButton fx:id="residentEvil1Button" mnemonicParsing="false" text="Resident Evil">
-               <padding>
-                  <Insets left="10.0" top="10.0" />
-               </padding>
-            </RadioButton>
-            <RadioButton fx:id="residentEvil2Button" mnemonicParsing="false" text="Resident Evil 2">
-               <padding>
-                  <Insets left="10.0" top="10.0" />
-               </padding>
-            </RadioButton>
-            <RadioButton fx:id="residentEvil3Button" mnemonicParsing="false" text="Resident Evil 3">
-               <padding>
-                  <Insets left="10.0" top="10.0" />
-               </padding>
-            </RadioButton>
-            <RadioButton fx:id="residentEvil4Button" mnemonicParsing="false" text="Resident Evil 4">
-               <padding>
-                  <Insets left="10.0" top="10.0" />
-               </padding>
-            </RadioButton>
-            <RadioButton fx:id="residentEvil7Button" mnemonicParsing="false" text="Resident Evil 7">
-               <padding>
-                  <Insets left="10.0" top="10.0" />
-               </padding>
-            </RadioButton>
-            <RadioButton fx:id="residentEvilVillageButton" mnemonicParsing="false" text="Resident Evil Village">
-               <padding>
-                  <Insets left="10.0" top="10.0" />
-               </padding>
-            </RadioButton>
-            <RadioButton fx:id="residentEvilSurvivorButton" mnemonicParsing="false" text="Resident Evil Survivor">
-               <padding>
-                  <Insets left="10.0" top="10.0" />
-               </padding>
-            </RadioButton>
-         </children>
-      </HBox>
-      <HBox fx:id="residentEvil0CategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
-         <children>
-            <Label text="Filter by category:">
+            <Label text="Filter by game:">
                <padding>
                   <Insets left="10.0" top="5.0" />
                </padding>
+            </Label>
+            <RadioButton fx:id="residentEvil0Button" mnemonicParsing="false" text="Resident Evil 0">
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil1Button" mnemonicParsing="false" text="Resident Evil">
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil2Button" mnemonicParsing="false" text="Resident Evil 2">
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil3Button" mnemonicParsing="false" text="Resident Evil 3">
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil4Button" mnemonicParsing="false" text="Resident Evil 4">
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="residentEvil7Button" mnemonicParsing="false" text="Resident Evil 7">
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="residentEvilVillageButton" mnemonicParsing="false" text="Resident Evil Village">
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="residentEvilSurvivorButton" mnemonicParsing="false" text="Resident Evil Survivor">
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="residentEvil0CategoryBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+         <children>
+            <Label text="Filter by category:">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
             </Label>
             <RadioButton fx:id="residentEvil0Any" mnemonicParsing="false" text="Any%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvil0HardAny" mnemonicParsing="false" text="Hard Any%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvil0ExtraModes" mnemonicParsing="false" text="Extra Modes">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvil0NGPlus" mnemonicParsing="false" text="NG+">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="residentEvil1CategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+      <HBox fx:id="residentEvil1CategoryBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </Label>
             <RadioButton fx:id="residentEvil1Normal" mnemonicParsing="false" text="Normal">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvil1Hard" mnemonicParsing="false" text="Hard Any%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvil1RealSurvivor" mnemonicParsing="false" text="Real Survivor">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvil1InvisibleEnemy" mnemonicParsing="false" text="Invisible Enemy">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvil1Original" mnemonicParsing="false" text="Original">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvil1Arrange" mnemonicParsing="false" text="Arrange">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="residentEvil2CategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+      <HBox fx:id="residentEvil2CategoryBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </Label>
             <RadioButton fx:id="residentEvil2Any" mnemonicParsing="false" text="Any%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvil2Hard" mnemonicParsing="false" text="Hard Any%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvil2True" mnemonicParsing="false" text="True Ending">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvil2AllScenarios" mnemonicParsing="false" text="All Scenarios">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvil2ExtraMode" mnemonicParsing="false" text="Extra Modes">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvil2Normal" mnemonicParsing="false" text="Normal">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
          </children>
       </HBox>
       <HBox fx:id="residentEvil3CategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </Label>
             <RadioButton fx:id="residentEvil3Hard" mnemonicParsing="false" text="Hard Any%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvil3Nightmare" mnemonicParsing="false" text="Nightmare">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvil3Inferno" mnemonicParsing="false" text="Inferno">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvil3Nemesis" mnemonicParsing="false" text="Nemesis%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvil3AllBosses" mnemonicParsing="false" text="All Bosses">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="residentEvil4CategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+      <HBox fx:id="residentEvil4CategoryBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </Label>
             <RadioButton fx:id="residentEvil4Pro" mnemonicParsing="false" text="Professional">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvil4Extra" mnemonicParsing="false" text="Extra Modes">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvil4NoMerchant" mnemonicParsing="false" text="No Merchant">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="residentEvil7CategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+      <HBox fx:id="residentEvil7CategoryBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </Label>
             <RadioButton fx:id="residentEvil7Normal" mnemonicParsing="false" text="Normal">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvil7Madhouse" mnemonicParsing="false" text="Madhouse">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvil7Extra" mnemonicParsing="false" text="Extra Modes">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="residentEvilVillageCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+      <HBox fx:id="residentEvilVillageCategoryBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </Label>
             <RadioButton fx:id="residentEvilVillageHard" mnemonicParsing="false" text="Hard Any%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvilVillageVillage" mnemonicParsing="false" text="Village of Shadows">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvilVillageDuke" mnemonicParsing="false" text="No Duke">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvilVillageExtra" mnemonicParsing="false" text="Extra Modes">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="residentEvilSurvivorCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+      <HBox fx:id="residentEvilSurvivorCategoryBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </Label>
             <RadioButton fx:id="residentEvilSurvivorAny" mnemonicParsing="false" text="Any%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvilSurvivorS" mnemonicParsing="false" text="S-Rank">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
          </children>
       </HBox>
@@ -1243,69 +1240,66 @@
             </Button>
          </children>
       </HBox>
-      <HBox fx:id="crashSubGameBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3">
+      <HBox fx:id="crashSubGameBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3">
          <children>
             <Label text="FIlter by game:">
-               <padding>
-                  <Insets left="10.0" top="10.0" />
-               </padding>
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
             </Label>
             <RadioButton fx:id="crash1Button" mnemonicParsing="false" prefHeight="30.0" prefWidth="114.0" text="Crash Bandicoot">
                <HBox.margin>
-                  <Insets left="15.0" />
+                  <Insets left="10.0" top="5.0" />
                </HBox.margin>
-               <padding>
-                  <Insets left="3.0" top="10.0" />
-               </padding>
             </RadioButton>
             <RadioButton fx:id="crashTwoButton" mnemonicParsing="false" text="Crash Bandicoot 2">
-               <padding>
-                  <Insets left="10.0" top="10.0" />
-               </padding>
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="crashThreeButton" mnemonicParsing="false" text="Crash Bandicoot 3">
-               <padding>
-                  <Insets left="10.0" top="10.0" />
-               </padding>
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="crashFourButton" mnemonicParsing="false" text="Crash Bandicoot 4">
-               <padding>
-                  <Insets left="10.0" top="10.0" />
-               </padding>
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="crashCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+      <HBox fx:id="crashCategoryBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </Label>
             <RadioButton fx:id="crashAny" mnemonicParsing="false" text="Any%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="crashSecretEnding" mnemonicParsing="false" text="Secret Ending">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="crashAllLevels" mnemonicParsing="false" text="All Levels">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="crashAllGems" mnemonicParsing="false" text="All Gems">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="crash105" mnemonicParsing="false" text="105%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
          </children>
       </HBox>
@@ -1320,136 +1314,133 @@
             <Button fx:id="crashFilterButton" mnemonicParsing="false" text="Filter" />
          </children>
       </HBox>
-      <HBox fx:id="crashTwoCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+      <HBox fx:id="crashTwoCategoryBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </Label>
             <RadioButton fx:id="crashTwoAny" mnemonicParsing="false" text="Any%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="crashTwoAllLevels" mnemonicParsing="false" text="All Levels">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="crashTwoAllGems" mnemonicParsing="false" text="All Gems">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="crashTwo102" mnemonicParsing="false" text="102%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="crashThreeCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+      <HBox fx:id="crashThreeCategoryBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </Label>
             <RadioButton fx:id="crashThreeAny" mnemonicParsing="false" text="Any%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="crashThree108" mnemonicParsing="false" text="108%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
          </children>
       </HBox>
       <HBox fx:id="crashFourCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </Label>
             <RadioButton fx:id="crashFourAny" mnemonicParsing="false" text="Any%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="crashFourAllTimelines" mnemonicParsing="false" text="All Timelines">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="crashFourAllClearGems" mnemonicParsing="false" text="All Clear Gems">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="crashFour106" mnemonicParsing="false" text="106%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="dishonoredSubGameBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3">
+      <HBox fx:id="dishonoredSubGameBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3">
          <children>
             <Label text="FIlter by game:">
-               <padding>
-                  <Insets left="10.0" top="10.0" />
-               </padding>
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
             </Label>
             <RadioButton fx:id="dishonoredOneButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="114.0" text="Dishonored">
                <HBox.margin>
-                  <Insets left="15.0" />
+                  <Insets left="10.0" top="5.0" />
                </HBox.margin>
-               <padding>
-                  <Insets left="3.0" top="10.0" />
-               </padding>
             </RadioButton>
             <RadioButton fx:id="dishonoredTwoButton" mnemonicParsing="false" text="Dishonored 2">
-               <padding>
-                  <Insets left="10.0" top="10.0" />
-               </padding>
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="dishonoredDotoButton" mnemonicParsing="false" text="Dishonored: Death of the Outsider">
-               <padding>
-                  <Insets left="10.0" top="10.0" />
-               </padding>
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="dishonoredCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+      <HBox fx:id="dishonoredCategoryBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </Label>
             <RadioButton fx:id="dishonoredAny" mnemonicParsing="false" text="Any%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="dishonoredDLC" mnemonicParsing="false" text="DLC'S">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="dishonoredAllMissions" mnemonicParsing="false" text="All Missions">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="dishonoredAllCollectibles" mnemonicParsing="false" text="All Collectibles">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
          </children>
       </HBox>
@@ -1527,112 +1518,109 @@
             </Button>
          </children>
       </HBox>
-      <HBox fx:id="dishonoredTwoCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+      <HBox fx:id="dishonoredTwoCategoryBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </Label>
             <RadioButton fx:id="dishonoredTwoAny" mnemonicParsing="false" text="Any%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="dishonoredTwoAllCollectibles" mnemonicParsing="false" text="All Collectibles">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="dishonoredDotoCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+      <HBox fx:id="dishonoredDotoCategoryBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </Label>
             <RadioButton fx:id="dishonoredDotoAny" mnemonicParsing="false" text="Any%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="dishonoredDotoAllContracts" mnemonicParsing="false" text="All Contracts">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="dishonoredDotoAllCollectibles" mnemonicParsing="false" text="All Collectibles">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="dishonoredDotoAA" mnemonicParsing="false" text="All Achievements">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="zeldaSubGameBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3">
+      <HBox fx:id="zeldaSubGameBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3">
          <children>
             <Label text="FIlter by game:">
-               <padding>
-                  <Insets left="10.0" top="10.0" />
-               </padding>
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
             </Label>
             <RadioButton fx:id="zeldaBotwButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="194.0" text="Zelda: Breath of the Wild">
                <HBox.margin>
-                  <Insets left="15.0" />
+                  <Insets left="10.0" top="5.0" />
                </HBox.margin>
-               <padding>
-                  <Insets left="3.0" top="10.0" />
-               </padding>
             </RadioButton>
             <RadioButton fx:id="zeldaTotkButton" mnemonicParsing="false" prefWidth="182.0" text="Zelda: Tears of the Kingdom">
-               <padding>
-                  <Insets left="10.0" top="10.0" />
-               </padding>
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="zeldaBotwCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+      <HBox fx:id="zeldaBotwCategoryBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </Label>
             <RadioButton fx:id="zeldaBotwAny" mnemonicParsing="false" text="Any%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="zeldaBotwAllSlate" mnemonicParsing="false" text="All Slate Memories">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="zeldaBotwAllBeasts" mnemonicParsing="false" text="All Divine Beasts">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="zeldaBotwAllBeatsChampions" mnemonicParsing="false" text="All Divine Beasts + The Champions' Ballad">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="zeldaBotwABMBVanilla" mnemonicParsing="false" text="All Bosses + Minibosses (Vanilla)">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="zeldaBotwABMBDLC" mnemonicParsing="false" text="All Bosses + Minibosses (DLC)">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
          </children>
       </HBox>
@@ -1674,42 +1662,42 @@
             </Button>
          </children>
       </HBox>
-      <HBox fx:id="zeldaTotkCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
+      <HBox fx:id="zeldaTotkCategoryBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </Label>
             <RadioButton fx:id="zeldaTotkAny" mnemonicParsing="false" text="Any%">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="zeldaTotkAllAbilities" mnemonicParsing="false" text="All Abilities">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="zeldaTotkAllGeoglyphs" mnemonicParsing="false" text="All Geoglyps">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="zeldaTotkAllDungeons" mnemonicParsing="false" text="All Dungeons">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="zeldaTotkTrueEnding" mnemonicParsing="false" text="True Ending">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
             <RadioButton fx:id="zeldaTotkABMB" mnemonicParsing="false" text="All Bosses + Minibosses">
-               <padding>
+               <HBox.margin>
                   <Insets left="10.0" top="5.0" />
-               </padding>
+               </HBox.margin>
             </RadioButton>
          </children>
       </HBox>
@@ -1735,7 +1723,7 @@
             </Button>
          </children>
       </HBox>
-      <HBox fx:id="cupheadCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
+      <HBox fx:id="cupheadCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
          <children>
             <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
                <padding>
@@ -1814,7 +1802,7 @@
             </GridPane>
          </children>
       </HBox>
-      <HBox fx:id="hollowKnightCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
+      <HBox fx:id="hollowKnightCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
          <children>
             <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
                <padding>
@@ -1894,7 +1882,7 @@
             </Button>
          </children>
       </HBox>
-      <HBox fx:id="hadesCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
+      <HBox fx:id="hadesCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
          <children>
             <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
                <padding>
@@ -1964,7 +1952,7 @@
             </Button>
          </children>
       </HBox>
-      <HBox fx:id="celesteCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
+      <HBox fx:id="celesteCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
          <children>
             <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
                <padding>
@@ -2002,7 +1990,7 @@
          </children>
       </HBox>
       <HBox fx:id="celesteRestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2" />
-      <HBox fx:id="blasphemousCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
+      <HBox fx:id="blasphemousCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
          <children>
             <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
                <padding>
@@ -2032,6 +2020,34 @@
                   <Insets left="15.0" top="20.0" />
                </padding>
             </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="blasphemousRestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
+         <children>
+            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <CheckBox fx:id="blasphemousNoDamage" mnemonicParsing="false" text="No Damage">
+               <padding>
+                  <Insets top="15.0" />
+               </padding></CheckBox>
+            <CheckBox fx:id="blasphemousSkipless" mnemonicParsing="false" text="Skipless">
+               <padding>
+                  <Insets left="15.0" top="15.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="blasphemousMeleeOnly" mnemonicParsing="false" text="Melee Only">
+               <padding>
+                  <Insets left="15.0" top="15.0" />
+               </padding>
+            </CheckBox>
+            <Button fx:id="blasphemousFilterButton" mnemonicParsing="false" text="Filter">
+               <HBox.margin>
+                  <Insets left="30.0" top="15.0" />
+               </HBox.margin>
+            </Button>
          </children>
       </HBox>
    </children>

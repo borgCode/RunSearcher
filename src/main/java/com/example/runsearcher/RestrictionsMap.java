@@ -65,6 +65,8 @@ public class RestrictionsMap {
         restrictions.put("No Companion", "no companion");
         restrictions.put("Nail Only", "(only nail|nail only)");
         restrictions.put("Skipless", "(no skip|no skips|skipless|skip less)");
+        restrictions.put("Melee Only", "(melee only|only melee)");
+
 
 
     }
