@@ -3,6 +3,7 @@ package com.example.runsearcher;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.transformation.FilteredList;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.layout.HBox;
 
@@ -18,15 +19,21 @@ public class GameFilter implements ChangeListener<Boolean> {
     private HBox restrictionBox;
     private String game;
     private ArrayList<RadioButton> categories;
+    private FilteredList<Run> restrictionFilter;
+    private ArrayList<CheckBox> restrictions;
+
 
     public GameFilter(FilteredList<Run> filter, RadioButton currentButton, List<RadioButton> gameButtons
-            , HBox categoryBox, HBox restrictionBox, ArrayList<RadioButton> categories) {
+            , HBox categoryBox, HBox restrictionBox, ArrayList<RadioButton> categories,
+                      FilteredList<Run> restrictionFilter, ArrayList<CheckBox> restrictions) {
         this.filter = filter;
         this.currentButton = currentButton;
         this.gameButtons = gameButtons;
         this.categoryBox = categoryBox;
         this.restrictionBox = restrictionBox;
         this.categories = categories;
+        this.restrictionFilter = restrictionFilter;
+        this.restrictions = restrictions;
         game = currentButton.getText().toLowerCase().replaceAll("[’',()]", "");
     }
     @Override
@@ -40,6 +47,10 @@ public class GameFilter implements ChangeListener<Boolean> {
             restrictionBox.setVisible(false);
             for (RadioButton button: categories) {
                 button.setSelected(false);
+            }
+            restrictionFilter.setPredicate(run -> true);
+            for (CheckBox box : restrictions) {
+                box.setSelected(false);
             }
 
         }

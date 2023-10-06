@@ -12,29 +12,42 @@ public class RestrictionFilter implements EventHandler<ActionEvent> {
 
     private FilteredList<Run> filter;
     private ArrayList<CheckBox> restrictions;
-    private StringBuilder restrictionString;
     private RestrictionsMap map;
 
     public RestrictionFilter(FilteredList<Run> filteredByRestriction, ArrayList<CheckBox> restrictions, RestrictionsMap map) {
         this.filter = filteredByRestriction;
         this.restrictions = restrictions;
-        this.restrictionString = new StringBuilder("");
+
         this.map = map;
     }
 
     @Override
     public void handle(ActionEvent actionEvent) {
-        restrictionString.replace(0, restrictionString.length(), "");
+        ArrayList<CheckBox> selectedBoxes = new ArrayList<>();
+        StringBuilder restrictionString = new StringBuilder();
+
         for (CheckBox box : restrictions) {
             if (box.isSelected()) {
-                restrictionString.append("(?=.*" + map.getValue(box.getText()) + ").*");
+                selectedBoxes.add(box);
             }
         }
 
+        if (selectedBoxes.isEmpty()) {
+            filter.setPredicate( run -> true);
+            return;
+        }
+
+        for (CheckBox box: selectedBoxes) {
+            restrictionString.append("(?=.*" + map.getValue(box.getText()) + ").*");
+        }
+
+        System.out.println(restrictionString);
+
 
         filter.setPredicate(run -> {
+
             if (run.getRunName().toLowerCase().
-                    replaceAll("[’',()]", "").
+                    replaceAll("[’',()\"]", "").
                     replaceAll("/", "").matches(restrictionString.toString())) {
                 return true;
             } else {

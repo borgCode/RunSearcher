@@ -3,9 +3,11 @@ package com.example.runsearcher;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.transformation.FilteredList;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.layout.HBox;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SubGameBox implements ChangeListener<Boolean> {
@@ -18,8 +20,8 @@ public class SubGameBox implements ChangeListener<Boolean> {
     private String game;
 
     public SubGameBox(FilteredList<Run> filter, List<RadioButton> gameButtons,
-                      RadioButton currentButton, List<RadioButton> subGameButtons
-            , HBox subGameBox) {
+                      RadioButton currentButton, List<RadioButton> subGameButtons,
+                      HBox subGameBox) {
         this.filter = filter;
         this.currentButton = currentButton;
         this.gameButtons = gameButtons;
@@ -42,6 +44,7 @@ public class SubGameBox implements ChangeListener<Boolean> {
                 button.setSelected(false);
             }
             subGameBox.setVisible(false);
+
         }
         filter.setPredicate(run -> {
             if (!currentButton.isSelected()) {

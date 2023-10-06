@@ -83,7 +83,8 @@ public class Controller {
     private CheckBox demonsSoulsSL1;
     @FXML
     private CheckBox demonsSoulsSorceryOnly;
-    @FXML Button demonsSoulsFilterButton;
+    @FXML
+    Button demonsSoulsFilterButton;
     @FXML
     private HBox darkSoulsCategoryBox;
     @FXML
@@ -106,6 +107,7 @@ public class Controller {
     private CheckBox darkSoulsPyroOnly;
     @FXML
     private CheckBox darkSoulsNoRoll;
+    @FXML
     private CheckBox darkSoulsMiraclesOnly;
     @FXML
     private CheckBox darkSoulsNoUpgrades;
@@ -113,6 +115,8 @@ public class Controller {
     private CheckBox darkSoulsSL1;
     @FXML
     private CheckBox darkSoulsSorceryOnly;
+    @FXML
+    Button darkSoulsFilterButton;
     @FXML
     private HBox darkSoulsTwoCategoryBox;
     @FXML
@@ -144,6 +148,8 @@ public class Controller {
     @FXML
     private CheckBox darkSoulsTwoHexOnly;
     @FXML
+    Button darkSoulsTwoFilterButton;
+    @FXML
     private HBox darkSoulsThreeCategoryBox;
     @FXML
     private RadioButton darkSoulsThreeAny;
@@ -155,7 +161,8 @@ public class Controller {
     private RadioButton darkSoulsThreeAA;
     @FXML
     private HBox darkSoulsThreeRestrictionsBox;
-    @FXML private CheckBox darkSoulsThreeNGPlus;
+    @FXML
+    private CheckBox darkSoulsThreeNGPlus;
     @FXML
     private CheckBox darkSoulsThreeNoDamage;
     @FXML
@@ -168,6 +175,8 @@ public class Controller {
     private CheckBox darkSoulsThreeSL1;
     @FXML
     private CheckBox darkSoulsThreeSorceryOnly;
+    @FXML
+    Button darkSoulsThreeFilterButton;
     @FXML
     private HBox bloodborneCategoryBox;
     @FXML
@@ -182,6 +191,26 @@ public class Controller {
     private RadioButton bloodborneAA;
     @FXML
     private HBox bloodborneRestrictionsBox;
+    @FXML
+    private CheckBox bloodborneBL4;
+    @FXML
+    private CheckBox bloodborneNoDmg;
+    @FXML
+    private CheckBox bloodborneNoUpgrades;
+    @FXML
+    private CheckBox bloodborneNoBuffs;
+    @FXML
+    private CheckBox bloodborneNoGems;
+    @FXML
+    private CheckBox bloodborneNHD;
+    @FXML
+    private CheckBox bloodborneNG6;
+    @FXML
+    private CheckBox bloodborneNoRoll;
+    @FXML
+    private CheckBox bloodborneArcane;
+    @FXML
+    Button bloodborneFilterButton;
     @FXML
     private HBox sekiroCategoryBox;
     @FXML
@@ -209,6 +238,24 @@ public class Controller {
     @FXML
     private HBox sekiroRestrictionsBox;
     @FXML
+    private CheckBox sekiroAP1;
+    @FXML
+    private CheckBox sekiroNoDamage;
+    @FXML
+    private CheckBox sekiroDBNKC;
+    @FXML
+    private CheckBox sekiroSwordOnly;
+    @FXML
+    private CheckBox sekiroNoDeflect;
+    @FXML
+    private CheckBox sekiroSwordDmgOnly;
+    @FXML
+    private CheckBox sekiroNoSkills;
+    @FXML
+    private CheckBox sekiroNoPros;
+    @FXML
+    Button sekiroFilterButton;
+    @FXML
     private HBox eldenRingCategoryBox;
     @FXML
     private RadioButton eldenRingAny;
@@ -223,13 +270,47 @@ public class Controller {
     @FXML
     private HBox eldenRingRestrictionsBox;
     @FXML
+    private CheckBox eldenRingRL1;
+    @FXML
+    private CheckBox eldenRingNoDamage;
+    @FXML
+    private CheckBox eldenRingNoUpgrades;
+    @FXML
+    private CheckBox eldenRingSorceryOnly;
+    @FXML
+    private CheckBox eldenRingNoRoll;
+    @FXML
+    private CheckBox eldenRingIncantOnly;
+    @FXML
+    private CheckBox eldenRingRegionlocked;
+    @FXML
+    Button eldenRingFilterButton;
+    @FXML
     private HBox residentEvilSubGameBox;
     @FXML
     private RadioButton residentEvil0Button;
     @FXML
     private HBox residentEvil0CategoryBox;
     @FXML
-    private HBox residentEvil0RestrictionsBox;
+    private HBox residentEvilRestrictionsBox;
+    @FXML
+    private CheckBox residentEvilHandgun;
+    @FXML
+    private CheckBox residentEvilKnife;
+    @FXML
+    private CheckBox residentEvilNoCrafting;
+    @FXML
+    private CheckBox residentEvilKillAll;
+    @FXML
+    private CheckBox residentEvilNoItemBox;
+    @FXML
+    private CheckBox residentEvil100;
+    @FXML
+    private CheckBox residentEvilNGplus;
+    @FXML
+    private CheckBox residentEvilNoUpgrades;
+    @FXML
+    Button residentEvilFilterButton;
     @FXML
     private RadioButton residentEvil0Any;
     @FXML
@@ -255,13 +336,9 @@ public class Controller {
     @FXML
     private HBox residentEvil1CategoryBox;
     @FXML
-    private HBox residentEvil1RestrictionsBox;
-    @FXML
     private RadioButton residentEvil2Button;
     @FXML
     private HBox residentEvil2CategoryBox;
-    @FXML
-    private HBox residentEvil2RestrictionsBox;
     @FXML
     private RadioButton residentEvil2Any;
     @FXML
@@ -279,8 +356,6 @@ public class Controller {
     @FXML
     private HBox residentEvil3CategoryBox;
     @FXML
-    private HBox residentEvil3RestrictionsBox;
-    @FXML
     private RadioButton residentEvil3Hard;
     @FXML
     private RadioButton residentEvil3Nightmare;
@@ -295,8 +370,6 @@ public class Controller {
     @FXML
     private HBox residentEvil4CategoryBox;
     @FXML
-    private HBox residentEvil4RestrictionsBox;
-    @FXML
     private RadioButton residentEvil4Pro;
     @FXML
     private RadioButton residentEvil4Extra;
@@ -307,8 +380,6 @@ public class Controller {
     @FXML
     private HBox residentEvil7CategoryBox;
     @FXML
-    private HBox residentEvil7RestrictionsBox;
-    @FXML
     private RadioButton residentEvil7Normal;
     @FXML
     private RadioButton residentEvil7Madhouse;
@@ -318,8 +389,6 @@ public class Controller {
     private RadioButton residentEvilVillageButton;
     @FXML
     private HBox residentEvilVillageCategoryBox;
-    @FXML
-    private HBox residentEvilVillageRestrictionsBox;
     @FXML
     private RadioButton residentEvilVillageHard;
     @FXML
@@ -332,8 +401,6 @@ public class Controller {
     private RadioButton residentEvilSurvivorButton;
     @FXML
     private HBox residentEvilSurvivorCategoryBox;
-    @FXML
-    private HBox residentEvilSurvivorRestrictionsBox;
     @FXML
     private RadioButton residentEvilSurvivorAny;
     @FXML
@@ -353,6 +420,10 @@ public class Controller {
     @FXML
     private HBox crashRestrictionsBox;
     @FXML
+    private CheckBox crashNoTripleMask;
+    @FXML
+    Button crashFilterButton;
+    @FXML
     private RadioButton crashAny;
     @FXML
     private RadioButton crashSecretEnding;
@@ -365,8 +436,6 @@ public class Controller {
     @FXML
     private HBox crashTwoCategoryBox;
     @FXML
-    private HBox crashTwoRestrictionsBox;
-    @FXML
     private RadioButton crashTwoAny;
     @FXML
     private RadioButton crashTwoAllLevels;
@@ -377,15 +446,11 @@ public class Controller {
     @FXML
     private HBox crashThreeCategoryBox;
     @FXML
-    private HBox crashThreeRestrictionsBox;
-    @FXML
     private RadioButton crashThreeAny;
     @FXML
     private RadioButton crashThree108;
     @FXML
     private HBox crashFourCategoryBox;
-    @FXML
-    private HBox crashFourRestrictionsBox;
     @FXML
     private RadioButton crashFourAny;
     @FXML
@@ -400,6 +465,24 @@ public class Controller {
     private HBox dishonoredCategoryBox;
     @FXML
     private HBox dishonoredRestrictionsBox;
+    @FXML
+    private CheckBox dishonoredGhost;
+    @FXML
+    private CheckBox dishonoredPacifist;
+    @FXML
+    private CheckBox dishonoredNoUpgrades;
+    @FXML
+    private CheckBox dishonoredCleanHands;
+    @FXML
+    private CheckBox dishonoredKnifeOnly;
+    @FXML
+    private CheckBox dishonoredNoGear;
+    @FXML
+    private CheckBox dishonoredNoKnockout;
+    @FXML
+    private CheckBox dishonoredNGplus;
+    @FXML
+    private Button dishonoredFilterButton;
     @FXML
     private RadioButton dishonoredOneButton;
     @FXML
@@ -417,15 +500,11 @@ public class Controller {
     @FXML
     private HBox dishonoredTwoCategoryBox;
     @FXML
-    private HBox dishonoredTwoRestrictionsBox;
-    @FXML
     private RadioButton dishonoredTwoAny;
     @FXML
     private RadioButton dishonoredTwoAllCollectibles;
     @FXML
     private HBox dishonoredDotoCategoryBox;
-    @FXML
-    private HBox dishonoredDotoRestrictionsBox;
     @FXML
     private RadioButton dishonoredDotoAny;
     @FXML
@@ -457,6 +536,18 @@ public class Controller {
     @FXML
     private HBox zeldaBotwRestrictionsBox;
     @FXML
+    private CheckBox zeldaBotwMasterMode;
+    @FXML
+    private CheckBox zeldaBotwBowOnly;
+    @FXML
+    private CheckBox zeldaBotwMasterSword;
+    @FXML
+    private CheckBox zeldaBotwNoBuffs;
+    @FXML
+    private CheckBox zeldaBotwNightOnly;
+    @FXML
+    private Button zeldaBotwFilterButton;
+    @FXML
     private HBox zeldaTotkCategoryBox;
     @FXML
     private RadioButton zeldaTotkAny;
@@ -472,6 +563,10 @@ public class Controller {
     private RadioButton zeldaTotkABMB;
     @FXML
     private HBox zeldaTotkRestrictionsBox;
+    @FXML
+    private CheckBox zeldaTotkNoDamage;
+    @FXML
+    private Button zeldaTotkFilterButton;
     @FXML
     private HBox cupheadCategoryBox;
     @FXML
@@ -505,6 +600,14 @@ public class Controller {
     @FXML
     private HBox hollowKnightRestrictionsBox;
     @FXML
+    private CheckBox hollowKnightNoDamage;
+    @FXML
+    private CheckBox hollowKnightNailOnly;
+    @FXML
+    private CheckBox hollowKnightNoUpgrades;
+    @FXML
+    private CheckBox hollowKnightSkipLess;
+    @FXML
     private RadioButton hollowKnightAny;
     @FXML
     private RadioButton hollowKnightAllSkills;
@@ -536,6 +639,18 @@ public class Controller {
     private HBox hadesCategoryBox;
     @FXML
     private HBox hadesRestrictionsBox;
+    @FXML
+    private CheckBox hadesNoBoons;
+    @FXML
+    private CheckBox hadesNoDash;
+    @FXML
+    private CheckBox hadesDashOnly;
+    @FXML
+    private CheckBox hadesNoNyx;
+    @FXML
+    private CheckBox hadesNoChoice;
+    @FXML
+    private CheckBox hadesNoCompanion;
     @FXML
     private RadioButton hadesAny;
     @FXML
@@ -658,6 +773,59 @@ public class Controller {
         FilteredList<Run> filteredByText = new FilteredList<>(filteredByRestriction, b -> true);
 
 
+        //Restriction lists
+
+        ArrayList<CheckBox> demonsRestrictions = new ArrayList<>(List.of(
+                demonsSoulsSL1, demonsSoulsNGPlus, demonsSoulsNoDamage, demonsSoulsNoMagic,
+                demonsSoulsNoRoll, demonsSoulsNoUpgrades, demonsSoulsSorceryOnly
+        ));
+
+        ArrayList<CheckBox> darkSoulsRestrictions = new ArrayList<>(List.of(
+                darkSoulsNGPlus, darkSoulsNGPlusSix, darkSoulsNoDamage,
+                darkSoulsPyroOnly, darkSoulsNoRoll, darkSoulsMiraclesOnly,
+                darkSoulsNoUpgrades, darkSoulsSL1, darkSoulsSorceryOnly
+        ));
+
+        ArrayList<CheckBox> darkSoulsTwoRestrictions = new ArrayList<>(List.of(
+                darkSoulsTwoNGPlus, darkSoulsTwoNoDamage, darkSoulsTwoPyroOnly,
+                darkSoulsTwoNoRoll, darkSoulsTwoMiraclesOnly, darkSoulsTwoNoUpgrades,
+                darkSoulsTwoSL1, darkSoulsTwoSorceryOnly, darkSoulsTwoHexOnly
+        ));
+
+        ArrayList<CheckBox> darkSoulsThreeRestrictions = new ArrayList<>(List.of(
+                darkSoulsThreeNGPlus, darkSoulsThreeNoDamage, darkSoulsThreePyroOnly,
+                darkSoulsThreeMiraclesOnly, darkSoulsThreeNoUpgrades, darkSoulsThreeSL1, darkSoulsThreeSorceryOnly
+        ));
+
+
+        ArrayList<CheckBox> bloodborneRestrictions = new ArrayList<>(List.of(
+                bloodborneBL4, bloodborneNoDmg, bloodborneNoUpgrades, bloodborneNoBuffs,
+                bloodborneNoGems, bloodborneNHD, bloodborneNG6, bloodborneNoRoll, bloodborneArcane));
+
+        ArrayList<CheckBox> sekiroRestrictions = new ArrayList<>(List.of(
+                sekiroAP1, sekiroNoDamage, sekiroDBNKC, sekiroSwordOnly, sekiroNoDeflect,
+                sekiroSwordDmgOnly, sekiroNoSkills, sekiroNoPros));
+
+        ArrayList<CheckBox> eldenRingRestrictions = new ArrayList<>(List.of(
+                eldenRingRL1, eldenRingNoDamage, eldenRingNoUpgrades, eldenRingSorceryOnly,
+                eldenRingNoRoll, eldenRingIncantOnly, eldenRingRegionlocked));
+
+        ArrayList<CheckBox> residentEvilRestrictions = new ArrayList<>(List.of(
+                residentEvilHandgun, residentEvilKnife, residentEvilNoCrafting,
+                residentEvilKillAll, residentEvilNoItemBox, residentEvil100, residentEvilNGplus, residentEvilNoUpgrades));
+
+        ArrayList<CheckBox> crashRestrictions = new ArrayList<>(List.of(crashNoTripleMask));
+
+        ArrayList<CheckBox> dishonoredRestrictions = new ArrayList<>(List.of(
+                dishonoredGhost, dishonoredPacifist, dishonoredNoUpgrades,
+                dishonoredCleanHands, dishonoredKnifeOnly, dishonoredNoGear,
+                dishonoredNoKnockout, dishonoredNGplus));
+
+        ArrayList<CheckBox> zeldaBotwRestrictions = new ArrayList<>(List.of(
+                zeldaBotwMasterMode, zeldaBotwBowOnly, zeldaBotwMasterSword,
+                zeldaBotwNoBuffs, zeldaBotwNightOnly));
+
+        ArrayList<CheckBox> zeldaTotkRestrictions = new ArrayList<>(List.of(zeldaTotkNoDamage));
 
 
         //Category Filters
@@ -715,7 +883,8 @@ public class Controller {
                 List.of(eldenRingAny, eldenRingAGR, eldenRingAR, eldenRingAB, eldenRingAA));
         for (
                 RadioButton button : eldenRingCategories) {
-            button.selectedProperty().addListener(new CategoryFilter(filteredByGame, eldenRingRadioButton, button, eldenRingRestrictionsBox, eldenRingCategories));
+            button.selectedProperty().addListener(new CategoryFilter(filteredByGame, eldenRingRadioButton, button,
+                    eldenRingRestrictionsBox, eldenRingCategories));
         }
 
         ArrayList<RadioButton> residentEvil0Categories = new ArrayList<>(
@@ -724,7 +893,7 @@ public class Controller {
                 RadioButton button : residentEvil0Categories) {
             button.selectedProperty().addListener(
                     new CategoryFilter(filteredByGame, residentEvil0Button, button,
-                            residentEvil0RestrictionsBox, residentEvil0Categories));
+                            residentEvilRestrictionsBox, residentEvil0Categories));
         }
 
         ArrayList<RadioButton> residentEvil1Categories = new ArrayList<>(
@@ -734,7 +903,7 @@ public class Controller {
                 RadioButton button : residentEvil1Categories) {
             button.selectedProperty().addListener(
                     new CategoryFilter(filteredByGame, residentEvil1Button, button,
-                            residentEvil1RestrictionsBox, residentEvil1Categories));
+                            residentEvilRestrictionsBox, residentEvil1Categories));
         }
 
         ArrayList<RadioButton> residentEvil2Categories = new ArrayList<>(
@@ -744,7 +913,7 @@ public class Controller {
                 RadioButton button : residentEvil2Categories) {
             button.selectedProperty().addListener(
                     new CategoryFilter(filteredByGame, residentEvil2Button, button,
-                            residentEvil2RestrictionsBox, residentEvil2Categories));
+                            residentEvilRestrictionsBox, residentEvil2Categories));
         }
 
         ArrayList<RadioButton> residentEvil3Categories = new ArrayList<>(
@@ -754,7 +923,7 @@ public class Controller {
                 RadioButton button : residentEvil3Categories) {
             button.selectedProperty().addListener(
                     new CategoryFilter(filteredByGame, residentEvil3Button, button,
-                            residentEvil3RestrictionsBox, residentEvil3Categories));
+                            residentEvilRestrictionsBox, residentEvil3Categories));
         }
 
         ArrayList<RadioButton> residentEvil4Categories = new ArrayList<>(
@@ -763,7 +932,7 @@ public class Controller {
                 RadioButton button : residentEvil4Categories) {
             button.selectedProperty().addListener(
                     new CategoryFilter(filteredByGame, residentEvil4Button, button,
-                            residentEvil4RestrictionsBox, residentEvil4Categories));
+                            residentEvilRestrictionsBox, residentEvil4Categories));
         }
 
         ArrayList<RadioButton> residentEvil7Categories = new ArrayList<>(
@@ -772,7 +941,7 @@ public class Controller {
                 RadioButton button : residentEvil7Categories) {
             button.selectedProperty().addListener(
                     new CategoryFilter(filteredByGame, residentEvil7Button, button,
-                            residentEvil7RestrictionsBox, residentEvil7Categories));
+                            residentEvilRestrictionsBox, residentEvil7Categories));
         }
 
         ArrayList<RadioButton> residentEvilVillageCategories = new ArrayList<>(
@@ -782,7 +951,7 @@ public class Controller {
                 RadioButton button : residentEvilVillageCategories) {
             button.selectedProperty().addListener(
                     new CategoryFilter(filteredByGame, residentEvilVillageButton, button,
-                            residentEvilVillageRestrictionsBox, residentEvilVillageCategories));
+                            residentEvilRestrictionsBox, residentEvilVillageCategories));
         }
 
         ArrayList<RadioButton> residentEvilSurvivorCategories = new ArrayList<>(
@@ -791,7 +960,7 @@ public class Controller {
                 RadioButton button : residentEvilSurvivorCategories) {
             button.selectedProperty().addListener(
                     new CategoryFilter(filteredByGame, residentEvilSurvivorButton, button,
-                            residentEvilSurvivorRestrictionsBox, residentEvilSurvivorCategories));
+                            residentEvilRestrictionsBox, residentEvilSurvivorCategories));
         }
 
         ArrayList<RadioButton> crashOneCategories = new ArrayList<>(
@@ -810,7 +979,7 @@ public class Controller {
                 RadioButton button : crashTwoCategories) {
             button.selectedProperty().addListener(
                     new CategoryFilter(filteredByGame, crashTwoButton, button,
-                            crashTwoRestrictionsBox, crashTwoCategories));
+                            crashRestrictionsBox, crashTwoCategories));
         }
 
         ArrayList<RadioButton> crashThreeCategories = new ArrayList<>(
@@ -819,7 +988,7 @@ public class Controller {
                 RadioButton button : crashThreeCategories) {
             button.selectedProperty().addListener(
                     new CategoryFilter(filteredByGame, crashThreeButton, button,
-                            crashThreeRestrictionsBox, crashThreeCategories));
+                            crashRestrictionsBox, crashThreeCategories));
         }
 
         ArrayList<RadioButton> crashFourCategories = new ArrayList<>(
@@ -828,7 +997,7 @@ public class Controller {
                 RadioButton button : crashFourCategories) {
             button.selectedProperty().addListener(
                     new CategoryFilter(filteredByGame, crashFourButton, button,
-                            crashFourRestrictionsBox, crashFourCategories));
+                            crashRestrictionsBox, crashFourCategories));
         }
 
         ArrayList<RadioButton> dishonoredCategories = new ArrayList<>(
@@ -846,7 +1015,7 @@ public class Controller {
                 RadioButton button : dishonoredTwoCategories) {
             button.selectedProperty().addListener(
                     new CategoryFilter(filteredByGame, dishonoredTwoButton, button,
-                            dishonoredTwoRestrictionsBox, dishonoredTwoCategories));
+                            dishonoredRestrictionsBox, dishonoredTwoCategories));
         }
 
         ArrayList<RadioButton> dishonoredDotoCategories = new ArrayList<>(
@@ -856,7 +1025,7 @@ public class Controller {
                 RadioButton button : dishonoredDotoCategories) {
             button.selectedProperty().addListener(
                     new CategoryFilter(filteredByGame, dishonoredDotoButton, button,
-                            dishonoredDotoRestrictionsBox, dishonoredDotoCategories));
+                            dishonoredRestrictionsBox, dishonoredDotoCategories));
         }
 
         ArrayList<RadioButton> zeldaBotwCategories = new ArrayList<>(
@@ -935,29 +1104,38 @@ public class Controller {
 
         demonsSoulsRadioButton.selectedProperty().addListener(
                 new GameFilter(filteredByGame, demonsSoulsRadioButton, gameButtons,
-                        demonsSoulsCategoryBox, demonsSoulsRestrictionsBox, demonsSoulsCategories));
+                        demonsSoulsCategoryBox, demonsSoulsRestrictionsBox, demonsSoulsCategories,
+                        filteredByRestriction, demonsRestrictions));
 
         darkSoulsRadioButton.selectedProperty().addListener(
                 new GameFilter(filteredByGame, darkSoulsRadioButton, gameButtons,
-                        darkSoulsCategoryBox, darkSoulsRestrictionsBox, darkSoulsCategories));
+                        darkSoulsCategoryBox, darkSoulsRestrictionsBox, darkSoulsCategories,
+                        filteredByRestriction, darkSoulsRestrictions));
 
         darkSoulsTwoRadioButton.selectedProperty().addListener(
                 new GameFilter(filteredByGame, darkSoulsTwoRadioButton, gameButtons,
-                        darkSoulsTwoCategoryBox, darkSoulsTwoRestrictionsBox, darkSoulsTwoCategories));
+                        darkSoulsTwoCategoryBox, darkSoulsTwoRestrictionsBox, darkSoulsTwoCategories,
+                        filteredByRestriction, darkSoulsTwoRestrictions));
 
         darkSoulsThreeRadioButton.selectedProperty().addListener(
                 new GameFilter(filteredByGame, darkSoulsThreeRadioButton, gameButtons,
-                        darkSoulsThreeCategoryBox, darkSoulsThreeRestrictionsBox, darkSoulsThreeCategories));
+                        darkSoulsThreeCategoryBox, darkSoulsThreeRestrictionsBox, darkSoulsThreeCategories,
+                        filteredByRestriction, darkSoulsThreeRestrictions));
 
         bloodborneRadioButton.selectedProperty().addListener(
                 new GameFilter(filteredByGame, bloodborneRadioButton, gameButtons,
-                        bloodborneCategoryBox, bloodborneRestrictionsBox, bloodborneCategories));
+                        bloodborneCategoryBox, bloodborneRestrictionsBox, bloodborneCategories,
+                        filteredByRestriction, bloodborneRestrictions));
+
         sekiroRadioButton.selectedProperty().addListener(
                 new GameFilter(filteredByGame, sekiroRadioButton, gameButtons,
-                        sekiroCategoryBox, sekiroRestrictionsBox, sekiroCategories));
+                        sekiroCategoryBox, sekiroRestrictionsBox, sekiroCategories, filteredByRestriction,
+                        sekiroRestrictions));
+
         eldenRingRadioButton.selectedProperty().addListener(
                 new GameFilter(filteredByGame, eldenRingRadioButton, gameButtons,
-                        eldenRingCategoryBox, eldenRingRestrictionsBox, eldenRingCategories));
+                        eldenRingCategoryBox, eldenRingRestrictionsBox, eldenRingCategories,
+                        filteredByRestriction, eldenRingRestrictions));
 
         ArrayList<RadioButton> residentEvilSubGames = new ArrayList<>(
                 List.of(residentEvil0Button, residentEvil1Button, residentEvil2Button,
@@ -970,42 +1148,50 @@ public class Controller {
         residentEvil0Button.selectedProperty().addListener(
                 new SubGameFilter(filteredByGame, residentEvil0Button,
                         residentEvilSubGames, residentEvil0CategoryBox,
-                        residentEvil0RestrictionsBox, residentEvil0Categories));
+                        residentEvilRestrictionsBox, residentEvil0Categories,
+                        filteredByRestriction, residentEvilRestrictions));
 
         residentEvil1Button.selectedProperty().addListener(
                 new SubGameFilter(filteredByGame, residentEvil1Button,
                         residentEvilSubGames, residentEvil1CategoryBox,
-                        residentEvil1RestrictionsBox, residentEvil1Categories));
+                        residentEvilRestrictionsBox, residentEvil1Categories,
+                        filteredByRestriction, residentEvilRestrictions));
 
         residentEvil2Button.selectedProperty().addListener(
                 new SubGameFilter(filteredByGame, residentEvil2Button,
                         residentEvilSubGames, residentEvil2CategoryBox,
-                        residentEvil2RestrictionsBox, residentEvil2Categories));
+                        residentEvilRestrictionsBox, residentEvil2Categories,
+                        filteredByRestriction, residentEvilRestrictions));
 
         residentEvil3Button.selectedProperty().addListener(
                 new SubGameFilter(filteredByGame, residentEvil3Button,
                         residentEvilSubGames, residentEvil3CategoryBox,
-                        residentEvil3RestrictionsBox, residentEvil3Categories));
+                        residentEvilRestrictionsBox, residentEvil3Categories,
+                        filteredByRestriction, residentEvilRestrictions));
 
         residentEvil4Button.selectedProperty().addListener(
                 new SubGameFilter(filteredByGame, residentEvil4Button,
                         residentEvilSubGames, residentEvil4CategoryBox,
-                        residentEvil4RestrictionsBox, residentEvil4Categories));
+                        residentEvilRestrictionsBox, residentEvil4Categories,
+                        filteredByRestriction, residentEvilRestrictions));
 
         residentEvil7Button.selectedProperty().addListener(
                 new SubGameFilter(filteredByGame, residentEvil7Button,
                         residentEvilSubGames, residentEvil7CategoryBox,
-                        residentEvil7RestrictionsBox, residentEvil7Categories));
+                        residentEvilRestrictionsBox, residentEvil7Categories,
+                        filteredByRestriction, residentEvilRestrictions));
 
         residentEvilVillageButton.selectedProperty().addListener(
                 new SubGameFilter(filteredByGame, residentEvilVillageButton,
                         residentEvilSubGames, residentEvilVillageCategoryBox,
-                        residentEvilVillageRestrictionsBox, residentEvilVillageCategories));
+                        residentEvilRestrictionsBox, residentEvilVillageCategories,
+                        filteredByRestriction, residentEvilRestrictions));
 
         residentEvilSurvivorButton.selectedProperty().addListener(
                 new SubGameFilter(filteredByGame, residentEvilSurvivorButton,
                         residentEvilSubGames, residentEvilSurvivorCategoryBox,
-                        residentEvilSurvivorRestrictionsBox, residentEvilSurvivorCategories));
+                        residentEvilRestrictionsBox, residentEvilSurvivorCategories,
+                        filteredByRestriction, residentEvilRestrictions));
 
         ArrayList<RadioButton> crashSubGames = new ArrayList<>(
                 List.of(crash1Button, crashTwoButton, crashThreeButton, crashFourButton));
@@ -1015,22 +1201,26 @@ public class Controller {
 
         crash1Button.selectedProperty().addListener(
                 new SubGameFilter(filteredByGame, crash1Button, crashSubGames,
-                        crashCategoryBox, crashRestrictionsBox, crashOneCategories)
+                        crashCategoryBox, crashRestrictionsBox, crashOneCategories,
+                        filteredByRestriction, crashRestrictions)
         );
 
         crashTwoButton.selectedProperty().addListener(
                 new SubGameFilter(filteredByGame, crashTwoButton, crashSubGames,
-                        crashTwoCategoryBox, crashTwoRestrictionsBox, crashTwoCategories)
+                        crashTwoCategoryBox, crashRestrictionsBox, crashTwoCategories,
+                        filteredByRestriction, crashRestrictions)
         );
 
         crashThreeButton.selectedProperty().addListener(
                 new SubGameFilter(filteredByGame, crashThreeButton, crashSubGames,
-                        crashThreeCategoryBox, crashThreeRestrictionsBox, crashThreeCategories)
+                        crashThreeCategoryBox, crashRestrictionsBox, crashThreeCategories,
+                        filteredByRestriction, crashRestrictions)
         );
 
         crashFourButton.selectedProperty().addListener(
                 new SubGameFilter(filteredByGame, crashFourButton, crashSubGames,
-                        crashFourCategoryBox, crashFourRestrictionsBox, crashFourCategories)
+                        crashFourCategoryBox, crashRestrictionsBox, crashFourCategories,
+                        filteredByRestriction, crashRestrictions)
         );
 
         ArrayList<RadioButton> dishonoredSubGames = new ArrayList<>(
@@ -1041,15 +1231,18 @@ public class Controller {
 
         dishonoredOneButton.selectedProperty().addListener(
                 new SubGameFilter(filteredByGame, dishonoredOneButton, dishonoredSubGames,
-                        dishonoredCategoryBox, dishonoredRestrictionsBox, dishonoredCategories)
+                        dishonoredCategoryBox, dishonoredRestrictionsBox, dishonoredCategories,
+                        filteredByRestriction, dishonoredRestrictions)
         );
         dishonoredTwoButton.selectedProperty().addListener(
                 new SubGameFilter(filteredByGame, dishonoredTwoButton, dishonoredSubGames,
-                        dishonoredTwoCategoryBox, dishonoredTwoRestrictionsBox, dishonoredTwoCategories)
+                        dishonoredTwoCategoryBox, dishonoredRestrictionsBox, dishonoredTwoCategories,
+                        filteredByRestriction, dishonoredRestrictions)
         );
         dishonoredDotoButton.selectedProperty().addListener(
                 new SubGameFilter(filteredByGame, dishonoredDotoButton, dishonoredSubGames,
-                        dishonoredDotoCategoryBox, dishonoredDotoRestrictionsBox, dishonoredDotoCategories)
+                        dishonoredDotoCategoryBox, dishonoredRestrictionsBox, dishonoredDotoCategories,
+                        filteredByRestriction, dishonoredRestrictions)
         );
 
         ArrayList<RadioButton> zeldaSubGames = new ArrayList<>(
@@ -1060,28 +1253,30 @@ public class Controller {
 
         zeldaBotwButton.selectedProperty().addListener(
                 new SubGameFilter(filteredByGame, zeldaBotwButton, zeldaSubGames,
-                        zeldaBotwCategoryBox, zeldaBotwRestrictionsBox, zeldaBotwCategories)
+                        zeldaBotwCategoryBox, zeldaBotwRestrictionsBox, zeldaBotwCategories,
+                        filteredByRestriction, zeldaBotwRestrictions)
         );
         zeldaTotkButton.selectedProperty().addListener(
                 new SubGameFilter(filteredByGame, zeldaTotkButton, zeldaSubGames,
-                        zeldaTotkCategoryBox, zeldaTotkRestrictionsBox, zeldaTotkCategories)
+                        zeldaTotkCategoryBox, zeldaTotkRestrictionsBox, zeldaTotkCategories,
+                        filteredByRestriction, zeldaTotkRestrictions)
         );
 
-        cupheadRadioButton.selectedProperty().addListener(
-                new GameFilter(filteredByGame, cupheadRadioButton, gameButtons,
-                        cupheadCategoryBox, cupheadRestrictionsBox, cupheadCategories));
-        hollowKnightRadioButton.selectedProperty().addListener(
-                new GameFilter(filteredByGame, hollowKnightRadioButton, gameButtons,
-                        hollowKnightCategoryBox, hollowKnightRestrictionsBox, hollowKnightCategories));
-        hadesRadioButton.selectedProperty().addListener(
-                new GameFilter(filteredByGame, hadesRadioButton, gameButtons,
-                        hadesCategoryBox, hadesRestrictionsBox, hadesCategories));
-        celesteRadioButton.selectedProperty().addListener(
-                new GameFilter(filteredByGame, celesteRadioButton, gameButtons,
-                        celesteCategoryBox, celesteRestrictionsBox, celesteCategories));
-        blasphemousRadioButton.selectedProperty().addListener(
-                new GameFilter(filteredByGame, blasphemousRadioButton, gameButtons,
-                        blasphemousCategoryBox, blasphemousRestrictionsBox, blasphemousCategories));
+//        cupheadRadioButton.selectedProperty().addListener(
+//                new GameFilter(filteredByGame, cupheadRadioButton, gameButtons,
+//                        cupheadCategoryBox, cupheadRestrictionsBox, cupheadCategories));
+//        hollowKnightRadioButton.selectedProperty().addListener(
+//                new GameFilter(filteredByGame, hollowKnightRadioButton, gameButtons,
+//                        hollowKnightCategoryBox, hollowKnightRestrictionsBox, hollowKnightCategories));
+//        hadesRadioButton.selectedProperty().addListener(
+//                new GameFilter(filteredByGame, hadesRadioButton, gameButtons,
+//                        hadesCategoryBox, hadesRestrictionsBox, hadesCategories));
+//        celesteRadioButton.selectedProperty().addListener(
+//                new GameFilter(filteredByGame, celesteRadioButton, gameButtons,
+//                        celesteCategoryBox, celesteRestrictionsBox, celesteCategories));
+//        blasphemousRadioButton.selectedProperty().addListener(
+//                new GameFilter(filteredByGame, blasphemousRadioButton, gameButtons,
+//                        blasphemousCategoryBox, blasphemousRestrictionsBox, blasphemousCategories));
 
         multipleRadioButton.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
@@ -1110,12 +1305,19 @@ public class Controller {
 
         });
 
-        ArrayList<CheckBox> demonsRestrictions = new ArrayList<>(List.of(
-                demonsSoulsSL1, demonsSoulsNGPlus, demonsSoulsNoDamage, demonsSoulsNoMagic,
-                demonsSoulsNoRoll, demonsSoulsNoUpgrades, demonsSoulsSorceryOnly
-        ));
 
-       demonsSoulsFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, demonsRestrictions, restrictions));
+        demonsSoulsFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, demonsRestrictions, restrictions));
+        darkSoulsFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, darkSoulsRestrictions, restrictions));
+        darkSoulsTwoFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, darkSoulsTwoRestrictions, restrictions));
+        darkSoulsThreeFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, darkSoulsThreeRestrictions, restrictions));
+        bloodborneFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, bloodborneRestrictions, restrictions));
+        sekiroFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, sekiroRestrictions, restrictions));
+        eldenRingFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, eldenRingRestrictions, restrictions));
+        residentEvilFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, residentEvilRestrictions, restrictions));
+        crashFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, crashRestrictions, restrictions));
+        dishonoredFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, dishonoredRestrictions, restrictions));
+        zeldaBotwFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, zeldaBotwRestrictions, restrictions));
+        zeldaTotkFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, zeldaTotkRestrictions, restrictions));
 
         searchBox.textProperty().
 
@@ -1144,7 +1346,7 @@ public class Controller {
                                 .replaceAll("/", " ")
                                 .split(" ")).toList()::contains)) {
                             return true;
-                        }else if (run.getCategory().toLowerCase()
+                        } else if (run.getCategory().toLowerCase()
                                 .replaceAll("’", "").replaceAll("'", "")
                                 .contains(lowerCaseFilter)) {
                             return true;

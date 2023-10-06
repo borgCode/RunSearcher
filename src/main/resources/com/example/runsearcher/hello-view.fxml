@@ -49,7 +49,7 @@
             <TableColumn fx:id="linkColumn" editable="false" prefWidth="245.0" sortable="false" text="Run link" />
         </columns>
       </TableView>
-      <GridPane prefHeight="61.0" prefWidth="956.0" GridPane.columnSpan="5" GridPane.rowIndex="1" GridPane.rowSpan="2">
+      <GridPane prefHeight="61.0" prefWidth="956.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" GridPane.columnSpan="5" GridPane.rowIndex="1" GridPane.rowSpan="2">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="95.0" prefWidth="185.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="110.0" prefWidth="100.0" />
@@ -73,12 +73,12 @@
          <children>
             <RadioButton fx:id="hadesRadioButton" mnemonicParsing="false" text="Hades" GridPane.columnIndex="5" GridPane.rowIndex="5">
                <GridPane.margin>
-                  <Insets bottom="15.0" />
+                  <Insets bottom="30.0" />
                </GridPane.margin>
             </RadioButton>
             <RadioButton fx:id="cupheadRadioButton" mnemonicParsing="false" text="Cuphead" GridPane.columnIndex="3" GridPane.rowIndex="5">
                <GridPane.margin>
-                  <Insets bottom="15.0" />
+                  <Insets bottom="30.0" />
                </GridPane.margin>
             </RadioButton>
             <RadioButton fx:id="darkSoulsRadioButton" mnemonicParsing="false" text="Dark Souls" GridPane.columnIndex="2">
@@ -88,12 +88,12 @@
             </RadioButton>
             <RadioButton fx:id="zeldaRadioButton" mnemonicParsing="false" text="Zelda" GridPane.columnIndex="2" GridPane.rowIndex="5">
                <GridPane.margin>
-                  <Insets bottom="15.0" />
+                  <Insets bottom="30.0" />
                </GridPane.margin>
             </RadioButton>
             <RadioButton fx:id="dishonoredRadioButton" mnemonicParsing="false" text="Dishonored" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <GridPane.margin>
-                  <Insets bottom="15.0" />
+                  <Insets bottom="30.0" />
                </GridPane.margin>
             </RadioButton>
             <RadioButton fx:id="darkSoulsTwoRadioButton" mnemonicParsing="false" text="Dark Souls II" GridPane.columnIndex="3">
@@ -118,7 +118,7 @@
             </RadioButton>
             <RadioButton fx:id="hollowKnightRadioButton" mnemonicParsing="false" text="Hollow Knight" GridPane.columnIndex="4" GridPane.rowIndex="5">
                <GridPane.margin>
-                  <Insets bottom="15.0" />
+                  <Insets bottom="30.0" />
                </GridPane.margin>
             </RadioButton>
             <RadioButton fx:id="crashRadioButton" mnemonicParsing="false" text="Crash" GridPane.columnIndex="9">
@@ -128,17 +128,17 @@
             </RadioButton>
             <RadioButton fx:id="celesteRadioButton" mnemonicParsing="false" text="Celeste" GridPane.columnIndex="6" GridPane.rowIndex="5">
                <GridPane.margin>
-                  <Insets bottom="15.0" />
+                  <Insets bottom="30.0" />
                </GridPane.margin>
             </RadioButton>
             <RadioButton fx:id="multipleRadioButton" mnemonicParsing="false" text="Multiple" GridPane.columnIndex="8" GridPane.rowIndex="5">
                <GridPane.margin>
-                  <Insets bottom="15.0" />
+                  <Insets bottom="30.0" />
                </GridPane.margin>
             </RadioButton>
             <RadioButton fx:id="blasphemousRadioButton" mnemonicParsing="false" text="Blasphemous" GridPane.columnIndex="7" GridPane.rowIndex="5">
                <GridPane.margin>
-                  <Insets bottom="15.0" />
+                  <Insets bottom="30.0" />
                </GridPane.margin>
             </RadioButton>
             <RadioButton fx:id="residentEvilRadioButton" mnemonicParsing="false" text="Resident Evil" GridPane.columnIndex="8">
@@ -190,7 +190,7 @@
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="demonsSoulsRestrictionsBox" prefHeight="56.0" prefWidth="100.0" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
+      <HBox fx:id="demonsSoulsRestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
          <children>
             <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
                <padding>
@@ -324,13 +324,18 @@
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="Miracles Only" GridPane.columnIndex="5">
+                  <CheckBox fx:id="darkSoulsMiraclesOnly" mnemonicParsing="false" text="Miracles Only" GridPane.columnIndex="5">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
                </children>
             </GridPane>
+            <Button fx:id="darkSoulsFilterButton" mnemonicParsing="false" text="Filter">
+               <HBox.margin>
+                  <Insets left="30.0" top="15.0" />
+               </HBox.margin>
+            </Button>
          </children>
       </HBox>
       <HBox fx:id="darkSoulsTwoCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
@@ -427,6 +432,11 @@
                   </CheckBox>
                </children>
             </GridPane>
+            <Button fx:id="darkSoulsTwoFilterButton" mnemonicParsing="false" text="Filter">
+               <HBox.margin>
+                  <Insets left="30.0" top="15.0" />
+               </HBox.margin>
+            </Button>
          </children>
       </HBox>
       <HBox fx:id="darkSoulsThreeCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
@@ -513,6 +523,11 @@
                   </CheckBox>
                </children>
             </GridPane>
+            <Button fx:id="darkSoulsThreeFilterButton" mnemonicParsing="false" text="Filter">
+               <HBox.margin>
+                  <Insets left="30.0" top="15.0" />
+               </HBox.margin>
+            </Button>
          </children>
       </HBox>
       <HBox fx:id="bloodborneCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
@@ -574,45 +589,50 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <CheckBox mnemonicParsing="false" text="BL4" />
-                  <CheckBox mnemonicParsing="false" text="No Damage" GridPane.columnIndex="1">
+                  <CheckBox fx:id="bloodborneBL4" mnemonicParsing="false" text="BL4" />
+                  <CheckBox fx:id="bloodborneNoDmg" mnemonicParsing="false" text="No Damage" GridPane.columnIndex="1">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="No Upgrades" GridPane.columnIndex="2">
+                  <CheckBox fx:id="bloodborneNoUpgrades" mnemonicParsing="false" text="No Upgrades" GridPane.columnIndex="2">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="No Buffs" GridPane.columnIndex="3">
+                  <CheckBox fx:id="bloodborneNoBuffs" mnemonicParsing="false" text="No Buffs" GridPane.columnIndex="3">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="No Gems" GridPane.columnIndex="6">
+                  <CheckBox fx:id="bloodborneNoGems" mnemonicParsing="false" text="No Gems" GridPane.columnIndex="6">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="No Hunter's Dream" GridPane.rowIndex="1" />
-                  <CheckBox mnemonicParsing="false" text="NG+6" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <CheckBox fx:id="bloodborneNHD" mnemonicParsing="false" text="No Hunter's Dream" GridPane.rowIndex="1" />
+                  <CheckBox fx:id="bloodborneNG6" mnemonicParsing="false" text="NG+6" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="No Roll/Quickstep" GridPane.columnIndex="4">
+                  <CheckBox fx:id="bloodborneNoRoll" mnemonicParsing="false" text="No Roll/Quickstep" GridPane.columnIndex="4">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="Arcane Only" GridPane.columnIndex="5">
+                  <CheckBox fx:id="bloodborneArcane" mnemonicParsing="false" text="Arcane Only" GridPane.columnIndex="5">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
                </children>
             </GridPane>
+            <Button fx:id="bloodborneFilterButton" mnemonicParsing="false" text="Filter">
+               <HBox.margin>
+                  <Insets left="30.0" top="15.0" />
+               </HBox.margin>
+            </Button>
          </children>
       </HBox>
       <HBox fx:id="sekiroCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
@@ -724,44 +744,49 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <CheckBox mnemonicParsing="false" text="AP1" />
-                  <CheckBox mnemonicParsing="false" text="No Damage" GridPane.columnIndex="1">
+                  <CheckBox fx:id="sekiroAP1" mnemonicParsing="false" text="AP1" />
+                  <CheckBox fx:id="sekiroNoDamage" mnemonicParsing="false" text="No Damage" GridPane.columnIndex="1">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="DB/NKC" GridPane.columnIndex="2">
+                  <CheckBox fx:id="sekiroDBNKC" mnemonicParsing="false" text="DB/NKC" GridPane.columnIndex="2">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="Sword Only" GridPane.columnIndex="3">
+                  <CheckBox fx:id="sekiroSwordOnly" mnemonicParsing="false" text="Sword Only" GridPane.columnIndex="3">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="No Deflect" GridPane.columnIndex="6">
+                  <CheckBox fx:id="sekiroNoDeflect" mnemonicParsing="false" text="No Deflect" GridPane.columnIndex="6">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="Sword DMG Only" GridPane.columnIndex="4">
+                  <CheckBox fx:id="sekiroSwordDmgOnly" mnemonicParsing="false" text="Sword DMG Only" GridPane.columnIndex="4">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="No Skills" GridPane.columnIndex="5">
+                  <CheckBox fx:id="sekiroNoSkills" mnemonicParsing="false" text="No Skills" GridPane.columnIndex="5">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="No Prosthetics" GridPane.columnIndex="7">
+                  <CheckBox fx:id="sekiroNoPros" mnemonicParsing="false" text="No Prosthetics" GridPane.columnIndex="7">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
                </children>
             </GridPane>
+            <Button fx:id="sekiroFilterButton" mnemonicParsing="false" text="Filter">
+               <HBox.margin>
+                  <Insets left="30.0" top="15.0" />
+               </HBox.margin>
+            </Button>
          </children>
       </HBox>
       <HBox fx:id="eldenRingCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
@@ -824,39 +849,44 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <CheckBox mnemonicParsing="false" text="RL1" />
-                  <CheckBox mnemonicParsing="false" text="No Damage" GridPane.columnIndex="1">
+                  <CheckBox fx:id="eldenRingRL1" mnemonicParsing="false" text="RL1" />
+                  <CheckBox fx:id="eldenRingNoDamage" mnemonicParsing="false" text="No Damage" GridPane.columnIndex="1">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="No Upgrades" GridPane.columnIndex="2">
+                  <CheckBox fx:id="eldenRingNoUpgrades" mnemonicParsing="false" text="No Upgrades" GridPane.columnIndex="2">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="Sorcery Only" GridPane.columnIndex="3">
+                  <CheckBox fx:id="eldenRingSorceryOnly" mnemonicParsing="false" text="Sorcery Only" GridPane.columnIndex="3">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="No Roll" GridPane.columnIndex="6">
+                  <CheckBox fx:id="eldenRingNoRoll" mnemonicParsing="false" text="No Roll" GridPane.columnIndex="6">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="Incantations Only" GridPane.columnIndex="4">
+                  <CheckBox fx:id="eldenRingIncantOnly" mnemonicParsing="false" text="Incantations Only" GridPane.columnIndex="4">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="Regionlocked" GridPane.columnIndex="5">
+                  <CheckBox fx:id="eldenRingRegionlocked" mnemonicParsing="false" text="Regionlocked" GridPane.columnIndex="5">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
                </children>
             </GridPane>
+            <Button fx:id="eldenRingFilterButton" mnemonicParsing="false" text="Filter">
+               <HBox.margin>
+                  <Insets left="30.0" top="15.0" />
+               </HBox.margin>
+            </Button>
          </children>
       </HBox>
       <HBox fx:id="residentEvilSubGameBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3">
@@ -943,7 +973,6 @@
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="residentEvil0RestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2" />
       <HBox fx:id="residentEvil1CategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
@@ -956,7 +985,7 @@
                   <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
-            <RadioButton fx:id="residentEvil1Hard" mnemonicParsing="false" text="Hard">
+            <RadioButton fx:id="residentEvil1Hard" mnemonicParsing="false" text="Hard Any%">
                <padding>
                   <Insets left="10.0" top="5.0" />
                </padding>
@@ -983,41 +1012,6 @@
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="residentEvil1RestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
-         <children>
-            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
-            </Label>
-            <CheckBox mnemonicParsing="false" text="No Hit" />
-            <CheckBox mnemonicParsing="false" text="No Damage">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Jill">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Chris">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Magic">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="NG+">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-         </children>
-      </HBox>
       <HBox fx:id="residentEvil2CategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
@@ -1030,7 +1024,7 @@
                   <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
-            <RadioButton fx:id="residentEvil2Hard" mnemonicParsing="false" text="Hard">
+            <RadioButton fx:id="residentEvil2Hard" mnemonicParsing="false" text="Hard Any%">
                <padding>
                   <Insets left="10.0" top="5.0" />
                </padding>
@@ -1057,41 +1051,6 @@
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="residentEvil2RestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
-         <children>
-            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
-            </Label>
-            <CheckBox mnemonicParsing="false" text="SL1" />
-            <CheckBox mnemonicParsing="false" text="No Damage">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Upgrades">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Sorcery Only">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Magic">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="NG+">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-         </children>
-      </HBox>
       <HBox fx:id="residentEvil3CategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
@@ -1099,7 +1058,7 @@
                   <Insets left="10.0" top="5.0" />
                </padding>
             </Label>
-            <RadioButton fx:id="residentEvil3Hard" mnemonicParsing="false" text="Hard">
+            <RadioButton fx:id="residentEvil3Hard" mnemonicParsing="false" text="Hard Any%">
                <padding>
                   <Insets left="10.0" top="5.0" />
                </padding>
@@ -1126,41 +1085,6 @@
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="residentEvil3RestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
-         <children>
-            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
-            </Label>
-            <CheckBox mnemonicParsing="false" text="SL1" />
-            <CheckBox mnemonicParsing="false" text="No Damage">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Upgrades">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Sorcery Only">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Magic">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="NG+">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-         </children>
-      </HBox>
       <HBox fx:id="residentEvil4CategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
@@ -1183,41 +1107,6 @@
                   <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
-         </children>
-      </HBox>
-      <HBox fx:id="residentEvil4RestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
-         <children>
-            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
-            </Label>
-            <CheckBox mnemonicParsing="false" text="SL1" />
-            <CheckBox mnemonicParsing="false" text="No Damage">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Upgrades">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Sorcery Only">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Magic">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="NG+">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
          </children>
       </HBox>
       <HBox fx:id="residentEvil7CategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
@@ -1244,41 +1133,6 @@
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="residentEvil7RestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
-         <children>
-            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
-            </Label>
-            <CheckBox mnemonicParsing="false" text="SL1" />
-            <CheckBox mnemonicParsing="false" text="No Damage">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Upgrades">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Sorcery Only">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Magic">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="NG+">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-         </children>
-      </HBox>
       <HBox fx:id="residentEvilVillageCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
@@ -1286,7 +1140,7 @@
                   <Insets left="10.0" top="5.0" />
                </padding>
             </Label>
-            <RadioButton fx:id="residentEvilVillageHard" mnemonicParsing="false" text="Hard">
+            <RadioButton fx:id="residentEvilVillageHard" mnemonicParsing="false" text="Hard Any%">
                <padding>
                   <Insets left="10.0" top="5.0" />
                </padding>
@@ -1308,41 +1162,6 @@
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="residentEvilVillageRestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
-         <children>
-            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
-            </Label>
-            <CheckBox mnemonicParsing="false" text="SL1" />
-            <CheckBox mnemonicParsing="false" text="No Damage">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Upgrades">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Sorcery Only">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Magic">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="NG+">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-         </children>
-      </HBox>
       <HBox fx:id="residentEvilSurvivorCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
@@ -1362,39 +1181,57 @@
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="residentEvilSurvivorRestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
+      <HBox fx:id="residentEvilRestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
          <children>
             <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
                <padding>
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <CheckBox mnemonicParsing="false" text="SL1" />
-            <CheckBox mnemonicParsing="false" text="No Damage">
+            <CheckBox fx:id="residentEvilHandgun" mnemonicParsing="false" text="Handgun Only">
                <padding>
-                  <Insets left="15.0" />
+                  <Insets top="15.0" />
+               </padding></CheckBox>
+            <CheckBox fx:id="residentEvilKnife" mnemonicParsing="false" text="Knife Only">
+               <padding>
+                  <Insets left="15.0" top="15.0" />
                </padding>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Upgrades">
+            <CheckBox fx:id="residentEvilNoCrafting" mnemonicParsing="false" text="No Crafting">
                <padding>
-                  <Insets left="15.0" />
+                  <Insets left="15.0" top="15.0" />
                </padding>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Sorcery Only">
+            <CheckBox fx:id="residentEvilNoUpgrades" mnemonicParsing="false" text="No Upgrades">
                <padding>
-                  <Insets left="15.0" />
+                  <Insets left="15.0" top="15.0" />
                </padding>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Magic">
+            <CheckBox fx:id="residentEvilKillAll" mnemonicParsing="false" text="Kill All">
                <padding>
-                  <Insets left="15.0" />
+                  <Insets left="15.0" top="15.0" />
                </padding>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" text="NG+">
+            <CheckBox fx:id="residentEvilNoItemBox" mnemonicParsing="false" text="No Item Box">
                <padding>
-                  <Insets left="15.0" />
+                  <Insets left="15.0" top="15.0" />
                </padding>
             </CheckBox>
+            <CheckBox fx:id="residentEvil100" mnemonicParsing="false" text="100%">
+               <padding>
+                  <Insets left="15.0" top="15.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="residentEvilNGplus" mnemonicParsing="false" text="NG+">
+               <padding>
+                  <Insets left="15.0" top="15.0" />
+               </padding>
+            </CheckBox>
+            <Button fx:id="residentEvilFilterButton" mnemonicParsing="false" text="Filter">
+               <HBox.margin>
+                  <Insets left="30.0" top="15.0" />
+               </HBox.margin>
+            </Button>
          </children>
       </HBox>
       <HBox fx:id="crashSubGameBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3">
@@ -1470,32 +1307,8 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <CheckBox mnemonicParsing="false" text="SL1" />
-            <CheckBox mnemonicParsing="false" text="No Damage">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Upgrades">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Sorcery Only">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Magic">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="NG+">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
+            <CheckBox fx:id="crashNoTripleMask" mnemonicParsing="false" text="No Triple Mask" />
+            <Button fx:id="crashFilterButton" mnemonicParsing="false" text="Filter" />
          </children>
       </HBox>
       <HBox fx:id="crashTwoCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
@@ -1527,41 +1340,6 @@
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="crashTwoRestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
-         <children>
-            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
-            </Label>
-            <CheckBox mnemonicParsing="false" text="SL1" />
-            <CheckBox mnemonicParsing="false" text="No Damage">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Upgrades">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Sorcery Only">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Magic">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="NG+">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-         </children>
-      </HBox>
       <HBox fx:id="crashThreeCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
@@ -1579,41 +1357,6 @@
                   <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
-         </children>
-      </HBox>
-      <HBox fx:id="crashThreeRestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
-         <children>
-            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
-            </Label>
-            <CheckBox mnemonicParsing="false" text="SL1" />
-            <CheckBox mnemonicParsing="false" text="No Damage">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Upgrades">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Sorcery Only">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Magic">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="NG+">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
          </children>
       </HBox>
       <HBox fx:id="crashFourCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
@@ -1643,41 +1386,6 @@
                   <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
-         </children>
-      </HBox>
-      <HBox fx:id="crashFourRestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
-         <children>
-            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
-            </Label>
-            <CheckBox mnemonicParsing="false" text="SL1" />
-            <CheckBox mnemonicParsing="false" text="No Damage">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Upgrades">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Sorcery Only">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Magic">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="NG+">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
          </children>
       </HBox>
       <HBox fx:id="dishonoredSubGameBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3">
@@ -1743,32 +1451,71 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <CheckBox mnemonicParsing="false" text="SL1" />
-            <CheckBox mnemonicParsing="false" text="No Damage">
+            <CheckBox fx:id="dishonoredGhost" mnemonicParsing="false" text="Ghost">
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin></CheckBox>
+            <CheckBox fx:id="dishonoredPacifist" mnemonicParsing="false" text="Pacifist">
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin>
                <padding>
-                  <Insets left="15.0" />
+                  <Insets left="10.0" />
                </padding>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Upgrades">
+            <CheckBox fx:id="dishonoredCleanHands" mnemonicParsing="false" text="Clean Hands">
                <padding>
-                  <Insets left="15.0" />
+                  <Insets left="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="dishonoredNoUpgrades" mnemonicParsing="false" text="No Upgrades">
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets left="10.0" />
                </padding>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Sorcery Only">
+            <CheckBox fx:id="dishonoredKnifeOnly" mnemonicParsing="false" text="Knife Only">
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin>
                <padding>
-                  <Insets left="15.0" />
+                  <Insets left="10.0" />
                </padding>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Magic">
+            <CheckBox fx:id="dishonoredNoGear" mnemonicParsing="false" text="No Gear">
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin>
                <padding>
-                  <Insets left="15.0" />
+                  <Insets left="10.0" />
                </padding>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" text="NG+">
+            <CheckBox fx:id="dishonoredNoKnockout" mnemonicParsing="false" text="No Knockout">
                <padding>
-                  <Insets left="15.0" />
+                  <Insets left="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="dishonoredNGplus" mnemonicParsing="false" text="NG+">
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets left="10.0" />
                </padding>
             </CheckBox>
+            <Button fx:id="dishonoredFilterButton" mnemonicParsing="false" text="Filter">
+               <HBox.margin>
+                  <Insets left="30.0" top="15.0" />
+               </HBox.margin>
+            </Button>
          </children>
       </HBox>
       <HBox fx:id="dishonoredTwoCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
@@ -1788,41 +1535,6 @@
                   <Insets left="10.0" top="5.0" />
                </padding>
             </RadioButton>
-         </children>
-      </HBox>
-      <HBox fx:id="dishonoredTwoRestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
-         <children>
-            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
-            </Label>
-            <CheckBox mnemonicParsing="false" text="SL1" />
-            <CheckBox mnemonicParsing="false" text="No Damage">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Upgrades">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Sorcery Only">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Magic">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="NG+">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
          </children>
       </HBox>
       <HBox fx:id="dishonoredDotoCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
@@ -1854,41 +1566,6 @@
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="dishonoredDotoRestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
-         <children>
-            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
-            </Label>
-            <CheckBox mnemonicParsing="false" text="SL1" />
-            <CheckBox mnemonicParsing="false" text="No Damage">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Upgrades">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Sorcery Only">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Magic">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="NG+">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-         </children>
-      </HBox>
       <HBox fx:id="zeldaSubGameBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3">
          <children>
             <Label text="FIlter by game:">
@@ -1911,7 +1588,7 @@
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="zeldaBotwCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4" GridPane.rowSpan="2">
+      <HBox fx:id="zeldaBotwCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
          <children>
             <Label text="Filter by category:">
                <padding>
@@ -1957,32 +1634,35 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <CheckBox mnemonicParsing="false" text="SL1" />
-            <CheckBox mnemonicParsing="false" text="No Damage">
+            <CheckBox fx:id="zeldaBotwMasterMode" mnemonicParsing="false" text="Master Mode">
                <padding>
-                  <Insets left="15.0" />
+                  <Insets top="15.0" />
+               </padding></CheckBox>
+            <CheckBox fx:id="zeldaBotwBowOnly" mnemonicParsing="false" text="Bow Only">
+               <padding>
+                  <Insets left="15.0" top="15.0" />
                </padding>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Upgrades">
+            <CheckBox fx:id="zeldaBotwMasterSword" mnemonicParsing="false" text="Master Sword">
                <padding>
-                  <Insets left="15.0" />
+                  <Insets left="15.0" top="15.0" />
                </padding>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Sorcery Only">
+            <CheckBox fx:id="zeldaBotwNoBuffs" mnemonicParsing="false" text="No Buffs">
                <padding>
-                  <Insets left="15.0" />
+                  <Insets left="15.0" top="15.0" />
                </padding>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Magic">
+            <CheckBox fx:id="zeldaBotwNightOnly" mnemonicParsing="false" text="Night Only">
                <padding>
-                  <Insets left="15.0" />
+                  <Insets left="15.0" top="15.0" />
                </padding>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" text="NG+">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
+            <Button fx:id="zeldaBotwFilterButton" mnemonicParsing="false" text="Filter">
+               <HBox.margin>
+                  <Insets left="30.0" top="15.0" />
+               </HBox.margin>
+            </Button>
          </children>
       </HBox>
       <HBox fx:id="zeldaTotkCategoryBox" prefHeight="100.0" prefWidth="200.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
@@ -2031,32 +1711,19 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <CheckBox mnemonicParsing="false" text="SL1" />
-            <CheckBox mnemonicParsing="false" text="No Damage">
+            <CheckBox fx:id="zeldaTotkNoDamage" mnemonicParsing="false" text="No Damage">
                <padding>
                   <Insets left="15.0" />
                </padding>
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Upgrades">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Sorcery Only">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Magic">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="NG+">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
+            <Button fx:id="zeldaTotkFilterButton" mnemonicParsing="false" text="Filter">
+               <HBox.margin>
+                  <Insets left="30.0" top="15.0" />
+               </HBox.margin>
+            </Button>
          </children>
       </HBox>
       <HBox fx:id="cupheadCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
@@ -2138,41 +1805,6 @@
             </GridPane>
          </children>
       </HBox>
-      <HBox fx:id="cupheadRestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
-         <children>
-            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
-            </Label>
-            <CheckBox mnemonicParsing="false" text="SL1" />
-            <CheckBox mnemonicParsing="false" text="No Damage">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Upgrades">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Sorcery Only">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Magic">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="NG+">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-         </children>
-      </HBox>
       <HBox fx:id="hollowKnightCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
          <children>
             <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
@@ -2220,41 +1852,6 @@
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="hollowKnightRestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
-         <children>
-            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
-            </Label>
-            <CheckBox mnemonicParsing="false" text="SL1" />
-            <CheckBox mnemonicParsing="false" text="No Damage">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Upgrades">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Sorcery Only">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Magic">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="NG+">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-         </children>
-      </HBox>
       <HBox fx:id="hadesCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
          <children>
             <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
@@ -2280,41 +1877,6 @@
                   <Insets left="15.0" />
                </HBox.margin>
             </RadioButton>
-         </children>
-      </HBox>
-      <HBox fx:id="hadesRestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
-         <children>
-            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
-            </Label>
-            <CheckBox mnemonicParsing="false" text="SL1" />
-            <CheckBox mnemonicParsing="false" text="No Damage">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Upgrades">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Sorcery Only">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Magic">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="NG+">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
          </children>
       </HBox>
       <HBox fx:id="celesteCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
@@ -2354,41 +1916,6 @@
             </RadioButton>
          </children>
       </HBox>
-      <HBox fx:id="celesteRestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
-         <children>
-            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
-            </Label>
-            <CheckBox mnemonicParsing="false" text="SL1" />
-            <CheckBox mnemonicParsing="false" text="No Damage">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Upgrades">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Sorcery Only">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Magic">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="NG+">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-         </children>
-      </HBox>
       <HBox fx:id="blasphemousCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
          <children>
             <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
@@ -2419,41 +1946,6 @@
                   <Insets left="15.0" top="20.0" />
                </padding>
             </RadioButton>
-         </children>
-      </HBox>
-      <HBox fx:id="blasphemousRestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
-         <children>
-            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
-            </Label>
-            <CheckBox mnemonicParsing="false" text="SL1" />
-            <CheckBox mnemonicParsing="false" text="No Damage">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Upgrades">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="Sorcery Only">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="No Magic">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
-            <CheckBox mnemonicParsing="false" text="NG+">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </CheckBox>
          </children>
       </HBox>
    </children>

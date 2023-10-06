@@ -17,6 +17,7 @@ public class CategoryFilter implements ChangeListener<Boolean> {
     private List<RadioButton> categories;
     private String game;
     private String category;
+    private FilteredList<Run> restrictionFilter;
 
 
     public CategoryFilter(FilteredList<Run> filter, RadioButton gameButton,

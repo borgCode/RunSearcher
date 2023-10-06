@@ -3,6 +3,7 @@ package com.example.runsearcher;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.transformation.FilteredList;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.layout.HBox;
 
@@ -18,16 +19,21 @@ public class SubGameFilter implements ChangeListener<Boolean> {
     private HBox restrictionBox;
     private String game;
     private ArrayList<RadioButton> categories;
+    private FilteredList<Run> restrictionFilter;
+    private ArrayList<CheckBox> restrictions;
 
     public SubGameFilter(FilteredList<Run> filter, RadioButton currentButton,
                          List<RadioButton> subGameButtons, HBox categoryBox,
-                         HBox restrictionBox, ArrayList<RadioButton> categories) {
+                         HBox restrictionBox, ArrayList<RadioButton> categories,
+                         FilteredList<Run> restrictionFilter, ArrayList<CheckBox> restrictions) {
         this.filter = filter;
         this.currentButton = currentButton;
         this.subGameButtons = subGameButtons;
         this.categoryBox = categoryBox;
         this.restrictionBox = restrictionBox;
         this.categories = categories;
+        this.restrictionFilter = restrictionFilter;
+        this.restrictions = restrictions;
         game = currentButton.getText().toLowerCase().replaceAll("[’',()]", "");
 
     }
@@ -45,6 +51,11 @@ public class SubGameFilter implements ChangeListener<Boolean> {
             }
             categoryBox.setVisible(false);
             restrictionBox.setVisible(false);
+
+            restrictionFilter.setPredicate(run -> true);
+            for (CheckBox box : restrictions) {
+                box.setSelected(false);
+            }
         }
         filter.setPredicate(run -> {
             if (!currentButton.isSelected()) {

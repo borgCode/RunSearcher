@@ -21,7 +21,7 @@ public class RestrictionsMap {
         restrictions.put("No Upgrades", "(no upgrades|no upgrades/infusions|\\+0|no weapon upgrades)");
         restrictions.put("Sorcery Only", "(sorcery only|sorceries only)");
         restrictions.put("No Magic", "(no magic|no sorcery)");
-        restrictions.put("NG\\+", "(ng+|new game+|new game plus|new game \\+");
+        restrictions.put("NG+", "(ng\\+|new game+|new game plus|new game \\+)");
         restrictions.put("No Roll", "(no roll|no dodge|dodgeless|no roll/quickstep)");
         restrictions.put("Pyro Only", "(pyro only|pyromancy only|pyromancies only)");
         restrictions.put("Miracle Only", "(miracle only|miracles only)");
@@ -42,7 +42,29 @@ public class RestrictionsMap {
         restrictions.put("Incantations Only", "(incant only|incants only|incantation only|incantations only)");
         restrictions.put("Regionlocked", "(regionlock|regionlocked|region lock|region locked)");
         restrictions.put("No Triple Mask", "(no triplemask|no triple mask)");
-
+        restrictions.put("No Crafting", "no crafting");
+        restrictions.put("Handgun Only", "(handgun only|hand gun only)");
+        restrictions.put("No Item Box", "no item box");
+        restrictions.put("100%", "100%");
+        restrictions.put("Kill All Enemies", "(kill all|kill all enemies)");
+        restrictions.put("Ghost", "ghost");
+        restrictions.put("Pacifist", "pacifist");
+        restrictions.put("Knife Only", "(knife only|only knife)");
+        restrictions.put("No Gear", "no gear");
+        restrictions.put("No Knockout", "no knockout");
+        restrictions.put("Master Mode", "master mode");
+        restrictions.put("Bow Only", "(bow only|only bow)");
+        restrictions.put("Master Sword", "master sword");
+        restrictions.put("Night Only", "(only night|night only)");
+        restrictions.put("No Boons", "no boons");
+        restrictions.put("No Dash", "(no dashes|no dash)");
+        restrictions.put("Dash Only", "(only dash|dash only)");
+        restrictions.put("No Nyx's mirror", "(no nyx mirror|no nyxs mirror)");
+        restrictions.put("Cast Only", "(only cast|cast only)");
+        restrictions.put("No Choice", "no choice");
+        restrictions.put("No Companion", "no companion");
+        restrictions.put("Nail Only", "(only nail|nail only)");
+        restrictions.put("Skipless", "(no skip|no skips|skipless|skip less)");
 
 
     }
