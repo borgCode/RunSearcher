@@ -608,6 +608,8 @@ public class Controller {
     @FXML
     private CheckBox hollowKnightSkipLess;
     @FXML
+    private Button hollowKnightFilterButton;
+    @FXML
     private RadioButton hollowKnightAny;
     @FXML
     private RadioButton hollowKnightAllSkills;
@@ -651,6 +653,7 @@ public class Controller {
     private CheckBox hadesNoChoice;
     @FXML
     private CheckBox hadesNoCompanion;
+    @FXML private Button hadesFilterButton;
     @FXML
     private RadioButton hadesAny;
     @FXML
@@ -797,7 +800,6 @@ public class Controller {
                 darkSoulsThreeMiraclesOnly, darkSoulsThreeNoUpgrades, darkSoulsThreeSL1, darkSoulsThreeSorceryOnly
         ));
 
-
         ArrayList<CheckBox> bloodborneRestrictions = new ArrayList<>(List.of(
                 bloodborneBL4, bloodborneNoDmg, bloodborneNoUpgrades, bloodborneNoBuffs,
                 bloodborneNoGems, bloodborneNHD, bloodborneNG6, bloodborneNoRoll, bloodborneArcane));
@@ -826,6 +828,20 @@ public class Controller {
                 zeldaBotwNoBuffs, zeldaBotwNightOnly));
 
         ArrayList<CheckBox> zeldaTotkRestrictions = new ArrayList<>(List.of(zeldaTotkNoDamage));
+
+        //   ArrayList<CheckBox> cupheadRestrictions = new ArrayList<>(List.of
+
+        ArrayList<CheckBox> hollowKnightRestrictions = new ArrayList<>(List.of(
+                hollowKnightNoDamage, hollowKnightNailOnly, hollowKnightNoUpgrades,
+                hollowKnightSkipLess));
+
+        ArrayList<CheckBox> hadesRestrictions = new ArrayList<>(List.of(
+                hadesNoChoice, hadesNoBoons, hadesDashOnly, hadesNoDash, hadesNoCompanion,
+                hadesNoNyx));
+
+        ArrayList<CheckBox> celesteRestrictions = new ArrayList<>();
+
+        //ArrayList<CheckBox> blasphemousRestrictions = new ArrayList<>(List.of())
 
 
         //Category Filters
@@ -1265,15 +1281,18 @@ public class Controller {
 //        cupheadRadioButton.selectedProperty().addListener(
 //                new GameFilter(filteredByGame, cupheadRadioButton, gameButtons,
 //                        cupheadCategoryBox, cupheadRestrictionsBox, cupheadCategories));
-//        hollowKnightRadioButton.selectedProperty().addListener(
-//                new GameFilter(filteredByGame, hollowKnightRadioButton, gameButtons,
-//                        hollowKnightCategoryBox, hollowKnightRestrictionsBox, hollowKnightCategories));
-//        hadesRadioButton.selectedProperty().addListener(
-//                new GameFilter(filteredByGame, hadesRadioButton, gameButtons,
-//                        hadesCategoryBox, hadesRestrictionsBox, hadesCategories));
-//        celesteRadioButton.selectedProperty().addListener(
-//                new GameFilter(filteredByGame, celesteRadioButton, gameButtons,
-//                        celesteCategoryBox, celesteRestrictionsBox, celesteCategories));
+        hollowKnightRadioButton.selectedProperty().addListener(
+                new GameFilter(filteredByGame, hollowKnightRadioButton, gameButtons,
+                        hollowKnightCategoryBox, hollowKnightRestrictionsBox, hollowKnightCategories,
+                        filteredByRestriction, hollowKnightRestrictions));
+        hadesRadioButton.selectedProperty().addListener(
+                new GameFilter(filteredByGame, hadesRadioButton, gameButtons,
+                        hadesCategoryBox, hadesRestrictionsBox, hadesCategories,
+                        filteredByRestriction, hadesRestrictions));
+        celesteRadioButton.selectedProperty().addListener(
+                new GameFilter(filteredByGame, celesteRadioButton, gameButtons,
+                        celesteCategoryBox, celesteRestrictionsBox, celesteCategories,
+                        filteredByRestriction, celesteRestrictions));
 //        blasphemousRadioButton.selectedProperty().addListener(
 //                new GameFilter(filteredByGame, blasphemousRadioButton, gameButtons,
 //                        blasphemousCategoryBox, blasphemousRestrictionsBox, blasphemousCategories));
@@ -1318,6 +1337,10 @@ public class Controller {
         dishonoredFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, dishonoredRestrictions, restrictions));
         zeldaBotwFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, zeldaBotwRestrictions, restrictions));
         zeldaTotkFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, zeldaTotkRestrictions, restrictions));
+        //cuphead
+        hollowKnightFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, hollowKnightRestrictions, restrictions));
+        hadesFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, hadesRestrictions, restrictions));
+        //blasphemous
 
         searchBox.textProperty().
 

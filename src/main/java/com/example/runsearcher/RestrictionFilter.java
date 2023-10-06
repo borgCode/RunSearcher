@@ -1,6 +1,5 @@
 package com.example.runsearcher;
 
-import javafx.beans.value.ChangeListener;
 import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -10,9 +9,9 @@ import java.util.ArrayList;
 
 public class RestrictionFilter implements EventHandler<ActionEvent> {
 
-    private FilteredList<Run> filter;
-    private ArrayList<CheckBox> restrictions;
-    private RestrictionsMap map;
+    private final FilteredList<Run> filter;
+    private final ArrayList<CheckBox> restrictions;
+    private final RestrictionsMap map;
 
     public RestrictionFilter(FilteredList<Run> filteredByRestriction, ArrayList<CheckBox> restrictions, RestrictionsMap map) {
         this.filter = filteredByRestriction;
@@ -33,19 +32,15 @@ public class RestrictionFilter implements EventHandler<ActionEvent> {
         }
 
         if (selectedBoxes.isEmpty()) {
-            filter.setPredicate( run -> true);
+            filter.setPredicate(run -> true);
             return;
         }
 
-        for (CheckBox box: selectedBoxes) {
+        for (CheckBox box : selectedBoxes) {
             restrictionString.append("(?=.*" + map.getValue(box.getText()) + ").*");
         }
 
-        System.out.println(restrictionString);
-
-
         filter.setPredicate(run -> {
-
             if (run.getRunName().toLowerCase().
                     replaceAll("[’',()\"]", "").
                     replaceAll("/", "").matches(restrictionString.toString())) {
@@ -53,8 +48,6 @@ public class RestrictionFilter implements EventHandler<ActionEvent> {
             } else {
                 return false;
             }
-
         });
-
     }
 }

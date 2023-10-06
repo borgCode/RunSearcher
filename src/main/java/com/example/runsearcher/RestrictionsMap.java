@@ -3,7 +3,7 @@ package com.example.runsearcher;
 import java.util.HashMap;
 
 public class RestrictionsMap {
-    private HashMap<String, String> restrictions;
+    private final HashMap<String, String> restrictions;
 
 
     public RestrictionsMap() {

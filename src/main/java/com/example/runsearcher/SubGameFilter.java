@@ -12,15 +12,15 @@ import java.util.List;
 
 public class SubGameFilter implements ChangeListener<Boolean> {
 
-    private FilteredList<Run> filter;
-    private RadioButton currentButton;
-    private List<RadioButton> subGameButtons;
-    private HBox categoryBox;
-    private HBox restrictionBox;
-    private String game;
-    private ArrayList<RadioButton> categories;
-    private FilteredList<Run> restrictionFilter;
-    private ArrayList<CheckBox> restrictions;
+    private final FilteredList<Run> filter;
+    private final RadioButton currentButton;
+    private final List<RadioButton> subGameButtons;
+    private final HBox categoryBox;
+    private final HBox restrictionBox;
+    private final String game;
+    private final ArrayList<RadioButton> categories;
+    private final FilteredList<Run> restrictionFilter;
+    private final ArrayList<CheckBox> restrictions;
 
     public SubGameFilter(FilteredList<Run> filter, RadioButton currentButton,
                          List<RadioButton> subGameButtons, HBox categoryBox,
@@ -46,7 +46,7 @@ public class SubGameFilter implements ChangeListener<Boolean> {
             categoryBox.setVisible(true);
         }
         if (aBoolean) {
-            for (RadioButton button: categories) {
+            for (RadioButton button : categories) {
                 button.setSelected(false);
             }
             categoryBox.setVisible(false);
@@ -63,7 +63,7 @@ public class SubGameFilter implements ChangeListener<Boolean> {
             }
             if (run.getGame().toLowerCase()
                     .replaceAll("[’',()]", "").
-                    replaceAll("/", "").matches(game + "( remake| classic)?")) {
+                    replaceAll("/", "").matches(game + "( remake| classic|: classic|: remake)?")) {
                 return true;
             } else {
                 return false;
@@ -71,7 +71,6 @@ public class SubGameFilter implements ChangeListener<Boolean> {
         });
 
     }
-
 
 
     private void unSelectAllSubGameButtons(RadioButton currentButton) {

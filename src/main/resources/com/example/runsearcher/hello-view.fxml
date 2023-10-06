@@ -48,6 +48,9 @@
           <TableColumn fx:id="runColumn" editable="false" prefWidth="351.0" text="Run Name" />
             <TableColumn fx:id="linkColumn" editable="false" prefWidth="245.0" sortable="false" text="Run link" />
         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
       </TableView>
       <GridPane prefHeight="61.0" prefWidth="956.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" GridPane.columnSpan="5" GridPane.rowIndex="1" GridPane.rowSpan="2">
         <columnConstraints>
@@ -727,61 +730,67 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <GridPane>
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-               <children>
-                  <CheckBox fx:id="sekiroAP1" mnemonicParsing="false" text="AP1" />
-                  <CheckBox fx:id="sekiroNoDamage" mnemonicParsing="false" text="No Damage" GridPane.columnIndex="1">
-                     <padding>
-                        <Insets left="15.0" />
-                     </padding>
-                  </CheckBox>
-                  <CheckBox fx:id="sekiroDBNKC" mnemonicParsing="false" text="DB/NKC" GridPane.columnIndex="2">
-                     <padding>
-                        <Insets left="15.0" />
-                     </padding>
-                  </CheckBox>
-                  <CheckBox fx:id="sekiroSwordOnly" mnemonicParsing="false" text="Sword Only" GridPane.columnIndex="3">
-                     <padding>
-                        <Insets left="15.0" />
-                     </padding>
-                  </CheckBox>
-                  <CheckBox fx:id="sekiroNoDeflect" mnemonicParsing="false" text="No Deflect" GridPane.columnIndex="6">
-                     <padding>
-                        <Insets left="15.0" />
-                     </padding>
-                  </CheckBox>
-                  <CheckBox fx:id="sekiroSwordDmgOnly" mnemonicParsing="false" text="Sword DMG Only" GridPane.columnIndex="4">
-                     <padding>
-                        <Insets left="15.0" />
-                     </padding>
-                  </CheckBox>
-                  <CheckBox fx:id="sekiroNoSkills" mnemonicParsing="false" text="No Skills" GridPane.columnIndex="5">
-                     <padding>
-                        <Insets left="15.0" />
-                     </padding>
-                  </CheckBox>
-                  <CheckBox fx:id="sekiroNoPros" mnemonicParsing="false" text="No Prosthetics" GridPane.columnIndex="7">
-                     <padding>
-                        <Insets left="15.0" />
-                     </padding>
-                  </CheckBox>
-               </children>
-            </GridPane>
+            <CheckBox fx:id="sekiroAP1" mnemonicParsing="false" text="AP1">
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="sekiroNoDamage" mnemonicParsing="false" text="No Damage">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="sekiroDBNKC" mnemonicParsing="false" text="DB/NKC">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="sekiroSwordOnly" mnemonicParsing="false" text="Sword Only">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="sekiroNoDeflect" mnemonicParsing="false" text="No Deflect">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="sekiroSwordDmgOnly" mnemonicParsing="false" text="Sword DMG Only">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="sekiroNoSkills" mnemonicParsing="false" text="No Skills">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="sekiroNoPros" mnemonicParsing="false" text="No Prosthetics">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </CheckBox>
             <Button fx:id="sekiroFilterButton" mnemonicParsing="false" text="Filter">
                <HBox.margin>
                   <Insets left="30.0" top="15.0" />
@@ -1852,6 +1861,39 @@
             </RadioButton>
          </children>
       </HBox>
+      <HBox fx:id="hollowKnightRestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
+         <children>
+            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <CheckBox fx:id="hollowKnightNoDamage" mnemonicParsing="false" text="No Damage">
+               <padding>
+                  <Insets top="15.0" />
+               </padding></CheckBox>
+            <CheckBox fx:id="hollowKnightNailOnly" mnemonicParsing="false" text="Nail Only">
+               <padding>
+                  <Insets left="15.0" top="15.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="hollowKnightNoUpgrades" mnemonicParsing="false" text="No Upgrades">
+               <padding>
+                  <Insets left="15.0" top="15.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="hollowKnightSkipLess" mnemonicParsing="false" text="Skipless">
+               <padding>
+                  <Insets left="15.0" top="15.0" />
+               </padding>
+            </CheckBox>
+            <Button fx:id="hollowKnightFilterButton" mnemonicParsing="false" text="Filter">
+               <HBox.margin>
+                  <Insets left="30.0" top="15.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
       <HBox fx:id="hadesCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
          <children>
             <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">
@@ -1877,6 +1919,49 @@
                   <Insets left="15.0" />
                </HBox.margin>
             </RadioButton>
+         </children>
+      </HBox>
+      <HBox fx:id="hadesRestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2">
+         <children>
+            <Label prefHeight="58.0" prefWidth="127.0" text="Restrictions:">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <CheckBox fx:id="hadesNoBoons" mnemonicParsing="false" text="No Boons">
+               <padding>
+                  <Insets top="15.0" />
+               </padding></CheckBox>
+            <CheckBox fx:id="hadesNoDash" mnemonicParsing="false" text="No Dash">
+               <padding>
+                  <Insets left="15.0" top="15.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="hadesDashOnly" mnemonicParsing="false" text="Dash Only">
+               <padding>
+                  <Insets left="15.0" top="15.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="hadesNoNyx" mnemonicParsing="false" text="No Nyx's Mirror">
+               <padding>
+                  <Insets left="15.0" top="15.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="hadesNoChoice" mnemonicParsing="false" text="No Choice">
+               <padding>
+                  <Insets left="15.0" top="15.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="hadesNoCompanion" mnemonicParsing="false" text="No Companion">
+               <padding>
+                  <Insets left="15.0" top="15.0" />
+               </padding>
+            </CheckBox>
+            <Button fx:id="hadesFilterButton" mnemonicParsing="false" text="Filter">
+               <HBox.margin>
+                  <Insets left="30.0" top="15.0" />
+               </HBox.margin>
+            </Button>
          </children>
       </HBox>
       <HBox fx:id="celesteCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
@@ -1916,6 +2001,7 @@
             </RadioButton>
          </children>
       </HBox>
+      <HBox fx:id="celesteRestrictionsBox" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="5" GridPane.rowSpan="2" />
       <HBox fx:id="blasphemousCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
          <children>
             <Label prefHeight="58.0" prefWidth="127.0" text="FIlter by Category:">

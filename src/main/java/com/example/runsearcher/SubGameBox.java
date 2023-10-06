@@ -3,21 +3,17 @@ package com.example.runsearcher;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.transformation.FilteredList;
-import javafx.scene.control.CheckBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.layout.HBox;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class SubGameBox implements ChangeListener<Boolean> {
-    private FilteredList<Run> filter;
-    private RadioButton currentButton;
-    private List<RadioButton> gameButtons;
-    private List<RadioButton> subGameButtons;
-    private HBox subGameBox;
-
-    private String game;
+    private final FilteredList<Run> filter;
+    private final RadioButton currentButton;
+    private final List<RadioButton> gameButtons;
+    private final List<RadioButton> subGameButtons;
+    private final HBox subGameBox;
+    private final String game;
 
     public SubGameBox(FilteredList<Run> filter, List<RadioButton> gameButtons,
                       RadioButton currentButton, List<RadioButton> subGameButtons,

@@ -11,13 +11,12 @@ import java.util.List;
 
 public class CategoryFilter implements ChangeListener<Boolean> {
 
-    private FilteredList<Run> filter;
-    private RadioButton categoryButton;
-    private HBox restrictionBox;
-    private List<RadioButton> categories;
-    private String game;
-    private String category;
-    private FilteredList<Run> restrictionFilter;
+    private final FilteredList<Run> filter;
+    private final RadioButton categoryButton;
+    private final HBox restrictionBox;
+    private final List<RadioButton> categories;
+    private final String game;
+    private final String category;
 
 
     public CategoryFilter(FilteredList<Run> filter, RadioButton gameButton,
@@ -30,6 +29,7 @@ public class CategoryFilter implements ChangeListener<Boolean> {
         category = categoryButton.getText().toLowerCase();
 
     }
+
     @Override
     public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
         if (t1) {
@@ -46,8 +46,8 @@ public class CategoryFilter implements ChangeListener<Boolean> {
             }
             if ((run.getGame().toLowerCase()
                     .replaceAll("[’',()]", "").
-                    replaceAll("/", "").matches(game+ "( classic| remake)?")
-            && run.getCategory().toLowerCase().matches(category))) {
+                    replaceAll("/", "").matches(game + "( classic| remake|: classic|: remake)?")
+                    && run.getCategory().toLowerCase().matches(category + ".*"))) {
                 return true;
             } else {
                 return false;
