@@ -9,7 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="all games restriction filters and bottom status bar" />
+    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="all games restriction filters and bottom status bar">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -320,7 +322,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696705319908</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="all games restriction filters and bottom status bar">
+      <option name="closed" value="true" />
+      <created>1696705513619</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1696705513619</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,6 +373,7 @@
     <MESSAGE value="all games restrictionboxes" />
     <MESSAGE value="demon souls restrictionfilter" />
     <MESSAGE value="14 games restricctionfilter" />
+    <MESSAGE value="fixup! all games restriction filters and bottom status bar" />
     <MESSAGE value="all games restriction filters and bottom status bar" />
     <option name="LAST_COMMIT_MESSAGE" value="all games restriction filters and bottom status bar" />
   </component>
