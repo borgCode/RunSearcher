@@ -15,11 +15,17 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.*;
 import javafx.scene.layout.HBox;
+import javafx.util.Callback;
 
 import java.io.*;
+import java.awt.Desktop;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+
 
 public class Controller {
 
@@ -84,8 +90,6 @@ public class Controller {
     @FXML
     private CheckBox demonsSoulsSorceryOnly;
     @FXML
-    Button demonsSoulsFilterButton;
-    @FXML
     private HBox darkSoulsCategoryBox;
     @FXML
     private RadioButton darkSoulsAny;
@@ -115,8 +119,6 @@ public class Controller {
     private CheckBox darkSoulsSL1;
     @FXML
     private CheckBox darkSoulsSorceryOnly;
-    @FXML
-    Button darkSoulsFilterButton;
     @FXML
     private HBox darkSoulsTwoCategoryBox;
     @FXML
@@ -148,8 +150,6 @@ public class Controller {
     @FXML
     private CheckBox darkSoulsTwoHexOnly;
     @FXML
-    Button darkSoulsTwoFilterButton;
-    @FXML
     private HBox darkSoulsThreeCategoryBox;
     @FXML
     private RadioButton darkSoulsThreeAny;
@@ -175,8 +175,6 @@ public class Controller {
     private CheckBox darkSoulsThreeSL1;
     @FXML
     private CheckBox darkSoulsThreeSorceryOnly;
-    @FXML
-    Button darkSoulsThreeFilterButton;
     @FXML
     private HBox bloodborneCategoryBox;
     @FXML
@@ -209,8 +207,6 @@ public class Controller {
     private CheckBox bloodborneNoRoll;
     @FXML
     private CheckBox bloodborneArcane;
-    @FXML
-    Button bloodborneFilterButton;
     @FXML
     private HBox sekiroCategoryBox;
     @FXML
@@ -254,8 +250,6 @@ public class Controller {
     @FXML
     private CheckBox sekiroNoPros;
     @FXML
-    Button sekiroFilterButton;
-    @FXML
     private HBox eldenRingCategoryBox;
     @FXML
     private RadioButton eldenRingAny;
@@ -284,8 +278,6 @@ public class Controller {
     @FXML
     private CheckBox eldenRingRegionlocked;
     @FXML
-    Button eldenRingFilterButton;
-    @FXML
     private HBox residentEvilSubGameBox;
     @FXML
     private RadioButton residentEvil0Button;
@@ -309,8 +301,6 @@ public class Controller {
     private CheckBox residentEvilNGplus;
     @FXML
     private CheckBox residentEvilNoUpgrades;
-    @FXML
-    Button residentEvilFilterButton;
     @FXML
     private RadioButton residentEvil0Any;
     @FXML
@@ -422,8 +412,6 @@ public class Controller {
     @FXML
     private CheckBox crashNoTripleMask;
     @FXML
-    Button crashFilterButton;
-    @FXML
     private RadioButton crashAny;
     @FXML
     private RadioButton crashSecretEnding;
@@ -481,8 +469,6 @@ public class Controller {
     private CheckBox dishonoredNoKnockout;
     @FXML
     private CheckBox dishonoredNGplus;
-    @FXML
-    private Button dishonoredFilterButton;
     @FXML
     private RadioButton dishonoredOneButton;
     @FXML
@@ -546,8 +532,6 @@ public class Controller {
     @FXML
     private CheckBox zeldaBotwNightOnly;
     @FXML
-    private Button zeldaBotwFilterButton;
-    @FXML
     private HBox zeldaTotkCategoryBox;
     @FXML
     private RadioButton zeldaTotkAny;
@@ -566,8 +550,6 @@ public class Controller {
     @FXML
     private CheckBox zeldaTotkNoDamage;
     @FXML
-    private Button zeldaTotkFilterButton;
-    @FXML
     private HBox cupheadCategoryBox;
     @FXML
     private HBox cupheadRestrictionsBox;
@@ -579,7 +561,6 @@ public class Controller {
     @FXML private CheckBox cupheadAllKingDice;
     @FXML private CheckBox cupheadTwinHeart;
     @FXML private CheckBox cupheadAllPerfectGrades;
-    @FXML private Button cupheadFilterButton;
     @FXML
     private RadioButton cupheadAny;
     @FXML
@@ -616,8 +597,6 @@ public class Controller {
     private CheckBox hollowKnightNoUpgrades;
     @FXML
     private CheckBox hollowKnightSkipLess;
-    @FXML
-    private Button hollowKnightFilterButton;
     @FXML
     private RadioButton hollowKnightAny;
     @FXML
@@ -662,7 +641,6 @@ public class Controller {
     private CheckBox hadesNoChoice;
     @FXML
     private CheckBox hadesNoCompanion;
-    @FXML private Button hadesFilterButton;
     @FXML
     private RadioButton hadesAny;
     @FXML
@@ -676,7 +654,6 @@ public class Controller {
     @FXML private CheckBox blasphemousNoDamage;
     @FXML private CheckBox blasphemousSkipless;
     @FXML private CheckBox blasphemousMeleeOnly;
-    @FXML private Button blasphemousFilterButton;
     @FXML
     private RadioButton blasphemousAny;
     @FXML
@@ -707,6 +684,35 @@ public class Controller {
         categoryColumn.setCellValueFactory(new PropertyValueFactory<>("category"));
         runColumn.setCellValueFactory(new PropertyValueFactory<>("runName"));
         linkColumn.setCellValueFactory(new PropertyValueFactory<>("runLink"));
+        linkColumn.setCellFactory(new Callback<TableColumn<Run, String>, TableCell<Run, String>>() {
+            @Override
+            public TableCell<Run, String> call(TableColumn<Run, String> runStringTableColumn) {
+                return new TableCell<>() {
+                    @Override
+                    protected void updateItem(String item, boolean empty) {
+                        super.updateItem(item, empty);
+
+                        if (item == null || empty) {
+                            setText(null);
+                        } else {
+                            Hyperlink hyperlink = new Hyperlink(item);
+                            hyperlink.setOnAction(event -> openLink(item));
+                            setGraphic(hyperlink);
+                        }
+                    }
+
+                    private void openLink(String item) {
+                        try {
+                            URI uri = new URI(item);
+                            Desktop.getDesktop().browse(uri);
+                        } catch (URISyntaxException | IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+
+                };
+            }
+        });
         tableView.getItems().setAll((getRuns()));
 
         gameButtons = new ArrayList<>(List.of(demonsSoulsRadioButton, darkSoulsRadioButton,
@@ -858,6 +864,13 @@ public class Controller {
 
         ArrayList<CheckBox> blasphemousRestrictions = new ArrayList<>(List.of(
                 blasphemousNoDamage, blasphemousSkipless, blasphemousMeleeOnly
+        ));
+
+        ArrayList<ArrayList<CheckBox>> restrictionsList = new ArrayList<>(List.of(
+                demonsRestrictions, darkSoulsRestrictions, darkSoulsTwoRestrictions, darkSoulsThreeRestrictions,
+                bloodborneRestrictions, sekiroRestrictions, eldenRingRestrictions, crashRestrictions,
+                dishonoredRestrictions, zeldaBotwRestrictions, zeldaTotkRestrictions, residentEvilRestrictions,
+                cupheadRestrictions, hollowKnightRestrictions, hadesRestrictions, celesteRestrictions, blasphemousRestrictions
         ));
 
 
@@ -1343,23 +1356,19 @@ public class Controller {
 
         });
 
+        for(CheckBox box : demonsRestrictions) {
+            box.selectedProperty().addListener(new RestrictionFilter(filteredByRestriction, demonsRestrictions, restrictions));
 
-        demonsSoulsFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, demonsRestrictions, restrictions));
-        darkSoulsFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, darkSoulsRestrictions, restrictions));
-        darkSoulsTwoFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, darkSoulsTwoRestrictions, restrictions));
-        darkSoulsThreeFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, darkSoulsThreeRestrictions, restrictions));
-        bloodborneFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, bloodborneRestrictions, restrictions));
-        sekiroFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, sekiroRestrictions, restrictions));
-        eldenRingFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, eldenRingRestrictions, restrictions));
-        residentEvilFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, residentEvilRestrictions, restrictions));
-        crashFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, crashRestrictions, restrictions));
-        dishonoredFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, dishonoredRestrictions, restrictions));
-        zeldaBotwFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, zeldaBotwRestrictions, restrictions));
-        zeldaTotkFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, zeldaTotkRestrictions, restrictions));
-        cupheadFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, cupheadRestrictions, restrictions));
-        hollowKnightFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, hollowKnightRestrictions, restrictions));
-        hadesFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, hadesRestrictions, restrictions));
-        blasphemousFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, blasphemousRestrictions, restrictions));
+        }
+
+        for (CheckBox box : darkSoulsRestrictions) {
+            box.selectedProperty().addListener(new RestrictionFilter(filteredByRestriction, darkSoulsRestrictions, restrictions));
+        }
+
+        for (ArrayList<CheckBox> boxes : restrictionsList) {
+            addRestrictionListeners(filteredByRestriction, boxes, restrictions);
+        }
+
 
         searchBox.textProperty().
 
@@ -1410,5 +1419,12 @@ public class Controller {
 
                 bind(tableView.comparatorProperty());
         tableView.setItems(sortedData);
+    }
+
+    private void addRestrictionListeners(FilteredList<Run> filteredList, ArrayList<CheckBox> restrictions, RestrictionsMap map) {
+        for(CheckBox box : restrictions) {
+            box.selectedProperty().addListener(new RestrictionFilter(filteredList, restrictions, map));
+
+        }
     }
 }

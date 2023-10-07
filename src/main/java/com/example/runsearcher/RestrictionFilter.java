@@ -1,5 +1,7 @@
 package com.example.runsearcher;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -7,7 +9,7 @@ import javafx.scene.control.CheckBox;
 
 import java.util.ArrayList;
 
-public class RestrictionFilter implements EventHandler<ActionEvent> {
+public class RestrictionFilter implements ChangeListener<Boolean> {
 
     private final FilteredList<Run> filter;
     private final ArrayList<CheckBox> restrictions;
@@ -16,12 +18,12 @@ public class RestrictionFilter implements EventHandler<ActionEvent> {
     public RestrictionFilter(FilteredList<Run> filteredByRestriction, ArrayList<CheckBox> restrictions, RestrictionsMap map) {
         this.filter = filteredByRestriction;
         this.restrictions = restrictions;
-
         this.map = map;
     }
 
+
     @Override
-    public void handle(ActionEvent actionEvent) {
+    public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
         ArrayList<CheckBox> selectedBoxes = new ArrayList<>();
         StringBuilder restrictionString = new StringBuilder();
 

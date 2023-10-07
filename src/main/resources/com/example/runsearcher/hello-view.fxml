@@ -235,11 +235,6 @@
                   <Insets left="15.0" top="18.0" />
                </HBox.margin>
             </CheckBox>
-            <Button fx:id="demonsSoulsFilterButton" mnemonicParsing="false" text="Filter">
-               <HBox.margin>
-                  <Insets left="30.0" top="15.0" />
-               </HBox.margin>
-            </Button>
          </children>
       </HBox>
       <HBox fx:id="darkSoulsCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
@@ -335,11 +330,6 @@
                   </CheckBox>
                </children>
             </GridPane>
-            <Button fx:id="darkSoulsFilterButton" mnemonicParsing="false" text="Filter">
-               <HBox.margin>
-                  <Insets left="30.0" top="15.0" />
-               </HBox.margin>
-            </Button>
          </children>
       </HBox>
       <HBox fx:id="darkSoulsTwoCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
@@ -436,11 +426,6 @@
                   </CheckBox>
                </children>
             </GridPane>
-            <Button fx:id="darkSoulsTwoFilterButton" mnemonicParsing="false" text="Filter">
-               <HBox.margin>
-                  <Insets left="30.0" top="15.0" />
-               </HBox.margin>
-            </Button>
          </children>
       </HBox>
       <HBox fx:id="darkSoulsThreeCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
@@ -527,11 +512,6 @@
                   </CheckBox>
                </children>
             </GridPane>
-            <Button fx:id="darkSoulsThreeFilterButton" mnemonicParsing="false" text="Filter">
-               <HBox.margin>
-                  <Insets left="30.0" top="15.0" />
-               </HBox.margin>
-            </Button>
          </children>
       </HBox>
       <HBox fx:id="bloodborneCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
@@ -632,11 +612,6 @@
                   </CheckBox>
                </children>
             </GridPane>
-            <Button fx:id="bloodborneFilterButton" mnemonicParsing="false" text="Filter">
-               <HBox.margin>
-                  <Insets left="30.0" top="15.0" />
-               </HBox.margin>
-            </Button>
          </children>
       </HBox>
       <HBox fx:id="sekiroCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
@@ -792,11 +767,6 @@
                   <Insets top="20.0" />
                </HBox.margin>
             </CheckBox>
-            <Button fx:id="sekiroFilterButton" mnemonicParsing="false" text="Filter">
-               <HBox.margin>
-                  <Insets left="30.0" top="15.0" />
-               </HBox.margin>
-            </Button>
          </children>
       </HBox>
       <HBox fx:id="eldenRingCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
@@ -892,11 +862,6 @@
                   </CheckBox>
                </children>
             </GridPane>
-            <Button fx:id="eldenRingFilterButton" mnemonicParsing="false" text="Filter">
-               <HBox.margin>
-                  <Insets left="30.0" top="15.0" />
-               </HBox.margin>
-            </Button>
          </children>
       </HBox>
       <HBox fx:id="residentEvilSubGameBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3">
@@ -1234,11 +1199,6 @@
                   <Insets left="15.0" top="15.0" />
                </padding>
             </CheckBox>
-            <Button fx:id="residentEvilFilterButton" mnemonicParsing="false" text="Filter">
-               <HBox.margin>
-                  <Insets left="30.0" top="15.0" />
-               </HBox.margin>
-            </Button>
          </children>
       </HBox>
       <HBox fx:id="crashSubGameBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3">
@@ -1248,7 +1208,7 @@
                   <Insets left="10.0" top="5.0" />
                </HBox.margin>
             </Label>
-            <RadioButton fx:id="crash1Button" mnemonicParsing="false" prefHeight="30.0" prefWidth="114.0" text="Crash Bandicoot">
+            <RadioButton fx:id="crash1Button" mnemonicParsing="false" text="Crash Bandicoot">
                <HBox.margin>
                   <Insets left="10.0" top="5.0" />
                </HBox.margin>
@@ -1312,7 +1272,6 @@
                </padding>
             </Label>
             <CheckBox fx:id="crashNoTripleMask" mnemonicParsing="false" text="No Triple Mask" />
-            <Button fx:id="crashFilterButton" mnemonicParsing="false" text="Filter" />
          </children>
       </HBox>
       <HBox fx:id="crashTwoCategoryBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
@@ -1399,7 +1358,7 @@
                   <Insets left="10.0" top="5.0" />
                </HBox.margin>
             </Label>
-            <RadioButton fx:id="dishonoredOneButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="114.0" text="Dishonored">
+            <RadioButton fx:id="dishonoredOneButton" mnemonicParsing="false" text="Dishonored">
                <HBox.margin>
                   <Insets left="10.0" top="5.0" />
                </HBox.margin>
@@ -1512,11 +1471,6 @@
                   <Insets left="10.0" />
                </padding>
             </CheckBox>
-            <Button fx:id="dishonoredFilterButton" mnemonicParsing="false" text="Filter">
-               <HBox.margin>
-                  <Insets left="30.0" top="15.0" />
-               </HBox.margin>
-            </Button>
          </children>
       </HBox>
       <HBox fx:id="dishonoredTwoCategoryBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
@@ -1574,7 +1528,7 @@
                   <Insets left="10.0" top="5.0" />
                </HBox.margin>
             </Label>
-            <RadioButton fx:id="zeldaBotwButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="194.0" text="Zelda: Breath of the Wild">
+            <RadioButton fx:id="zeldaBotwButton" mnemonicParsing="false" text="Zelda: Breath of the Wild">
                <HBox.margin>
                   <Insets left="10.0" top="5.0" />
                </HBox.margin>
@@ -1656,11 +1610,6 @@
                   <Insets left="15.0" top="15.0" />
                </padding>
             </CheckBox>
-            <Button fx:id="zeldaBotwFilterButton" mnemonicParsing="false" text="Filter">
-               <HBox.margin>
-                  <Insets left="30.0" top="15.0" />
-               </HBox.margin>
-            </Button>
          </children>
       </HBox>
       <HBox fx:id="zeldaTotkCategoryBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
@@ -1717,11 +1666,6 @@
                   <Insets top="15.0" />
                </HBox.margin>
             </CheckBox>
-            <Button fx:id="zeldaTotkFilterButton" mnemonicParsing="false" text="Filter">
-               <HBox.margin>
-                  <Insets left="30.0" top="15.0" />
-               </HBox.margin>
-            </Button>
          </children>
       </HBox>
       <HBox fx:id="cupheadCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
@@ -1951,11 +1895,6 @@
                   <Insets left="15.0" top="15.0" />
                </padding>
             </CheckBox>
-            <Button fx:id="hollowKnightFilterButton" mnemonicParsing="false" text="Filter">
-               <HBox.margin>
-                  <Insets left="30.0" top="15.0" />
-               </HBox.margin>
-            </Button>
          </children>
       </HBox>
       <HBox fx:id="hadesCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
@@ -2021,11 +1960,6 @@
                   <Insets left="15.0" top="15.0" />
                </padding>
             </CheckBox>
-            <Button fx:id="hadesFilterButton" mnemonicParsing="false" text="Filter">
-               <HBox.margin>
-                  <Insets left="30.0" top="15.0" />
-               </HBox.margin>
-            </Button>
          </children>
       </HBox>
       <HBox fx:id="celesteCategoryBox" layoutX="10.0" layoutY="103.0" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="2">
@@ -2119,11 +2053,6 @@
                   <Insets left="15.0" top="15.0" />
                </padding>
             </CheckBox>
-            <Button fx:id="blasphemousFilterButton" mnemonicParsing="false" text="Filter">
-               <HBox.margin>
-                  <Insets left="30.0" top="15.0" />
-               </HBox.margin>
-            </Button>
          </children>
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 1 0 0 0;" GridPane.columnSpan="5" GridPane.rowIndex="12">
