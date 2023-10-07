@@ -571,6 +571,15 @@ public class Controller {
     private HBox cupheadCategoryBox;
     @FXML
     private HBox cupheadRestrictionsBox;
+    @FXML private CheckBox cupheadNoDash;
+    @FXML private CheckBox cupheadCharmless;
+    @FXML private CheckBox cupheadNoSuperArts;
+    @FXML private CheckBox cupheadAllPhases;
+    @FXML private CheckBox cupheadAllSecretPhases;
+    @FXML private CheckBox cupheadAllKingDice;
+    @FXML private CheckBox cupheadTwinHeart;
+    @FXML private CheckBox cupheadAllPerfectGrades;
+    @FXML private Button cupheadFilterButton;
     @FXML
     private RadioButton cupheadAny;
     @FXML
@@ -833,7 +842,9 @@ public class Controller {
 
         ArrayList<CheckBox> zeldaTotkRestrictions = new ArrayList<>(List.of(zeldaTotkNoDamage));
 
-        //   ArrayList<CheckBox> cupheadRestrictions = new ArrayList<>(List.of
+        ArrayList<CheckBox> cupheadRestrictions = new ArrayList<>(List.of(
+                cupheadNoDash, cupheadCharmless, cupheadNoSuperArts, cupheadAllPhases,
+                cupheadAllSecretPhases, cupheadAllKingDice, cupheadTwinHeart, cupheadAllPerfectGrades));
 
         ArrayList<CheckBox> hollowKnightRestrictions = new ArrayList<>(List.of(
                 hollowKnightNoDamage, hollowKnightNailOnly, hollowKnightNoUpgrades,
@@ -1284,9 +1295,10 @@ public class Controller {
                         filteredByRestriction, zeldaTotkRestrictions)
         );
 
-//        cupheadRadioButton.selectedProperty().addListener(
-//                new GameFilter(filteredByGame, cupheadRadioButton, gameButtons,
-//                        cupheadCategoryBox, cupheadRestrictionsBox, cupheadCategories));
+        cupheadRadioButton.selectedProperty().addListener(
+                new GameFilter(filteredByGame, cupheadRadioButton, gameButtons,
+                        cupheadCategoryBox, cupheadRestrictionsBox, cupheadCategories,
+                        filteredByRestriction, cupheadRestrictions));
         hollowKnightRadioButton.selectedProperty().addListener(
                 new GameFilter(filteredByGame, hollowKnightRadioButton, gameButtons,
                         hollowKnightCategoryBox, hollowKnightRestrictionsBox, hollowKnightCategories,
@@ -1344,7 +1356,7 @@ public class Controller {
         dishonoredFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, dishonoredRestrictions, restrictions));
         zeldaBotwFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, zeldaBotwRestrictions, restrictions));
         zeldaTotkFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, zeldaTotkRestrictions, restrictions));
-        //cuphead
+        cupheadFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, cupheadRestrictions, restrictions));
         hollowKnightFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, hollowKnightRestrictions, restrictions));
         hadesFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, hadesRestrictions, restrictions));
         blasphemousFilterButton.setOnAction(new RestrictionFilter(filteredByRestriction, blasphemousRestrictions, restrictions));

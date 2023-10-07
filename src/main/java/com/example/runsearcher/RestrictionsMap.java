@@ -57,7 +57,7 @@ public class RestrictionsMap {
         restrictions.put("Master Sword", "master sword");
         restrictions.put("Night Only", "(only night|night only)");
         restrictions.put("No Boons", "no boons");
-        restrictions.put("No Dash", "(no dashes|no dash)");
+        restrictions.put("No Dash", "(no dashes|no dash|dashless)");
         restrictions.put("Dash Only", "(only dash|dash only)");
         restrictions.put("No Nyx's mirror", "(no nyx mirror|no nyxs mirror)");
         restrictions.put("Cast Only", "(only cast|cast only)");
@@ -66,8 +66,12 @@ public class RestrictionsMap {
         restrictions.put("Nail Only", "(only nail|nail only)");
         restrictions.put("Skipless", "(no skip|no skips|skipless|skip less)");
         restrictions.put("Melee Only", "(melee only|only melee)");
-
-
-
+        restrictions.put("Charmless", "(charmless|no charms|no charm)");
+        restrictions.put("No Super Arts", "no super arts");
+        restrictions.put("All Phases", "all phases");
+        restrictions.put("All Secret Phases", "all secret phases");
+        restrictions.put("All King Dice Bosses", "(all king dice bosses|all king dice minibosses|all king dice mini bosses)");
+        restrictions.put("Twin Heart", "twin heart");
+        restrictions.put("All S Ranks", "(all perfect grades|perfect grades|all s ranks|all s rank|s rank|s ranks)");
     }
 }
