@@ -2136,7 +2136,7 @@
             <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
             <Label minHeight="-Infinity" minWidth="-Infinity" text="List last updated: 2023-10-06">
                <HBox.margin>
-                  <Insets right="20.0" />
+                  <Insets right="20.0" top="3.0" />
                </HBox.margin>
             </Label>
          </children>
