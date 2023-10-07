@@ -9,14 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="14 games restricctionfilter">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/RunSearcher_jar/RunSearcher-1.2.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/RunSearcher_jar/RunSearcher.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/RestrictionsMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/RestrictionsMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="all games restriction filters and bottom status bar" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="wip" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -319,7 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696626877212</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="all games restriction filters and bottom status bar">
+      <option name="closed" value="true" />
+      <created>1696705319908</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1696705319908</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,6 +363,7 @@
     <MESSAGE value="all games restrictionboxes" />
     <MESSAGE value="demon souls restrictionfilter" />
     <MESSAGE value="14 games restricctionfilter" />
-    <option name="LAST_COMMIT_MESSAGE" value="14 games restricctionfilter" />
+    <MESSAGE value="all games restriction filters and bottom status bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="all games restriction filters and bottom status bar" />
   </component>
 </project>
