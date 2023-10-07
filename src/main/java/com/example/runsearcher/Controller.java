@@ -15,11 +15,16 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.*;
 import javafx.scene.layout.HBox;
+import javafx.util.Callback;
 
 import java.io.*;
+import java.awt.Desktop;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 
 public class Controller {
 
@@ -707,6 +712,35 @@ public class Controller {
         categoryColumn.setCellValueFactory(new PropertyValueFactory<>("category"));
         runColumn.setCellValueFactory(new PropertyValueFactory<>("runName"));
         linkColumn.setCellValueFactory(new PropertyValueFactory<>("runLink"));
+        linkColumn.setCellFactory(new Callback<TableColumn<Run, String>, TableCell<Run, String>>() {
+            @Override
+            public TableCell<Run, String> call(TableColumn<Run, String> runStringTableColumn) {
+                return new TableCell<Run, String>() {
+                    @Override
+                    protected void updateItem(String item, boolean empty) {
+                        super.updateItem(item, empty);
+
+                        if (item == null || empty) {
+                            setText(null);
+                        } else {
+                            Hyperlink hyperlink = new Hyperlink(item);
+                            hyperlink.setOnAction(event -> openLink(item));
+                            setGraphic(hyperlink);
+                        }
+                    }
+
+                    private void openLink(String item) {
+                        try {
+                            URI uri = new URI(item);
+                            Desktop.getDesktop().browse(uri);
+                        } catch (URISyntaxException | IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+
+                };
+            }
+        });
         tableView.getItems().setAll((getRuns()));
 
         gameButtons = new ArrayList<>(List.of(demonsSoulsRadioButton, darkSoulsRadioButton,

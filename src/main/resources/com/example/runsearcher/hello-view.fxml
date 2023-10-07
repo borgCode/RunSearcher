@@ -1248,7 +1248,7 @@
                   <Insets left="10.0" top="5.0" />
                </HBox.margin>
             </Label>
-            <RadioButton fx:id="crash1Button" mnemonicParsing="false" prefHeight="30.0" prefWidth="114.0" text="Crash Bandicoot">
+            <RadioButton fx:id="crash1Button" mnemonicParsing="false" text="Crash Bandicoot">
                <HBox.margin>
                   <Insets left="10.0" top="5.0" />
                </HBox.margin>
@@ -1399,7 +1399,7 @@
                   <Insets left="10.0" top="5.0" />
                </HBox.margin>
             </Label>
-            <RadioButton fx:id="dishonoredOneButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="114.0" text="Dishonored">
+            <RadioButton fx:id="dishonoredOneButton" mnemonicParsing="false" text="Dishonored">
                <HBox.margin>
                   <Insets left="10.0" top="5.0" />
                </HBox.margin>
@@ -1574,7 +1574,7 @@
                   <Insets left="10.0" top="5.0" />
                </HBox.margin>
             </Label>
-            <RadioButton fx:id="zeldaBotwButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="194.0" text="Zelda: Breath of the Wild">
+            <RadioButton fx:id="zeldaBotwButton" mnemonicParsing="false" text="Zelda: Breath of the Wild">
                <HBox.margin>
                   <Insets left="10.0" top="5.0" />
                </HBox.margin>

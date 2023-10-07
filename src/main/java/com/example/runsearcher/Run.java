@@ -1,19 +1,22 @@
 package com.example.runsearcher;
 
+import javafx.beans.property.SimpleStringProperty;
+
 public class Run {
     private String runner;
     private String game;
     private String category;
     private String runName;
-    private String runLink;
+    private SimpleStringProperty runLink;
 
     public Run(String runner, String game, String category, String runName, String runLink) {
         this.runner = runner;
         this.game = game;
         this.category = category;
         this.runName = runName;
-        this.runLink = runLink;
+        this.runLink = new SimpleStringProperty(runLink);
     }
+
     public String getRunner() {
         return runner;
     }
@@ -21,6 +24,7 @@ public class Run {
     public void setRunner(String runner) {
         this.runner = runner;
     }
+
     public String getGame() {
         return game;
     }
@@ -46,10 +50,19 @@ public class Run {
     }
 
     public String getRunLink() {
-        return runLink;
+        return runLink.get();
     }
 
-    public void setRunLink(String runLink) {
-        this.runLink = runLink;
+    public SimpleStringProperty runLinkProperty() {
+        return runLink;
     }
 }
+//
+//    public String getRunLink() {
+//        return runLink;
+//    }
+//
+//    public void setRunLink(String runLink) {
+//        this.runLink = runLink;
+//    }
+//}
