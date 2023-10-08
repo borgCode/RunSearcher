@@ -689,7 +689,7 @@ public class Controller {
                 return new TableCell<>() {
                     @Override
                     protected void updateItem(String item, boolean empty) {
-                        System.out.println(item);
+
                         super.updateItem(item, empty);
 
                         if (item == null || empty) {
