@@ -45,9 +45,10 @@ public class CategoryFilter implements ChangeListener<Boolean> {
                 return true;
             }
             if ((run.getGame().toLowerCase()
-                    .replaceAll("[’',()]", "").
+                    .replaceAll("[’',()/+\"]", "").
                     replaceAll("/", "").matches(game + "( classic| remake|: classic|: remake)?")
-                    && run.getCategory().toLowerCase().matches(category + ".*"))) {
+                    && run.getCategory().toLowerCase().replaceAll("[’',()/+\"]", "").
+                    matches(category + ".*"))) {
                 return true;
             } else {
                 return false;
