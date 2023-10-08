@@ -683,16 +683,17 @@ public class Controller {
         categoryColumn.setCellValueFactory(new PropertyValueFactory<>("category"));
         runColumn.setCellValueFactory(new PropertyValueFactory<>("runName"));
         linkColumn.setCellValueFactory(new PropertyValueFactory<>("runLink"));
-        linkColumn.setCellFactory(new Callback<TableColumn<Run, String>, TableCell<Run, String>>() {
+        linkColumn.setCellFactory(new Callback<>() {
             @Override
             public TableCell<Run, String> call(TableColumn<Run, String> runStringTableColumn) {
                 return new TableCell<>() {
                     @Override
                     protected void updateItem(String item, boolean empty) {
+                        System.out.println(item);
                         super.updateItem(item, empty);
 
                         if (item == null || empty) {
-                            setText(null);
+                            setGraphic(null);
                         } else {
                             Hyperlink hyperlink = new Hyperlink(item);
                             hyperlink.setOnAction(event -> openLink(item));

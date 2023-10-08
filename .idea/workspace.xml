@@ -9,7 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="Added Hyperlinks in link column" />
+    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="removed filter button and added changelisteners to checkboxes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/Controller.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -334,7 +337,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696716550761</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="removed filter button and added changelisteners to checkboxes">
+      <option name="closed" value="true" />
+      <created>1696738516216</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1696738516216</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,6 +390,7 @@
     <MESSAGE value="14 games restricctionfilter" />
     <MESSAGE value="Miracle -&gt; Miracles in restrictionMap" />
     <MESSAGE value="Added Hyperlinks in link column" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Hyperlinks in link column" />
+    <MESSAGE value="removed filter button and added changelisteners to checkboxes" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed filter button and added changelisteners to checkboxes" />
   </component>
 </project>
