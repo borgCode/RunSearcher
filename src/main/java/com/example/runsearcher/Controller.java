@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.*;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.util.Callback;
 
@@ -661,6 +662,8 @@ public class Controller {
     private RadioButton blasphemousNGPlus;
     @FXML
     private RadioButton blasphemousLastSorrow;
+    @FXML private GridPane root;
+    @FXML private CheckBox darkMode;
     @FXML
     private TableView<Run> tableView;
     @FXML
@@ -689,7 +692,6 @@ public class Controller {
                 return new TableCell<>() {
                     @Override
                     protected void updateItem(String item, boolean empty) {
-
                         super.updateItem(item, empty);
 
                         if (item == null || empty) {
@@ -721,6 +723,16 @@ public class Controller {
                 crashRadioButton, dishonoredRadioButton, zeldaRadioButton,
                 cupheadRadioButton, hollowKnightRadioButton, hadesRadioButton,
                 celesteRadioButton, blasphemousRadioButton, multipleRadioButton));
+
+        darkMode.selectedProperty().addListener((obs, oldValue, newValue) -> {
+            if (newValue) {
+                root.getScene().getStylesheets().add(getClass().getResource("/styles/dark-theme.css").toExternalForm());
+            } else {
+                root.getScene().getStylesheets().remove(getClass().getResource("/styles/dark-theme.css").toExternalForm());
+            }
+        });
+
+
 
 
         tableView.getSelectionModel().setCellSelectionEnabled(true);
