@@ -1271,7 +1271,10 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <CheckBox fx:id="crashNoTripleMask" mnemonicParsing="false" text="No Triple Mask" />
+            <CheckBox fx:id="crashNoTripleMask" mnemonicParsing="false" text="No Triple Mask">
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin></CheckBox>
          </children>
       </HBox>
       <HBox fx:id="crashTwoCategoryBox" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 0 0 1 0;" visible="false" GridPane.columnSpan="5" GridPane.rowIndex="4">
