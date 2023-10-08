@@ -9,12 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="hyperlink null setgraphic(null) instead of setText">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/styles/dark-theme.css" afterDir="false" />
+    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="added darkMode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/RunSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/RunSearcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/dark-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/dark-theme.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +84,8 @@
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\resources\styles" />
+      <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\resources\styles\test" />
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\java\com\example\runsearcher" />
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\resources" />
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src" />
@@ -360,7 +359,23 @@
       <option name="project" value="LOCAL" />
       <updated>1696745541273</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="added darkMode">
+      <option name="closed" value="true" />
+      <created>1696768328754</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1696768328754</updated>
+    </task>
+    <task id="LOCAL-00028" summary="added darkMode">
+      <option name="closed" value="true" />
+      <created>1696768426479</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1696768426479</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,6 +422,7 @@
     <MESSAGE value="Added Hyperlinks in link column" />
     <MESSAGE value="removed filter button and added changelisteners to checkboxes" />
     <MESSAGE value="hyperlink null setgraphic(null) instead of setText" />
-    <option name="LAST_COMMIT_MESSAGE" value="hyperlink null setgraphic(null) instead of setText" />
+    <MESSAGE value="added darkMode" />
+    <option name="LAST_COMMIT_MESSAGE" value="added darkMode" />
   </component>
 </project>
