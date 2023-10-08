@@ -11,7 +11,7 @@
 }
 
 .text-field {
-    -fx-prompt-text-fill: gray;
+    -fx-prompt-text-fill: rgb(128, 128, 128);
 }
 
 .titulo{
