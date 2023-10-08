@@ -24,3 +24,6 @@
             -fx-mid-text-color   60%
     );
 }
+.hyperlink {
+    -fx-text-fill: #00008B;
+}

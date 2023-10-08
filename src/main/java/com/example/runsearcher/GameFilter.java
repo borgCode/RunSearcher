@@ -23,8 +23,8 @@ public class GameFilter implements ChangeListener<Boolean> {
     private final ArrayList<CheckBox> restrictions;
 
 
-    public GameFilter(FilteredList<Run> filter, RadioButton currentButton, List<RadioButton> gameButtons
-            , HBox categoryBox, HBox restrictionBox, ArrayList<RadioButton> categories,
+    public GameFilter(FilteredList<Run> filter, RadioButton currentButton, List<RadioButton> gameButtons,
+                      HBox categoryBox, HBox restrictionBox, ArrayList<RadioButton> categories,
                       FilteredList<Run> restrictionFilter, ArrayList<CheckBox> restrictions) {
         this.filter = filter;
         this.currentButton = currentButton;
