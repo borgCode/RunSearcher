@@ -59,21 +59,15 @@ class RestrictionFilterPredicate implements Predicate<Run> {
             return true;
         }
 
-
         List<CheckBox> selectedBoxesCopy = new ArrayList<>(selectedBoxes);
 
         for (CheckBox box : selectedBoxesCopy) {
             restrictionString.append("(?=.*" + map.getValue(box.getText()) + ").*");
         }
 
-
-
         String runName = run.getRunName().toLowerCase()
                 .replaceAll("[’',()\"]", "")
                 .replaceAll("/", "");
-
-        System.out.println(runName);
-
         return runName.matches(restrictionString.toString());
     }
 }
