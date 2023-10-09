@@ -26,7 +26,7 @@ public class RestrictionsMap {
         restrictions.put("Pyro Only", "(pyro only|pyromancy only|pyromancies only)");
         restrictions.put("Miracles Only", "(miracle only|miracles only)");
         restrictions.put("Hex Only", "(hex only|hexes only)");
-        restrictions.put("NG+6", "(ng\\+6|new game \\+6|new game\\+6)");
+        restrictions.put("Max NG", "(ng\\+(6|5|7)|new game \\+(6|5|7)|new game\\+(6|5|7))");
         restrictions.put("No Buffs", "(no buffs|buffless|no pellets|no papers)");
         restrictions.put("Arcane Only", "arcane only");
         restrictions.put("No Gems", "no gems");

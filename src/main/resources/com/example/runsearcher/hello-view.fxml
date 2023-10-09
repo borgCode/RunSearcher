@@ -316,7 +316,7 @@
                      </padding>
                   </CheckBox>
                   <CheckBox fx:id="darkSoulsNGPlus" mnemonicParsing="false" text="NG+" GridPane.rowIndex="1" />
-                  <CheckBox fx:id="darkSoulsNGPlusSix" mnemonicParsing="false" text="NG+6" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <CheckBox fx:id="darkSoulsNGPlusSix" mnemonicParsing="false" text="Max NG" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
@@ -598,7 +598,7 @@
                      </padding>
                   </CheckBox>
                   <CheckBox fx:id="bloodborneNHD" mnemonicParsing="false" text="No Hunter's Dream" GridPane.rowIndex="1" />
-                  <CheckBox fx:id="bloodborneNG6" mnemonicParsing="false" text="NG+6" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <CheckBox fx:id="bloodborneNG6" mnemonicParsing="false" text="Max NG" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
