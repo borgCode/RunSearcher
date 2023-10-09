@@ -11,9 +11,9 @@ import java.util.function.Predicate;
 
 
 public class FilterManager {
-    private FilteredList<Run> filteredData;
-    private SortedList<Run> sortedData;
-    private List<Predicate<Run>> predicateList;
+    private final FilteredList<Run> filteredData;
+    private final SortedList<Run> sortedData;
+    private final List<Predicate<Run>> predicateList;
     private List<Predicate<Run>> activeFilters;
     private Predicate<Run> textFilterPredicate = run -> true;
 

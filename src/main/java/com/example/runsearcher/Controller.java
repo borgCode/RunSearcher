@@ -7,8 +7,6 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.collections.transformation.FilteredList;
-import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -1409,11 +1407,7 @@ public class Controller {
     }
 
     private Predicate<Run> createTextFilterPredicate(String newValue) {
-
-
         return run -> {
-
-
             String[] values = newValue.toLowerCase().split(" ");
             List<String> wordList = Arrays.stream(values)
                     .map(s -> s.replaceAll("[’',()]", "").replaceAll("/", " "))
@@ -1443,7 +1437,6 @@ public class Controller {
             }
         };
     }
-
 
     private void addRestrictionListeners(FilterManager manager, ArrayList<CheckBox> restrictions, RestrictionsMap map) {
         for (CheckBox box : restrictions) {

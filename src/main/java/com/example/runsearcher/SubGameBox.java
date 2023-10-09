@@ -2,7 +2,6 @@ package com.example.runsearcher;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.collections.transformation.FilteredList;
 import javafx.scene.control.RadioButton;
 import javafx.scene.layout.HBox;
 import java.util.List;

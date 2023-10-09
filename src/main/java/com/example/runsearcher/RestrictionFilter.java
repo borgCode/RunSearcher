@@ -2,15 +2,11 @@ package com.example.runsearcher;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.collections.transformation.FilteredList;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.control.CheckBox;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
 import java.util.function.Predicate;
 
 public class RestrictionFilter implements ChangeListener<Boolean> {
@@ -68,7 +64,6 @@ class RestrictionFilterPredicate implements Predicate<Run> {
 
         for (CheckBox box : selectedBoxesCopy) {
             restrictionString.append("(?=.*" + map.getValue(box.getText()) + ").*");
-            System.out.println(restrictionString.toString());
         }
 
 
