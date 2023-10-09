@@ -12,27 +12,25 @@ import java.util.List;
 
 public class GameFilter implements ChangeListener<Boolean> {
 
-    private final FilteredList<Run> filter;
+    private final FilterManager manager;
     private final RadioButton currentButton;
     private final List<RadioButton> gameButtons;
     private final HBox categoryBox;
     private final HBox restrictionBox;
     private final String game;
     private final ArrayList<RadioButton> categories;
-    private final FilteredList<Run> restrictionFilter;
     private final ArrayList<CheckBox> restrictions;
 
 
-    public GameFilter(FilteredList<Run> filter, RadioButton currentButton, List<RadioButton> gameButtons,
+    public GameFilter(FilterManager manager, RadioButton currentButton, List<RadioButton> gameButtons,
                       HBox categoryBox, HBox restrictionBox, ArrayList<RadioButton> categories,
-                      FilteredList<Run> restrictionFilter, ArrayList<CheckBox> restrictions) {
-        this.filter = filter;
+                      ArrayList<CheckBox> restrictions) {
+        this.manager = manager;
         this.currentButton = currentButton;
         this.gameButtons = gameButtons;
         this.categoryBox = categoryBox;
         this.restrictionBox = restrictionBox;
         this.categories = categories;
-        this.restrictionFilter = restrictionFilter;
         this.restrictions = restrictions;
         game = currentButton.getText().toLowerCase().replaceAll("[’',()]", "");
     }
@@ -48,13 +46,12 @@ public class GameFilter implements ChangeListener<Boolean> {
             for (RadioButton button: categories) {
                 button.setSelected(false);
             }
-            restrictionFilter.setPredicate(run -> true);
             for (CheckBox box : restrictions) {
                 box.setSelected(false);
             }
 
         }
-        filter.setPredicate(run -> {
+        manager.addFilter(run -> {
             if (!currentButton.isSelected()) {
                 return true;
             }

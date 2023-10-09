@@ -22,7 +22,7 @@ public class RestrictionsMap {
         restrictions.put("Sorcery Only", "(sorcery only|sorceries only)");
         restrictions.put("No Magic", "(no magic|no sorcery)");
         restrictions.put("NG+", "(ng\\+|new game+|new game plus|new game \\+)");
-        restrictions.put("No Roll", "(no roll|no dodge|dodgeless|no roll/quickstep)");
+        restrictions.put("No Roll", "(no roll|no dodge|dodgeless|no roll/no quickstep)");
         restrictions.put("Pyro Only", "(pyro only|pyromancy only|pyromancies only)");
         restrictions.put("Miracles Only", "(miracle only|miracles only)");
         restrictions.put("Hex Only", "(hex only|hexes only)");

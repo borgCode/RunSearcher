@@ -9,30 +9,29 @@ import javafx.scene.layout.HBox;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class SubGameFilter implements ChangeListener<Boolean> {
 
-    private final FilteredList<Run> filter;
+    private final FilterManager manager;
     private final RadioButton currentButton;
     private final List<RadioButton> subGameButtons;
     private final HBox categoryBox;
     private final HBox restrictionBox;
     private final String game;
     private final ArrayList<RadioButton> categories;
-    private final FilteredList<Run> restrictionFilter;
     private final ArrayList<CheckBox> restrictions;
 
-    public SubGameFilter(FilteredList<Run> filter, RadioButton currentButton,
+    public SubGameFilter(FilterManager manager, RadioButton currentButton,
                          List<RadioButton> subGameButtons, HBox categoryBox,
                          HBox restrictionBox, ArrayList<RadioButton> categories,
-                         FilteredList<Run> restrictionFilter, ArrayList<CheckBox> restrictions) {
-        this.filter = filter;
+                         ArrayList<CheckBox> restrictions) {
+        this.manager = manager;
         this.currentButton = currentButton;
         this.subGameButtons = subGameButtons;
         this.categoryBox = categoryBox;
         this.restrictionBox = restrictionBox;
         this.categories = categories;
-        this.restrictionFilter = restrictionFilter;
         this.restrictions = restrictions;
         game = currentButton.getText().toLowerCase().replaceAll("[’',()]", "");
 
@@ -41,6 +40,19 @@ public class SubGameFilter implements ChangeListener<Boolean> {
 
     @Override
     public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+        Predicate<Run> predicate = run -> {
+            if (!currentButton.isSelected()) {
+                return true;
+            }
+            if (run.getGame().toLowerCase()
+                    .replaceAll("[’',()]", "").
+                    replaceAll("/", "").matches(game + "( remake| classic|: classic|: remake)?")) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+
         if (t1) {
             unSelectAllSubGameButtons(currentButton);
             categoryBox.setVisible(true);
@@ -52,23 +64,12 @@ public class SubGameFilter implements ChangeListener<Boolean> {
             categoryBox.setVisible(false);
             restrictionBox.setVisible(false);
 
-            restrictionFilter.setPredicate(run -> true);
+            manager.removeFilter(predicate);
             for (CheckBox box : restrictions) {
                 box.setSelected(false);
             }
         }
-        filter.setPredicate(run -> {
-            if (!currentButton.isSelected()) {
-                return true;
-            }
-            if (run.getGame().toLowerCase()
-                    .replaceAll("[’',()]", "").
-                    replaceAll("/", "").matches(game + "( remake| classic|: classic|: remake)?")) {
-                return true;
-            } else {
-                return false;
-            }
-        });
+        manager.addFilter(predicate);
 
     }
 

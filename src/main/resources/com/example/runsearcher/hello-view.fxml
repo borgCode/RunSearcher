@@ -603,7 +603,7 @@
                         <Insets left="15.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox fx:id="bloodborneNoRoll" mnemonicParsing="false" text="No Roll/Quickstep" GridPane.columnIndex="4">
+                  <CheckBox fx:id="bloodborneNoRoll" mnemonicParsing="false" text="No Roll" GridPane.columnIndex="4">
                      <padding>
                         <Insets left="15.0" />
                      </padding>

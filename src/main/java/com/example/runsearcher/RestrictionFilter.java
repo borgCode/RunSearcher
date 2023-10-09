@@ -8,15 +8,19 @@ import javafx.event.EventHandler;
 import javafx.scene.control.CheckBox;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Predicate;
 
 public class RestrictionFilter implements ChangeListener<Boolean> {
 
-    private final FilteredList<Run> filter;
+    private final FilterManager manager;
     private final ArrayList<CheckBox> restrictions;
     private final RestrictionsMap map;
 
-    public RestrictionFilter(FilteredList<Run> filteredByRestriction, ArrayList<CheckBox> restrictions, RestrictionsMap map) {
-        this.filter = filteredByRestriction;
+    public RestrictionFilter(FilterManager manager, ArrayList<CheckBox> restrictions, RestrictionsMap map) {
+        this.manager = manager;
         this.restrictions = restrictions;
         this.map = map;
     }
@@ -24,32 +28,57 @@ public class RestrictionFilter implements ChangeListener<Boolean> {
 
     @Override
     public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
-        ArrayList<CheckBox> selectedBoxes = new ArrayList<>();
+
+
+
+        List<Predicate<Run>> activeFilters = new ArrayList<>();
+
+        for (CheckBox checkBox : restrictions) {
+            if (checkBox.isSelected()) {
+                activeFilters.add(new RestrictionFilterPredicate(Collections.singletonList(checkBox), map));
+            }
+        }
+
+        manager.setActiveFilters(activeFilters);
+
+
+
+    }
+}
+
+class RestrictionFilterPredicate implements Predicate<Run> {
+    private final List<CheckBox> selectedBoxes;
+    private final RestrictionsMap map;
+
+    public RestrictionFilterPredicate(List<CheckBox> selectedBoxes, RestrictionsMap map) {
+        this.selectedBoxes = selectedBoxes;
+        this.map = map;
+    }
+
+    @Override
+    public boolean test(Run run) {
         StringBuilder restrictionString = new StringBuilder();
 
-        for (CheckBox box : restrictions) {
-            if (box.isSelected()) {
-                selectedBoxes.add(box);
-            }
-        }
-
         if (selectedBoxes.isEmpty()) {
-            filter.setPredicate(run -> true);
-            return;
+            return true;
         }
 
-        for (CheckBox box : selectedBoxes) {
+
+        List<CheckBox> selectedBoxesCopy = new ArrayList<>(selectedBoxes);
+
+        for (CheckBox box : selectedBoxesCopy) {
             restrictionString.append("(?=.*" + map.getValue(box.getText()) + ").*");
+            System.out.println(restrictionString.toString());
         }
 
-        filter.setPredicate(run -> {
-            if (run.getRunName().toLowerCase().
-                    replaceAll("[’',()\"]", "").
-                    replaceAll("/", "").matches(restrictionString.toString())) {
-                return true;
-            } else {
-                return false;
-            }
-        });
+
+
+        String runName = run.getRunName().toLowerCase()
+                .replaceAll("[’',()\"]", "")
+                .replaceAll("/", "");
+
+        System.out.println(runName);
+
+        return runName.matches(restrictionString.toString());
     }
 }

@@ -2,7 +2,6 @@ package com.example.runsearcher;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.collections.transformation.FilteredList;
 import javafx.scene.control.RadioButton;
 import javafx.scene.layout.HBox;
 
@@ -11,7 +10,7 @@ import java.util.List;
 
 public class CategoryFilter implements ChangeListener<Boolean> {
 
-    private final FilteredList<Run> filter;
+    private final FilterManager manager;
     private final RadioButton categoryButton;
     private final HBox restrictionBox;
     private final List<RadioButton> categories;
@@ -19,9 +18,9 @@ public class CategoryFilter implements ChangeListener<Boolean> {
     private final String category;
 
 
-    public CategoryFilter(FilteredList<Run> filter, RadioButton gameButton,
+    public CategoryFilter(FilterManager manager, RadioButton gameButton,
                           RadioButton categoryButton, HBox restrictionBox, ArrayList<RadioButton> categories) {
-        this.filter = filter;
+        this.manager = manager;
         this.categoryButton = categoryButton;
         this.restrictionBox = restrictionBox;
         this.categories = categories;
@@ -40,7 +39,7 @@ public class CategoryFilter implements ChangeListener<Boolean> {
             restrictionBox.setVisible(false);
         }
 
-        filter.setPredicate(run -> {
+        manager.addFilter(run -> {
             if (!categoryButton.isSelected()) {
                 return true;
             }

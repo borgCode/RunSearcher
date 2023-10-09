@@ -25,6 +25,7 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Predicate;
 
 
 public class Controller {
@@ -553,14 +554,22 @@ public class Controller {
     private HBox cupheadCategoryBox;
     @FXML
     private HBox cupheadRestrictionsBox;
-    @FXML private CheckBox cupheadNoDash;
-    @FXML private CheckBox cupheadCharmless;
-    @FXML private CheckBox cupheadNoSuperArts;
-    @FXML private CheckBox cupheadAllPhases;
-    @FXML private CheckBox cupheadAllSecretPhases;
-    @FXML private CheckBox cupheadAllKingDice;
-    @FXML private CheckBox cupheadTwinHeart;
-    @FXML private CheckBox cupheadAllPerfectGrades;
+    @FXML
+    private CheckBox cupheadNoDash;
+    @FXML
+    private CheckBox cupheadCharmless;
+    @FXML
+    private CheckBox cupheadNoSuperArts;
+    @FXML
+    private CheckBox cupheadAllPhases;
+    @FXML
+    private CheckBox cupheadAllSecretPhases;
+    @FXML
+    private CheckBox cupheadAllKingDice;
+    @FXML
+    private CheckBox cupheadTwinHeart;
+    @FXML
+    private CheckBox cupheadAllPerfectGrades;
     @FXML
     private RadioButton cupheadAny;
     @FXML
@@ -651,9 +660,12 @@ public class Controller {
     private HBox blasphemousCategoryBox;
     @FXML
     private HBox blasphemousRestrictionsBox;
-    @FXML private CheckBox blasphemousNoDamage;
-    @FXML private CheckBox blasphemousSkipless;
-    @FXML private CheckBox blasphemousMeleeOnly;
+    @FXML
+    private CheckBox blasphemousNoDamage;
+    @FXML
+    private CheckBox blasphemousSkipless;
+    @FXML
+    private CheckBox blasphemousMeleeOnly;
     @FXML
     private RadioButton blasphemousAny;
     @FXML
@@ -662,8 +674,10 @@ public class Controller {
     private RadioButton blasphemousNGPlus;
     @FXML
     private RadioButton blasphemousLastSorrow;
-    @FXML private GridPane root;
-    @FXML private CheckBox darkMode;
+    @FXML
+    private GridPane root;
+    @FXML
+    private CheckBox darkMode;
     @FXML
     private TableView<Run> tableView;
     @FXML
@@ -715,6 +729,7 @@ public class Controller {
                 };
             }
         });
+
         tableView.getItems().setAll((getRuns()));
 
         gameButtons = new ArrayList<>(List.of(demonsSoulsRadioButton, darkSoulsRadioButton,
@@ -731,8 +746,6 @@ public class Controller {
                 root.getScene().getStylesheets().remove(getClass().getResource("/styles/dark-theme.css").toExternalForm());
             }
         });
-
-
 
 
         tableView.getSelectionModel().setCellSelectionEnabled(true);
@@ -801,10 +814,15 @@ public class Controller {
 
     private void filterRuns() {
 
+        Predicate<Run> filterByGame = run -> true;
+        Predicate<Run> filterByRestriction = run -> true;
+        Predicate<Run> filterByText = run -> true;
 
-        FilteredList<Run> filteredByGame = new FilteredList<>(getRuns(), b -> true);
-        FilteredList<Run> filteredByRestriction = new FilteredList<>(filteredByGame, b -> true);
-        FilteredList<Run> filteredByText = new FilteredList<>(filteredByRestriction, b -> true);
+        FilterManager manager = new FilterManager(getRuns(), tableView);
+        manager.addFilter(filterByGame);
+        manager.addFilter(filterByRestriction);
+        manager.addFilter(filterByText);
+        tableView.setItems(manager.getSortedData());
 
 
         //Restriction lists
@@ -893,7 +911,7 @@ public class Controller {
                 List.of(demonsSoulsAny, demonsSoulsAB, demonsSoulsAA));
         for (
                 RadioButton button : demonsSoulsCategories) {
-            button.selectedProperty().addListener(new CategoryFilter(filteredByGame, demonsSoulsRadioButton, button,
+            button.selectedProperty().addListener(new CategoryFilter(manager, demonsSoulsRadioButton, button,
                     demonsSoulsRestrictionsBox, demonsSoulsCategories));
         }
 
@@ -901,7 +919,7 @@ public class Controller {
                 List.of(darkSoulsAny, darkSoulsAMGB, darkSoulsAB, darkSoulsAA));
         for (
                 RadioButton button : darkSoulsCategories) {
-            button.selectedProperty().addListener(new CategoryFilter(filteredByGame, darkSoulsRadioButton, button,
+            button.selectedProperty().addListener(new CategoryFilter(manager, darkSoulsRadioButton, button,
                     darkSoulsRestrictionsBox, darkSoulsCategories));
         }
 
@@ -909,7 +927,7 @@ public class Controller {
                 List.of(darkSoulsTwoAny, darkSoulsTwoAMGB, darkSoulsTwoAB, darkSoulsTwoAA));
         for (
                 RadioButton button : darkSoulsTwoCategories) {
-            button.selectedProperty().addListener(new CategoryFilter(filteredByGame, darkSoulsTwoRadioButton, button,
+            button.selectedProperty().addListener(new CategoryFilter(manager, darkSoulsTwoRadioButton, button,
                     darkSoulsTwoRestrictionsBox, darkSoulsTwoCategories));
         }
 
@@ -917,7 +935,7 @@ public class Controller {
                 List.of(darkSoulsThreeAny, darkSoulsThreeAMGB, darkSoulsThreeAB, darkSoulsThreeAA));
         for (
                 RadioButton button : darkSoulsThreeCategories) {
-            button.selectedProperty().addListener(new CategoryFilter(filteredByGame, darkSoulsThreeRadioButton, button,
+            button.selectedProperty().addListener(new CategoryFilter(manager, darkSoulsThreeRadioButton, button,
                     darkSoulsThreeRestrictionsBox, darkSoulsThreeCategories));
         }
 
@@ -925,7 +943,7 @@ public class Controller {
                 List.of(bloodborneAny, bloodborneAMGB, bloodborneAB, bloodborneABC, bloodborneAA));
         for (
                 RadioButton button : bloodborneCategories) {
-            button.selectedProperty().addListener(new CategoryFilter(filteredByGame, bloodborneRadioButton, button,
+            button.selectedProperty().addListener(new CategoryFilter(manager, bloodborneRadioButton, button,
                     bloodborneRestrictionsBox, bloodborneCategories));
         }
 
@@ -933,7 +951,7 @@ public class Controller {
                 List.of(sekiroShura, sekiroIS, sekiroReturn, sekiroPuri, sekiroAM, sekiroABM, sekiroABMB, sekiroMJ, sekiroAMG, sekiroAA, sekiroAllEnemy));
         for (
                 RadioButton button : sekiroCategories) {
-            button.selectedProperty().addListener(new CategoryFilter(filteredByGame, sekiroRadioButton, button,
+            button.selectedProperty().addListener(new CategoryFilter(manager, sekiroRadioButton, button,
                     sekiroRestrictionsBox, sekiroCategories));
         }
 
@@ -941,7 +959,7 @@ public class Controller {
                 List.of(eldenRingAny, eldenRingAGR, eldenRingAR, eldenRingAB, eldenRingAA));
         for (
                 RadioButton button : eldenRingCategories) {
-            button.selectedProperty().addListener(new CategoryFilter(filteredByGame, eldenRingRadioButton, button,
+            button.selectedProperty().addListener(new CategoryFilter(manager, eldenRingRadioButton, button,
                     eldenRingRestrictionsBox, eldenRingCategories));
         }
 
@@ -950,7 +968,7 @@ public class Controller {
         for (
                 RadioButton button : residentEvil0Categories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, residentEvil0Button, button,
+                    new CategoryFilter(manager, residentEvil0Button, button,
                             residentEvilRestrictionsBox, residentEvil0Categories));
         }
 
@@ -960,7 +978,7 @@ public class Controller {
         for (
                 RadioButton button : residentEvil1Categories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, residentEvil1Button, button,
+                    new CategoryFilter(manager, residentEvil1Button, button,
                             residentEvilRestrictionsBox, residentEvil1Categories));
         }
 
@@ -970,7 +988,7 @@ public class Controller {
         for (
                 RadioButton button : residentEvil2Categories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, residentEvil2Button, button,
+                    new CategoryFilter(manager, residentEvil2Button, button,
                             residentEvilRestrictionsBox, residentEvil2Categories));
         }
 
@@ -980,7 +998,7 @@ public class Controller {
         for (
                 RadioButton button : residentEvil3Categories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, residentEvil3Button, button,
+                    new CategoryFilter(manager, residentEvil3Button, button,
                             residentEvilRestrictionsBox, residentEvil3Categories));
         }
 
@@ -989,7 +1007,7 @@ public class Controller {
         for (
                 RadioButton button : residentEvil4Categories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, residentEvil4Button, button,
+                    new CategoryFilter(manager, residentEvil4Button, button,
                             residentEvilRestrictionsBox, residentEvil4Categories));
         }
 
@@ -998,7 +1016,7 @@ public class Controller {
         for (
                 RadioButton button : residentEvil7Categories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, residentEvil7Button, button,
+                    new CategoryFilter(manager, residentEvil7Button, button,
                             residentEvilRestrictionsBox, residentEvil7Categories));
         }
 
@@ -1008,7 +1026,7 @@ public class Controller {
         for (
                 RadioButton button : residentEvilVillageCategories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, residentEvilVillageButton, button,
+                    new CategoryFilter(manager, residentEvilVillageButton, button,
                             residentEvilRestrictionsBox, residentEvilVillageCategories));
         }
 
@@ -1017,7 +1035,7 @@ public class Controller {
         for (
                 RadioButton button : residentEvilSurvivorCategories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, residentEvilSurvivorButton, button,
+                    new CategoryFilter(manager, residentEvilSurvivorButton, button,
                             residentEvilRestrictionsBox, residentEvilSurvivorCategories));
         }
 
@@ -1027,7 +1045,7 @@ public class Controller {
         for (
                 RadioButton button : crashOneCategories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, crash1Button, button,
+                    new CategoryFilter(manager, crash1Button, button,
                             crashRestrictionsBox, crashOneCategories));
         }
 
@@ -1036,7 +1054,7 @@ public class Controller {
         for (
                 RadioButton button : crashTwoCategories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, crashTwoButton, button,
+                    new CategoryFilter(manager, crashTwoButton, button,
                             crashRestrictionsBox, crashTwoCategories));
         }
 
@@ -1045,7 +1063,7 @@ public class Controller {
         for (
                 RadioButton button : crashThreeCategories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, crashThreeButton, button,
+                    new CategoryFilter(manager, crashThreeButton, button,
                             crashRestrictionsBox, crashThreeCategories));
         }
 
@@ -1054,7 +1072,7 @@ public class Controller {
         for (
                 RadioButton button : crashFourCategories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, crashFourButton, button,
+                    new CategoryFilter(manager, crashFourButton, button,
                             crashRestrictionsBox, crashFourCategories));
         }
 
@@ -1063,7 +1081,7 @@ public class Controller {
         for (
                 RadioButton button : dishonoredCategories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, dishonoredOneButton, button,
+                    new CategoryFilter(manager, dishonoredOneButton, button,
                             dishonoredRestrictionsBox, dishonoredCategories));
         }
 
@@ -1072,7 +1090,7 @@ public class Controller {
         for (
                 RadioButton button : dishonoredTwoCategories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, dishonoredTwoButton, button,
+                    new CategoryFilter(manager, dishonoredTwoButton, button,
                             dishonoredRestrictionsBox, dishonoredTwoCategories));
         }
 
@@ -1082,7 +1100,7 @@ public class Controller {
         for (
                 RadioButton button : dishonoredDotoCategories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, dishonoredDotoButton, button,
+                    new CategoryFilter(manager, dishonoredDotoButton, button,
                             dishonoredRestrictionsBox, dishonoredDotoCategories));
         }
 
@@ -1092,7 +1110,7 @@ public class Controller {
         for (
                 RadioButton button : zeldaBotwCategories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, zeldaBotwButton, button,
+                    new CategoryFilter(manager, zeldaBotwButton, button,
                             zeldaBotwRestrictionsBox, zeldaBotwCategories));
         }
 
@@ -1102,7 +1120,7 @@ public class Controller {
         for (
                 RadioButton button : zeldaTotkCategories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, zeldaTotkButton, button,
+                    new CategoryFilter(manager, zeldaTotkButton, button,
                             zeldaTotkRestrictionsBox, zeldaTotkCategories));
         }
 
@@ -1114,7 +1132,7 @@ public class Controller {
         for (
                 RadioButton button : cupheadCategories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, cupheadRadioButton, button,
+                    new CategoryFilter(manager, cupheadRadioButton, button,
                             cupheadRestrictionsBox, cupheadCategories));
         }
 
@@ -1124,7 +1142,7 @@ public class Controller {
         for (
                 RadioButton button : hollowKnightCategories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, hollowKnightRadioButton, button,
+                    new CategoryFilter(manager, hollowKnightRadioButton, button,
                             hollowKnightRestrictionsBox, hollowKnightCategories));
         }
 
@@ -1134,7 +1152,7 @@ public class Controller {
         for (
                 RadioButton button : celesteCategories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, celesteRadioButton, button,
+                    new CategoryFilter(manager, celesteRadioButton, button,
                             celesteRestrictionsBox, celesteCategories));
         }
 
@@ -1143,7 +1161,7 @@ public class Controller {
         for (
                 RadioButton button : hadesCategories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, hadesRadioButton, button,
+                    new CategoryFilter(manager, hadesRadioButton, button,
                             hadesRestrictionsBox, hadesCategories));
         }
 
@@ -1153,7 +1171,7 @@ public class Controller {
         for (
                 RadioButton button : blasphemousCategories) {
             button.selectedProperty().addListener(
-                    new CategoryFilter(filteredByGame, blasphemousRadioButton, button,
+                    new CategoryFilter(manager, blasphemousRadioButton, button,
                             blasphemousRestrictionsBox, blasphemousCategories));
         }
 
@@ -1161,185 +1179,184 @@ public class Controller {
         //Game filters
 
         demonsSoulsRadioButton.selectedProperty().addListener(
-                new GameFilter(filteredByGame, demonsSoulsRadioButton, gameButtons,
+                new GameFilter(manager, demonsSoulsRadioButton, gameButtons,
                         demonsSoulsCategoryBox, demonsSoulsRestrictionsBox, demonsSoulsCategories,
-                        filteredByRestriction, demonsRestrictions));
+                        demonsRestrictions));
 
         darkSoulsRadioButton.selectedProperty().addListener(
-                new GameFilter(filteredByGame, darkSoulsRadioButton, gameButtons,
+                new GameFilter(manager, darkSoulsRadioButton, gameButtons,
                         darkSoulsCategoryBox, darkSoulsRestrictionsBox, darkSoulsCategories,
-                        filteredByRestriction, darkSoulsRestrictions));
+                        darkSoulsRestrictions));
 
         darkSoulsTwoRadioButton.selectedProperty().addListener(
-                new GameFilter(filteredByGame, darkSoulsTwoRadioButton, gameButtons,
+                new GameFilter(manager, darkSoulsTwoRadioButton, gameButtons,
                         darkSoulsTwoCategoryBox, darkSoulsTwoRestrictionsBox, darkSoulsTwoCategories,
-                        filteredByRestriction, darkSoulsTwoRestrictions));
+                        darkSoulsTwoRestrictions));
 
         darkSoulsThreeRadioButton.selectedProperty().addListener(
-                new GameFilter(filteredByGame, darkSoulsThreeRadioButton, gameButtons,
+                new GameFilter(manager, darkSoulsThreeRadioButton, gameButtons,
                         darkSoulsThreeCategoryBox, darkSoulsThreeRestrictionsBox, darkSoulsThreeCategories,
-                        filteredByRestriction, darkSoulsThreeRestrictions));
+                        darkSoulsThreeRestrictions));
 
         bloodborneRadioButton.selectedProperty().addListener(
-                new GameFilter(filteredByGame, bloodborneRadioButton, gameButtons,
+                new GameFilter(manager, bloodborneRadioButton, gameButtons,
                         bloodborneCategoryBox, bloodborneRestrictionsBox, bloodborneCategories,
-                        filteredByRestriction, bloodborneRestrictions));
+                        bloodborneRestrictions));
 
         sekiroRadioButton.selectedProperty().addListener(
-                new GameFilter(filteredByGame, sekiroRadioButton, gameButtons,
-                        sekiroCategoryBox, sekiroRestrictionsBox, sekiroCategories, filteredByRestriction,
+                new GameFilter(manager, sekiroRadioButton, gameButtons,
+                        sekiroCategoryBox, sekiroRestrictionsBox, sekiroCategories,
                         sekiroRestrictions));
 
         eldenRingRadioButton.selectedProperty().addListener(
-                new GameFilter(filteredByGame, eldenRingRadioButton, gameButtons,
+                new GameFilter(manager, eldenRingRadioButton, gameButtons,
                         eldenRingCategoryBox, eldenRingRestrictionsBox, eldenRingCategories,
-                        filteredByRestriction, eldenRingRestrictions));
+                        eldenRingRestrictions));
 
         ArrayList<RadioButton> residentEvilSubGames = new ArrayList<>(
                 List.of(residentEvil0Button, residentEvil1Button, residentEvil2Button,
                         residentEvil3Button, residentEvil4Button, residentEvil7Button,
                         residentEvilVillageButton, residentEvilSurvivorButton));
         residentEvilRadioButton.selectedProperty().addListener(
-                new SubGameBox(filteredByGame, gameButtons, residentEvilRadioButton,
+                new SubGameBox(manager, gameButtons, residentEvilRadioButton,
                         residentEvilSubGames, residentEvilSubGameBox));
 
         residentEvil0Button.selectedProperty().addListener(
-                new SubGameFilter(filteredByGame, residentEvil0Button,
+                new SubGameFilter(manager, residentEvil0Button,
                         residentEvilSubGames, residentEvil0CategoryBox,
                         residentEvilRestrictionsBox, residentEvil0Categories,
-                        filteredByRestriction, residentEvilRestrictions));
+                        residentEvilRestrictions));
 
         residentEvil1Button.selectedProperty().addListener(
-                new SubGameFilter(filteredByGame, residentEvil1Button,
+                new SubGameFilter(manager, residentEvil1Button,
                         residentEvilSubGames, residentEvil1CategoryBox,
                         residentEvilRestrictionsBox, residentEvil1Categories,
-                        filteredByRestriction, residentEvilRestrictions));
+                        residentEvilRestrictions));
 
         residentEvil2Button.selectedProperty().addListener(
-                new SubGameFilter(filteredByGame, residentEvil2Button,
+                new SubGameFilter(manager, residentEvil2Button,
                         residentEvilSubGames, residentEvil2CategoryBox,
                         residentEvilRestrictionsBox, residentEvil2Categories,
-                        filteredByRestriction, residentEvilRestrictions));
+                        residentEvilRestrictions));
 
         residentEvil3Button.selectedProperty().addListener(
-                new SubGameFilter(filteredByGame, residentEvil3Button,
+                new SubGameFilter(manager, residentEvil3Button,
                         residentEvilSubGames, residentEvil3CategoryBox,
                         residentEvilRestrictionsBox, residentEvil3Categories,
-                        filteredByRestriction, residentEvilRestrictions));
+                        residentEvilRestrictions));
 
         residentEvil4Button.selectedProperty().addListener(
-                new SubGameFilter(filteredByGame, residentEvil4Button,
+                new SubGameFilter(manager, residentEvil4Button,
                         residentEvilSubGames, residentEvil4CategoryBox,
                         residentEvilRestrictionsBox, residentEvil4Categories,
-                        filteredByRestriction, residentEvilRestrictions));
+                        residentEvilRestrictions));
 
         residentEvil7Button.selectedProperty().addListener(
-                new SubGameFilter(filteredByGame, residentEvil7Button,
+                new SubGameFilter(manager, residentEvil7Button,
                         residentEvilSubGames, residentEvil7CategoryBox,
                         residentEvilRestrictionsBox, residentEvil7Categories,
-                        filteredByRestriction, residentEvilRestrictions));
+                        residentEvilRestrictions));
 
         residentEvilVillageButton.selectedProperty().addListener(
-                new SubGameFilter(filteredByGame, residentEvilVillageButton,
+                new SubGameFilter(manager, residentEvilVillageButton,
                         residentEvilSubGames, residentEvilVillageCategoryBox,
                         residentEvilRestrictionsBox, residentEvilVillageCategories,
-                        filteredByRestriction, residentEvilRestrictions));
+                        residentEvilRestrictions));
 
         residentEvilSurvivorButton.selectedProperty().addListener(
-                new SubGameFilter(filteredByGame, residentEvilSurvivorButton,
+                new SubGameFilter(manager, residentEvilSurvivorButton,
                         residentEvilSubGames, residentEvilSurvivorCategoryBox,
                         residentEvilRestrictionsBox, residentEvilSurvivorCategories,
-                        filteredByRestriction, residentEvilRestrictions));
+                        residentEvilRestrictions));
 
         ArrayList<RadioButton> crashSubGames = new ArrayList<>(
                 List.of(crash1Button, crashTwoButton, crashThreeButton, crashFourButton));
 
         crashRadioButton.selectedProperty().addListener(
-                new SubGameBox(filteredByGame, gameButtons, crashRadioButton, crashSubGames, crashSubGameBox));
+                new SubGameBox(manager, gameButtons, crashRadioButton, crashSubGames, crashSubGameBox));
 
         crash1Button.selectedProperty().addListener(
-                new SubGameFilter(filteredByGame, crash1Button, crashSubGames,
+                new SubGameFilter(manager, crash1Button, crashSubGames,
                         crashCategoryBox, crashRestrictionsBox, crashOneCategories,
-                        filteredByRestriction, crashRestrictions)
+                        crashRestrictions)
         );
 
         crashTwoButton.selectedProperty().addListener(
-                new SubGameFilter(filteredByGame, crashTwoButton, crashSubGames,
+                new SubGameFilter(manager, crashTwoButton, crashSubGames,
                         crashTwoCategoryBox, crashRestrictionsBox, crashTwoCategories,
-                        filteredByRestriction, crashRestrictions)
+                        crashRestrictions)
         );
 
         crashThreeButton.selectedProperty().addListener(
-                new SubGameFilter(filteredByGame, crashThreeButton, crashSubGames,
+                new SubGameFilter(manager, crashThreeButton, crashSubGames,
                         crashThreeCategoryBox, crashRestrictionsBox, crashThreeCategories,
-                        filteredByRestriction, crashRestrictions)
+                        crashRestrictions)
         );
 
         crashFourButton.selectedProperty().addListener(
-                new SubGameFilter(filteredByGame, crashFourButton, crashSubGames,
+                new SubGameFilter(manager, crashFourButton, crashSubGames,
                         crashFourCategoryBox, crashRestrictionsBox, crashFourCategories,
-                        filteredByRestriction, crashRestrictions)
+                        crashRestrictions)
         );
 
         ArrayList<RadioButton> dishonoredSubGames = new ArrayList<>(
                 List.of(dishonoredOneButton, dishonoredTwoButton, dishonoredDotoButton));
 
         dishonoredRadioButton.selectedProperty().addListener(
-                new SubGameBox(filteredByGame, gameButtons, dishonoredRadioButton, dishonoredSubGames, dishonoredSubGameBox));
+                new SubGameBox(manager, gameButtons, dishonoredRadioButton, dishonoredSubGames, dishonoredSubGameBox));
 
         dishonoredOneButton.selectedProperty().addListener(
-                new SubGameFilter(filteredByGame, dishonoredOneButton, dishonoredSubGames,
+                new SubGameFilter(manager, dishonoredOneButton, dishonoredSubGames,
                         dishonoredCategoryBox, dishonoredRestrictionsBox, dishonoredCategories,
-                        filteredByRestriction, dishonoredRestrictions)
+                        dishonoredRestrictions)
         );
         dishonoredTwoButton.selectedProperty().addListener(
-                new SubGameFilter(filteredByGame, dishonoredTwoButton, dishonoredSubGames,
+                new SubGameFilter(manager, dishonoredTwoButton, dishonoredSubGames,
                         dishonoredTwoCategoryBox, dishonoredRestrictionsBox, dishonoredTwoCategories,
-                        filteredByRestriction, dishonoredRestrictions)
+                        dishonoredRestrictions)
         );
         dishonoredDotoButton.selectedProperty().addListener(
-                new SubGameFilter(filteredByGame, dishonoredDotoButton, dishonoredSubGames,
+                new SubGameFilter(manager, dishonoredDotoButton, dishonoredSubGames,
                         dishonoredDotoCategoryBox, dishonoredRestrictionsBox, dishonoredDotoCategories,
-                        filteredByRestriction, dishonoredRestrictions)
+                        dishonoredRestrictions)
         );
 
         ArrayList<RadioButton> zeldaSubGames = new ArrayList<>(
                 List.of(zeldaBotwButton, zeldaTotkButton));
 
         zeldaRadioButton.selectedProperty().addListener(
-                new SubGameBox(filteredByGame, gameButtons, zeldaRadioButton, zeldaSubGames, zeldaSubGameBox));
+                new SubGameBox(manager, gameButtons, zeldaRadioButton, zeldaSubGames, zeldaSubGameBox));
 
         zeldaBotwButton.selectedProperty().addListener(
-                new SubGameFilter(filteredByGame, zeldaBotwButton, zeldaSubGames,
-                        zeldaBotwCategoryBox, zeldaBotwRestrictionsBox, zeldaBotwCategories,
-                        filteredByRestriction, zeldaBotwRestrictions)
+                new SubGameFilter(manager, zeldaBotwButton, zeldaSubGames,
+                        zeldaBotwCategoryBox, zeldaBotwRestrictionsBox, zeldaBotwCategories, zeldaBotwRestrictions)
         );
         zeldaTotkButton.selectedProperty().addListener(
-                new SubGameFilter(filteredByGame, zeldaTotkButton, zeldaSubGames,
+                new SubGameFilter(manager, zeldaTotkButton, zeldaSubGames,
                         zeldaTotkCategoryBox, zeldaTotkRestrictionsBox, zeldaTotkCategories,
-                        filteredByRestriction, zeldaTotkRestrictions)
+                        zeldaTotkRestrictions)
         );
 
         cupheadRadioButton.selectedProperty().addListener(
-                new GameFilter(filteredByGame, cupheadRadioButton, gameButtons,
+                new GameFilter(manager, cupheadRadioButton, gameButtons,
                         cupheadCategoryBox, cupheadRestrictionsBox, cupheadCategories,
-                        filteredByRestriction, cupheadRestrictions));
+                        cupheadRestrictions));
         hollowKnightRadioButton.selectedProperty().addListener(
-                new GameFilter(filteredByGame, hollowKnightRadioButton, gameButtons,
+                new GameFilter(manager, hollowKnightRadioButton, gameButtons,
                         hollowKnightCategoryBox, hollowKnightRestrictionsBox, hollowKnightCategories,
-                        filteredByRestriction, hollowKnightRestrictions));
+                        hollowKnightRestrictions));
         hadesRadioButton.selectedProperty().addListener(
-                new GameFilter(filteredByGame, hadesRadioButton, gameButtons,
+                new GameFilter(manager, hadesRadioButton, gameButtons,
                         hadesCategoryBox, hadesRestrictionsBox, hadesCategories,
-                        filteredByRestriction, hadesRestrictions));
+                        hadesRestrictions));
         celesteRadioButton.selectedProperty().addListener(
-                new GameFilter(filteredByGame, celesteRadioButton, gameButtons,
+                new GameFilter(manager, celesteRadioButton, gameButtons,
                         celesteCategoryBox, celesteRestrictionsBox, celesteCategories,
-                        filteredByRestriction, celesteRestrictions));
+                        celesteRestrictions));
         blasphemousRadioButton.selectedProperty().addListener(
-                new GameFilter(filteredByGame, blasphemousRadioButton, gameButtons,
+                new GameFilter(manager, blasphemousRadioButton, gameButtons,
                         blasphemousCategoryBox, blasphemousRestrictionsBox, blasphemousCategories,
-                        filteredByRestriction, blasphemousRestrictions));
+                        blasphemousRestrictions));
 
         multipleRadioButton.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
@@ -1352,7 +1369,7 @@ public class Controller {
                     }
                 }
 
-                filteredByGame.setPredicate(run -> {
+                manager.addFilter(run -> {
                     if (!multipleRadioButton.isSelected()) {
                         return true;
                     }
@@ -1368,74 +1385,69 @@ public class Controller {
 
         });
 
-        for(CheckBox box : demonsRestrictions) {
-            box.selectedProperty().addListener(new RestrictionFilter(filteredByRestriction, demonsRestrictions, restrictions));
+        for (CheckBox box : demonsRestrictions) {
+            box.selectedProperty().addListener(new RestrictionFilter(manager, demonsRestrictions, restrictions));
 
         }
 
         for (CheckBox box : darkSoulsRestrictions) {
-            box.selectedProperty().addListener(new RestrictionFilter(filteredByRestriction, darkSoulsRestrictions, restrictions));
+            box.selectedProperty().addListener(new RestrictionFilter(manager, darkSoulsRestrictions, restrictions));
         }
 
         for (ArrayList<CheckBox> boxes : restrictionsList) {
-            addRestrictionListeners(filteredByRestriction, boxes, restrictions);
+            addRestrictionListeners(manager, boxes, restrictions);
         }
+        searchBox.textProperty().addListener((observable, oldValue, newValue) -> {
 
-
-        searchBox.textProperty().
-
-                addListener((observable, oldValue, newValue) ->
-
-                {
-                    filteredByText.setPredicate(run -> {
-                        if (newValue == null || newValue.isEmpty()) {
-                            return true;
-                        }
-
-                        String[] values = newValue.toLowerCase().split(" ");
-                        List<String> wordList = Arrays.stream(values)
-                                .map(s -> s
-                                        .replaceAll("[’',()]", "")
-                                        .replaceAll("/", " "))
-                                .toList();
-                        String lowerCaseFilter = newValue.toLowerCase().replaceAll("’", "").replaceAll("'", "");
-
-                        if (run.getRunner().toLowerCase()
-                                .replaceAll("’", "").replaceAll("'", "")
-                                .contains(lowerCaseFilter)) {
-                            return true;
-                        } else if (wordList.stream().allMatch(Arrays.stream(run.getGame().toLowerCase()
-                                .replaceAll("[’',()]", "")
-                                .replaceAll("/", " ")
-                                .split(" ")).toList()::contains)) {
-                            return true;
-                        } else if (run.getCategory().toLowerCase()
-                                .replaceAll("’", "").replaceAll("'", "")
-                                .contains(lowerCaseFilter)) {
-                            return true;
-                        } else if (wordList.stream().allMatch(Arrays.stream(run.getRunName().toLowerCase()
-                                .replaceAll("[’',()]", "")
-                                .replaceAll("/", " ")
-                                .split(" ")).toList()::contains)) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-
-                    });
-                });
-
-
-        SortedList<Run> sortedData = new SortedList<>(filteredByText);
-        sortedData.comparatorProperty().
-
-                bind(tableView.comparatorProperty());
-        tableView.setItems(sortedData);
+            if (newValue != null && !newValue.isEmpty()) {
+                Predicate<Run> textFilterPredicate = createTextFilterPredicate(newValue);
+                manager.setTextFilterPredicate(textFilterPredicate);
+            } else {
+                manager.setTextFilterPredicate(run -> true);
+            }
+        });
     }
 
-    private void addRestrictionListeners(FilteredList<Run> filteredList, ArrayList<CheckBox> restrictions, RestrictionsMap map) {
-        for(CheckBox box : restrictions) {
-            box.selectedProperty().addListener(new RestrictionFilter(filteredList, restrictions, map));
+    private Predicate<Run> createTextFilterPredicate(String newValue) {
+
+
+        return run -> {
+
+
+            String[] values = newValue.toLowerCase().split(" ");
+            List<String> wordList = Arrays.stream(values)
+                    .map(s -> s.replaceAll("[’',()]", "").replaceAll("/", " "))
+                    .toList();
+            String lowerCaseFilter = newValue.toLowerCase().replaceAll("’", "").replaceAll("'", "");
+
+            if (run.getRunner().toLowerCase()
+                    .replaceAll("’", "").replaceAll("'", "")
+                    .contains(lowerCaseFilter)) {
+                return true;
+            } else if (wordList.stream().allMatch(Arrays.stream(run.getGame().toLowerCase()
+                    .replaceAll("[’',()]", "")
+                    .replaceAll("/", " ")
+                    .split(" ")).toList()::contains)) {
+                return true;
+            } else if (run.getCategory().toLowerCase()
+                    .replaceAll("’", "").replaceAll("'", "")
+                    .contains(lowerCaseFilter)) {
+                return true;
+            } else if (wordList.stream().allMatch(Arrays.stream(run.getRunName().toLowerCase()
+                    .replaceAll("[’',()]", "")
+                    .replaceAll("/", " ")
+                    .split(" ")).toList()::contains)) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+    }
+
+
+    private void addRestrictionListeners(FilterManager manager, ArrayList<CheckBox> restrictions, RestrictionsMap map) {
+        for (CheckBox box : restrictions) {
+            box.selectedProperty().addListener(new RestrictionFilter(manager, restrictions, map));
 
         }
     }

@@ -8,17 +8,17 @@ import javafx.scene.layout.HBox;
 import java.util.List;
 
 public class SubGameBox implements ChangeListener<Boolean> {
-    private final FilteredList<Run> filter;
+    private final FilterManager manager;
     private final RadioButton currentButton;
     private final List<RadioButton> gameButtons;
     private final List<RadioButton> subGameButtons;
     private final HBox subGameBox;
     private final String game;
 
-    public SubGameBox(FilteredList<Run> filter, List<RadioButton> gameButtons,
+    public SubGameBox(FilterManager manager, List<RadioButton> gameButtons,
                       RadioButton currentButton, List<RadioButton> subGameButtons,
                       HBox subGameBox) {
-        this.filter = filter;
+        this.manager = manager;
         this.currentButton = currentButton;
         this.gameButtons = gameButtons;
         this.subGameButtons = subGameButtons;
@@ -42,7 +42,7 @@ public class SubGameBox implements ChangeListener<Boolean> {
             subGameBox.setVisible(false);
 
         }
-        filter.setPredicate(run -> {
+        manager.addFilter(run -> {
             if (!currentButton.isSelected()) {
                 return true;
             }
