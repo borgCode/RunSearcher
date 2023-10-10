@@ -5,7 +5,6 @@ import javafx.beans.value.ObservableValue;
 import javafx.scene.control.CheckBox;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -31,43 +30,32 @@ public class RestrictionFilter implements ChangeListener<Boolean> {
 
         for (CheckBox checkBox : restrictions) {
             if (checkBox.isSelected()) {
-                activeFilters.add(new RestrictionFilterPredicate(Collections.singletonList(checkBox), map));
+                activeFilters.add(new RestrictionFilterPredicate(checkBox, map));
             }
         }
 
         manager.setActiveFilters(activeFilters);
-
-
-
     }
 }
 
 class RestrictionFilterPredicate implements Predicate<Run> {
-    private final List<CheckBox> selectedBoxes;
+    private final CheckBox box;
     private final RestrictionsMap map;
 
-    public RestrictionFilterPredicate(List<CheckBox> selectedBoxes, RestrictionsMap map) {
-        this.selectedBoxes = selectedBoxes;
+    public RestrictionFilterPredicate(CheckBox box, RestrictionsMap map) {
+        this.box = box;
         this.map = map;
     }
 
     @Override
     public boolean test(Run run) {
-        StringBuilder restrictionString = new StringBuilder();
 
-        if (selectedBoxes.isEmpty()) {
-            return true;
-        }
+        String restrictionString = "(?=.*" + map.getValue(box.getText()) + ").*";
 
-        List<CheckBox> selectedBoxesCopy = new ArrayList<>(selectedBoxes);
-
-        for (CheckBox box : selectedBoxesCopy) {
-            restrictionString.append("(?=.*" + map.getValue(box.getText()) + ").*");
-        }
 
         String runName = run.getRunName().toLowerCase()
                 .replaceAll("[’',()\"]", "")
                 .replaceAll("/", "");
-        return runName.matches(restrictionString.toString());
+        return runName.matches(restrictionString);
     }
 }

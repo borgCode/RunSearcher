@@ -13,6 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import org.controlsfx.control.ToggleSwitch?>
 
 <GridPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.runsearcher.Controller">
   <columnConstraints>
@@ -39,11 +40,25 @@
       <RowConstraints />
   </rowConstraints>
    <children>
-      <TextField fx:id="searchBox" prefHeight="26.0" prefWidth="260.0" GridPane.columnIndex="1" GridPane.columnSpan="3">
+      <HBox GridPane.columnSpan="5">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="155.0" text="Search" />
+            <TextField fx:id="searchBox" prefHeight="26.0" prefWidth="260.0" />
+            <ToggleSwitch fx:id="toggleSwitchWF" text="WF">
+               <HBox.margin>
+                  <Insets left="50.0" top="2.0" />
+               </HBox.margin>
+            </ToggleSwitch>
+            <Pane prefHeight="26.0" prefWidth="362.0" />
+            <ToggleSwitch fx:id="darkMode" mnemonicParsing="false" text="Dark mode">
+               <HBox.margin>
+                  <Insets top="2.0" />
+               </HBox.margin></ToggleSwitch>
+         </children>
          <GridPane.margin>
             <Insets top="4.0" />
-         </GridPane.margin></TextField>
-      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="155.0" text="Search" />
+         </GridPane.margin>
+      </HBox>
       <TableView fx:id="tableView" editable="true" prefHeight="675.0" GridPane.columnSpan="5" GridPane.rowIndex="7" GridPane.rowSpan="5">
         <columns>
           <TableColumn fx:id="runnerColumn" editable="false" prefWidth="123.19998168945312" text="Runner" />
@@ -2081,10 +2096,5 @@
             </Label>
          </children>
       </HBox>
-      <CheckBox fx:id="darkMode" mnemonicParsing="false" text="Dark mode" GridPane.columnIndex="4">
-         <GridPane.margin>
-            <Insets left="50.0" />
-         </GridPane.margin>
-      </CheckBox>
    </children>
 </GridPane>

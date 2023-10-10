@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="Fixed more filter issues and added Old Souls button" />
+    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="WF filter" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="wip2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -469,7 +469,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696923910795</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="WF filter">
+      <option name="closed" value="true" />
+      <created>1696936276907</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1696936276907</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,6 +529,7 @@
     <MESSAGE value="Now checks for Max NG 5|6|7 instead of just ng+6" />
     <MESSAGE value="Removed max width" />
     <MESSAGE value="Fixed more filter issues and added Old Souls button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed more filter issues and added Old Souls button" />
+    <MESSAGE value="WF filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="WF filter" />
   </component>
 </project>
