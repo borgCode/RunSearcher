@@ -44,12 +44,12 @@
             <Insets top="4.0" />
          </GridPane.margin></TextField>
       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="155.0" text="Search" />
-      <TableView fx:id="tableView" editable="true" prefHeight="675.0" prefWidth="1066.0" GridPane.columnSpan="5" GridPane.rowIndex="7" GridPane.rowSpan="5">
+      <TableView fx:id="tableView" editable="true" prefHeight="675.0" GridPane.columnSpan="5" GridPane.rowIndex="7" GridPane.rowSpan="5">
         <columns>
           <TableColumn fx:id="runnerColumn" editable="false" prefWidth="123.19998168945312" text="Runner" />
-            <TableColumn fx:id="gameColumn" prefWidth="219.199951171875" text="Game" />
-            <TableColumn fx:id="categoryColumn" prefWidth="187.0" text="Category" />
-          <TableColumn fx:id="runColumn" editable="false" prefWidth="351.0" text="Run Name" />
+            <TableColumn fx:id="gameColumn" prefWidth="176.8000030517578" text="Game" />
+            <TableColumn fx:id="categoryColumn" prefWidth="179.20001220703125" text="Category" />
+          <TableColumn fx:id="runColumn" editable="false" prefWidth="361.5999755859375" text="Run Name" />
             <TableColumn fx:id="linkColumn" editable="false" prefWidth="245.0" sortable="false" text="Run link" />
         </columns>
          <columnResizePolicy>
@@ -345,6 +345,11 @@
             <RadioButton fx:id="darkSoulsTwoAny" mnemonicParsing="false" text="Any%">
                <padding>
                   <Insets top="20.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="darkSoulsTwoOldSouls" mnemonicParsing="false" text="Old Souls">
+               <padding>
+                  <Insets left="15.0" top="20.0" />
                </padding>
             </RadioButton>
             <RadioButton fx:id="darkSoulsTwoAMGB" mnemonicParsing="false" text="All Main Game Bosses">
@@ -666,7 +671,7 @@
                      <GridPane.margin>
                         <Insets />
                      </GridPane.margin></RadioButton>
-                  <RadioButton fx:id="sekiroABM" mnemonicParsing="false" text="All Beads &amp; Memories" GridPane.columnIndex="6">
+                  <RadioButton fx:id="sekiroABM" mnemonicParsing="false" text="All Beads + Memories" GridPane.columnIndex="6">
                      <GridPane.margin>
                         <Insets />
                      </GridPane.margin></RadioButton>
@@ -693,7 +698,7 @@
                      <padding>
                         <Insets left="10.0" />
                      </padding></RadioButton>
-                  <RadioButton fx:id="sekiroAMG" mnemonicParsing="false" prefHeight="30.0" prefWidth="202.0" text="All Memories &amp; Gauntlets" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <RadioButton fx:id="sekiroAMG" mnemonicParsing="false" prefHeight="30.0" prefWidth="202.0" text="All Memories + Gauntlets" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets />
                      </GridPane.margin></RadioButton>
@@ -1568,7 +1573,7 @@
                   <Insets left="10.0" top="5.0" />
                </HBox.margin>
             </RadioButton>
-            <RadioButton fx:id="zeldaBotwAllBeatsChampions" mnemonicParsing="false" text="All Divine Beasts + The Champions' Ballad">
+            <RadioButton fx:id="zeldaBotwAllBeatsChampions" mnemonicParsing="false" text="All Divine Beasts + The Champions’ Ballad">
                <HBox.margin>
                   <Insets left="10.0" top="5.0" />
                </HBox.margin>

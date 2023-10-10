@@ -9,11 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="Now checks for Max NG 5|6|7 instead of just ng+6">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2023-10-07_20_50__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2023-10-07_20_50__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2023-10-07_20_50__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2023-10-07_20_50__Changes_1.xml" afterDir="false" />
+    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="Removed max width">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/RunSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/RunSearcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/CategoryFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/CategoryFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/dark-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/dark-theme.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,6 +161,7 @@
       <workItem from="1696840428353" duration="596000" />
       <workItem from="1696844395812" duration="279000" />
       <workItem from="1696844689336" duration="1577000" />
+      <workItem from="1696919326327" duration="4131000" />
     </task>
     <task id="LOCAL-00001" summary="simple filtered list function">
       <option name="closed" value="true" />
@@ -417,7 +419,31 @@
       <option name="project" value="LOCAL" />
       <updated>1696831948757</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Removed max width">
+      <option name="closed" value="true" />
+      <created>1696880372120</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1696880372120</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Removed max width">
+      <option name="closed" value="true" />
+      <created>1696880430250</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1696880430250</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Removed max width">
+      <option name="closed" value="true" />
+      <created>1696880552413</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1696880552413</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,6 +493,7 @@
     <MESSAGE value="added darkMode" />
     <MESSAGE value="Added filterManager to handle the adding and removing of filters" />
     <MESSAGE value="Now checks for Max NG 5|6|7 instead of just ng+6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now checks for Max NG 5|6|7 instead of just ng+6" />
+    <MESSAGE value="Removed max width" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed max width" />
   </component>
 </project>

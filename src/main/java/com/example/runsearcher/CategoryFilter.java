@@ -25,7 +25,7 @@ public class CategoryFilter implements ChangeListener<Boolean> {
         this.restrictionBox = restrictionBox;
         this.categories = categories;
         game = gameButton.getText().toLowerCase().replaceAll("[’',()]", "");
-        category = categoryButton.getText().toLowerCase();
+        category = categoryButton.getText().toLowerCase().replaceAll("[^a-zA-Z0-9]+", "");
 
     }
 
@@ -46,8 +46,8 @@ public class CategoryFilter implements ChangeListener<Boolean> {
             if ((run.getGame().toLowerCase()
                     .replaceAll("[’',()/+\"]", "").
                     replaceAll("/", "").matches(game + "( classic| remake|: classic|: remake)?")
-                    && run.getCategory().toLowerCase().replaceAll("[’',()/+\"]", "").
-                    matches(category + ".*"))) {
+                    && run.getCategory().toLowerCase().replaceAll("[^a-zA-Z0-9]+", "").
+                    matches(category + " *"))) {
                 return true;
             } else {
                 return false;

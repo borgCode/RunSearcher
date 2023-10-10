@@ -123,6 +123,8 @@ public class Controller {
     @FXML
     private RadioButton darkSoulsTwoAny;
     @FXML
+    private RadioButton darkSoulsTwoOldSouls;
+    @FXML
     private RadioButton darkSoulsTwoAMGB;
     @FXML
     private RadioButton darkSoulsTwoAB;
@@ -922,7 +924,7 @@ public class Controller {
         }
 
         ArrayList<RadioButton> darkSoulsTwoCategories = new ArrayList<>(
-                List.of(darkSoulsTwoAny, darkSoulsTwoAMGB, darkSoulsTwoAB, darkSoulsTwoAA));
+                List.of(darkSoulsTwoAny, darkSoulsTwoOldSouls, darkSoulsTwoAMGB, darkSoulsTwoAB, darkSoulsTwoAA));
         for (
                 RadioButton button : darkSoulsTwoCategories) {
             button.selectedProperty().addListener(new CategoryFilter(manager, darkSoulsTwoRadioButton, button,
