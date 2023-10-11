@@ -9,15 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="WF filter">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/membersAndDate.txt" afterDir="false" />
+    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="Ability to download latest list">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/RunSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/RunSearcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/runs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/runs.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/membersAndDate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/membersAndDate.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -515,7 +511,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696938667107</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Ability to download latest list">
+      <option name="closed" value="true" />
+      <created>1697025854370</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1697025854370</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,6 +573,7 @@
     <MESSAGE value="Fixed more filter issues and added Old Souls button" />
     <MESSAGE value="WF filter and toggle switch darkMode" />
     <MESSAGE value="WF filter" />
-    <option name="LAST_COMMIT_MESSAGE" value="WF filter" />
+    <MESSAGE value="Ability to download latest list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ability to download latest list" />
   </component>
 </project>
