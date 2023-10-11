@@ -20,8 +20,6 @@ public class RunSearcher extends Application {
         Image image = new Image("icon.png");
         stage.getIcons().add(image);
 
-
-
         stage.setScene(scene);
         stage.show();
     }

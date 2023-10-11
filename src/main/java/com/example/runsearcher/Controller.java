@@ -30,7 +30,8 @@ public class Controller {
 
     @FXML
     private TextField searchBox;
-    @FXML private ToggleSwitch toggleSwitchWF;
+    @FXML
+    private ToggleSwitch toggleSwitchWF;
     @FXML
     private RadioButton demonsSoulsRadioButton;
     @FXML
@@ -691,11 +692,19 @@ public class Controller {
     private TableColumn<Run, String> runColumn;
     @FXML
     private TableColumn<Run, String> linkColumn;
+    @FXML
+    private Label membersLabel;
+    @FXML
+    private Label dateLabel;
+    @FXML
+    private Button updateButton;
     private List<RadioButton> gameButtons;
     RestrictionsMap restrictions = new RestrictionsMap();
 
 
     public void initialize() {
+
+        setMembersAndDate();
         runnerColumn.setCellValueFactory(new PropertyValueFactory<>("runner"));
         gameColumn.setCellValueFactory(new PropertyValueFactory<>("game"));
         categoryColumn.setCellValueFactory(new PropertyValueFactory<>("category"));
@@ -747,6 +756,8 @@ public class Controller {
                 root.getScene().getStylesheets().remove(getClass().getResource("/styles/dark-theme.css").toExternalForm());
             }
         });
+
+        updateButton.setOnAction(new updateDialog());
 
 
         tableView.getSelectionModel().setCellSelectionEnabled(true);
@@ -1411,5 +1422,21 @@ public class Controller {
             box.selectedProperty().addListener(new RestrictionFilter(manager, restrictions, map));
 
         }
+    }
+
+    private void setMembersAndDate() {
+        File file = new File("src/main/resources/membersAndDate.txt");
+
+        try {
+            FileReader fr = new FileReader(file);
+            BufferedReader br = new BufferedReader(fr);
+            membersLabel.setText(br.readLine());
+            dateLabel.setText(br.readLine());
+            fr.close();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
