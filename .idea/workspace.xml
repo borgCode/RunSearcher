@@ -9,11 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="WF filter">
+    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="Ability to download latest list">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/runs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/runs.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,9 +28,10 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="wip2" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -87,11 +85,14 @@
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\resources" />
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\resources\styles" />
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\resources\styles\test" />
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\java\com\example\runsearcher" />
-      <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\resources" />
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.runsearcher" />
     </key>
   </component>
   <component name="RunManager" selected="Application.RunSearcher">
@@ -161,6 +162,7 @@
       <workItem from="1696844395812" duration="279000" />
       <workItem from="1696844689336" duration="1577000" />
       <workItem from="1696919326327" duration="4929000" />
+      <workItem from="1696955663423" duration="22301000" />
     </task>
     <task id="LOCAL-00001" summary="simple filtered list function">
       <option name="closed" value="true" />
@@ -482,7 +484,47 @@
       <option name="project" value="LOCAL" />
       <updated>1696936276907</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="WF filter">
+      <option name="closed" value="true" />
+      <created>1696936548778</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1696936548778</updated>
+    </task>
+    <task id="LOCAL-00042" summary="WF filter">
+      <option name="closed" value="true" />
+      <created>1696937547415</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1696937547416</updated>
+    </task>
+    <task id="LOCAL-00043" summary="WF filter">
+      <option name="closed" value="true" />
+      <created>1696938667107</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1696938667107</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Ability to download latest list">
+      <option name="closed" value="true" />
+      <created>1697030155919</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1697030155919</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Ability to download latest list">
+      <option name="closed" value="true" />
+      <created>1697030395410</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1697030395410</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +576,9 @@
     <MESSAGE value="Now checks for Max NG 5|6|7 instead of just ng+6" />
     <MESSAGE value="Removed max width" />
     <MESSAGE value="Fixed more filter issues and added Old Souls button" />
+    <MESSAGE value="WF filter and toggle switch darkMode" />
     <MESSAGE value="WF filter" />
-    <option name="LAST_COMMIT_MESSAGE" value="WF filter" />
+    <MESSAGE value="Ability to download latest list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ability to download latest list" />
   </component>
 </project>
