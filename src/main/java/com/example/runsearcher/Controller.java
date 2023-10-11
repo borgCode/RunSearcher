@@ -757,7 +757,7 @@ public class Controller {
             }
         });
 
-        updateButton.setOnAction(new updateDialog());
+        updateButton.setOnAction(new UpdateDialog());
 
 
         tableView.getSelectionModel().setCellSelectionEnabled(true);
