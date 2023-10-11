@@ -57,24 +57,6 @@
       <artifactId>opencsv</artifactId>
       <version>5.7.1</version>
     </dependency>
-      <dependency>
-          <groupId>software.amazon.awssdk</groupId>
-          <artifactId>s3</artifactId>
-          <version>2.20.162</version>
-          <scope>compile</scope>
-      </dependency>
-      <dependency>
-          <groupId>software.amazon.awssdk</groupId>
-          <artifactId>auth</artifactId>
-          <version>2.20.162</version>
-      </dependency>
-      <dependency>
-          <groupId>software.amazon.awssdk</groupId>
-          <artifactId>sdk-core</artifactId>
-          <version>2.20.162</version>
-      </dependency>
-
-
   </dependencies>
 
   <build>
