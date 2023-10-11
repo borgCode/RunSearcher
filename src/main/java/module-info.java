@@ -7,6 +7,8 @@ module com.example.runsearcher {
     requires com.opencsv;
     requires java.desktop;
 
+
+
     opens com.example.runsearcher to javafx.fxml;
     exports com.example.runsearcher;
 }
