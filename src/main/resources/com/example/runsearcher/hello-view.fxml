@@ -2083,13 +2083,13 @@
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d9dadf; -fx-border-width: 1 0 0 0;" GridPane.columnSpan="5" GridPane.rowIndex="12">
          <children>
-            <Label minHeight="-Infinity" minWidth="-Infinity" text="Total members: 1360">
+            <Label minHeight="-Infinity" minWidth="-Infinity" text="Total members: 1373">
                <HBox.margin>
                   <Insets left="20.0" top="3.0" />
                </HBox.margin>
             </Label>
             <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-            <Label minHeight="-Infinity" minWidth="-Infinity" text="List last updated: 2023-10-10">
+            <Label minHeight="-Infinity" minWidth="-Infinity" text="List last updated: 2023-10-11">
                <HBox.margin>
                   <Insets right="20.0" top="3.0" />
                </HBox.margin>
