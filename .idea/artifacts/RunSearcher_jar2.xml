@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="RunSearcher:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/RunSearcher_jar</output-path>
+  <artifact type="jar" name="RunSearcher:jar2">
+    <output-path>$PROJECT_DIR$/testdir</output-path>
     <root id="archive" name="RunSearcher.jar">
       <element id="module-output" name="RunSearcher" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/20.0.1/javafx-graphics-20.0.1.jar" path-in-jar="/" />

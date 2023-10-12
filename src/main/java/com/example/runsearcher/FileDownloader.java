@@ -8,17 +8,19 @@ import java.net.URLConnection;
 
 public class FileDownloader {
 
-    File file;
-    String listVersion;
+    private final File file;
+
 
 
     public FileDownloader() {
-        file = new File("src/main/resources/membersAndDate.txt");
+        file = (ResourceSetup.getTXT());
+
 
     }
 
     public void init() {
 
+        String listVersion;
         try {
             FileReader fr = new FileReader(file);
             BufferedReader br = new BufferedReader(fr);
@@ -28,6 +30,7 @@ public class FileDownloader {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
 
         downloadTxt();
         
@@ -47,6 +50,7 @@ public class FileDownloader {
     }
 
     private void downloadTxt() {
+
         try {
             URL url = new URL("https://drive.google.com/uc?id=1_lLys2JtffjNO9FggtBnpKCEWVqyZwJw&export=download");
             URLConnection connection = url.openConnection();
@@ -94,7 +98,7 @@ public class FileDownloader {
             URLConnection connection = url.openConnection();
             InputStream is = connection.getInputStream();
             BufferedInputStream bis = new BufferedInputStream(is);
-            FileOutputStream fos = new FileOutputStream("src/main/resources/runs.csv");
+            FileOutputStream fos = new FileOutputStream(ResourceSetup.getCSV());
 
             byte[] buffer = new byte[1024];
             int bytesRead;

@@ -807,7 +807,7 @@ public class Controller {
         ObservableList<Run> runs = FXCollections.observableArrayList();
         List<String[]> data;
 
-        try (InputStream in = getClass().getResourceAsStream("/runs.csv");
+        try (InputStream in = new FileInputStream((ResourceSetup.getCSV()));
              BufferedReader reader = new BufferedReader(new InputStreamReader(in))) {
             CSVReader csvReader = new CSVReaderBuilder(reader).withSkipLines(1).build();
             data = csvReader.readAll();
@@ -1425,14 +1425,15 @@ public class Controller {
     }
 
     private void setMembersAndDate() {
-        File file = new File("src/main/resources/membersAndDate.txt");
 
         try {
-            FileReader fr = new FileReader(file);
-            BufferedReader br = new BufferedReader(fr);
+
+            InputStream inputStream = new FileInputStream(ResourceSetup.getTXT());
+
+            BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
             membersLabel.setText(br.readLine());
             dateLabel.setText(br.readLine());
-            fr.close();
+            inputStream.close();
 
         } catch (IOException e) {
             throw new RuntimeException(e);

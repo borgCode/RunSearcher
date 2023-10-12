@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="RunSearcher:jar" />
+      <artifact name="RunSearcher:jar2" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,7 +10,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="Ability to download latest list">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/RunSearcher_jar2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/ResourceSetup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/resources/membersAndDate.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/RunSearcher_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/RunSearcher_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2023-10-07_20_50__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2023-10-07_20_50__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2023-10-07_20_50__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2023-10-07_20_50__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/FileDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/FileDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/RunSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/RunSearcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/membersAndDate.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/runs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/resources/runs.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,46 +71,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/46735/IdeaProjects/RunSearcher/src/main/java/com/example/runsearcher&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/46735/IdeaProjects/RunSearcher/out/artifacts/RunSearcher_jar&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "last_directory_selection": "C:/Users/46735/IdeaProjects/RunSearcher/src/main/java/com/example/runsearcher",
+    "last_opened_file_path": "C:/Users/46735/IdeaProjects/RunSearcher/testdir/RunSearcher.jar",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\out\artifacts\RunSearcher_jar" />
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\46735\IdeaProjects\RunSearcher\testdir" />
+      <recent name="C:\Users\46735\IdeaProjects\RunSearcher\out\artifacts\RunSearcher_jar" />
+      <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\resources\resources" />
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\resources" />
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\resources\styles" />
-      <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\resources\styles\test" />
-      <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\java\com\example\runsearcher" />
-      <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.runsearcher" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RunSearcher">
+  <component name="RunManager" selected="JAR Application.RunSearcher.jar (1)">
     <configuration name="RunSearcher" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.runsearcher.RunSearcher" />
       <module name="RunSearcher" />
@@ -103,12 +118,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RunSearcher.jar (1)" type="JarApplication">
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <option name="JAR_PATH" value="$PROJECT_DIR$/testdir/RunSearcher.jar" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\46735\Downloads\openjfx-21_windows-x64_bin-sdk\javafx-sdk-21\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2" />
+    </configuration>
     <configuration name="RunSearcher.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/RunSearcher_jar/RunSearcher.jar" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Application.RunSearcher" />
+      <item itemvalue="JAR Application.RunSearcher.jar (1)" />
       <item itemvalue="JAR Application.RunSearcher.jar" />
     </list>
     <recent_temporary>
@@ -535,19 +562,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="wip2" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
