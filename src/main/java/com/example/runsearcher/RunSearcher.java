@@ -20,6 +20,7 @@ public class RunSearcher extends Application {
 
         Scene scene = new Scene(fxmlLoader.load());
         stage.setMinWidth(1157);
+        stage.setMinHeight(720);
         stage.setTitle("Hitless runs");
 
         Image image = new Image("icon.png");
@@ -28,6 +29,7 @@ public class RunSearcher extends Application {
         stage.setScene(scene);
         stage.show();
     }
+
 
 
 

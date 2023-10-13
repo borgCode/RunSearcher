@@ -41,7 +41,7 @@ public class FileDownloader {
             success.setHeaderText("List successfully updated!");
             success.show();
         } else {
-            Alert error = new Alert(Alert.AlertType.ERROR);
+            Alert error = new Alert(Alert.AlertType.INFORMATION);
             error.setTitle("List update");
             error.setHeaderText("Your list is already updated with the latest version!");
             error.show();

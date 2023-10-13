@@ -1,7 +1,6 @@
 package com.example.runsearcher;
 
 import java.io.*;
-import java.net.URISyntaxException;
 
 public class ResourceSetup {
 

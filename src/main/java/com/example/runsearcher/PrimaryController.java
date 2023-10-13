@@ -11,6 +11,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -26,7 +28,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 
-public class Controller {
+public class PrimaryController {
 
     @FXML
     private TextField searchBox;
@@ -698,6 +700,7 @@ public class Controller {
     private Label dateLabel;
     @FXML
     private Button updateButton;
+    @FXML private Button aboutButton;
     private List<RadioButton> gameButtons;
     RestrictionsMap restrictions = new RestrictionsMap();
 
@@ -758,6 +761,19 @@ public class Controller {
         });
 
         updateButton.setOnAction(new UpdateDialog());
+
+        Image aboutImage = new Image("questionmark.png");
+        ImageView img = new ImageView(aboutImage);
+        img.setFitWidth(aboutButton.getPrefWidth());
+        img.setFitHeight(aboutButton.getPrefHeight());
+        img.setPreserveRatio(true);
+        aboutButton.setStyle("-fx-background-color: transparent;" +
+                " -fx-border-color: transparent; -fx-background-radius: " +
+                "0; -fx-border-radius: 0; -fx-padding: 5;" +
+                "-fx-cursor: hand;");
+        aboutButton.setGraphic(img);
+        aboutButton.setOnAction(new AboutDialog(aboutButton));
+
 
 
         tableView.getSelectionModel().setCellSelectionEnabled(true);
