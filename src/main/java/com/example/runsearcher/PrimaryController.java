@@ -9,6 +9,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
@@ -762,18 +764,28 @@ public class PrimaryController {
 
         updateButton.setOnAction(new UpdateDialog());
 
-        Image aboutImage = new Image("questionmark.png");
-        ImageView img = new ImageView(aboutImage);
-        img.setFitWidth(aboutButton.getPrefWidth());
-        img.setFitHeight(aboutButton.getPrefHeight());
-        img.setPreserveRatio(true);
+        Node svgNode;
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("questionmark.fxml"));
+        try {
+            svgNode = loader.load();
+
+            double referenceWidth = 800;
+            double referenceHeight = 800;
+            svgNode.scaleXProperty().bind(aboutButton.widthProperty().divide(referenceWidth));
+            svgNode.scaleYProperty().bind(aboutButton.heightProperty().divide(referenceHeight));
+            svgNode.setStyle("-fx-fill: black;");
+            aboutButton.setGraphic(svgNode);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        svgNode.getStyleClass().add("about-button");
+
+        aboutButton.setOnAction(new AboutDialog(aboutButton));
         aboutButton.setStyle("-fx-background-color: transparent;" +
                 " -fx-border-color: transparent; -fx-background-radius: " +
                 "0; -fx-border-radius: 0; -fx-padding: 5;" +
                 "-fx-cursor: hand;");
-        aboutButton.setGraphic(img);
-        aboutButton.setOnAction(new AboutDialog(aboutButton));
-
 
 
         tableView.getSelectionModel().setCellSelectionEnabled(true);

@@ -6,6 +6,10 @@
     -fx-control-inner-background-alt: -fx-control-inner-background ;
 }
 
+.about-button {
+    -fx-fill: white;
+}
+
 .label{
     -fx-text-fill: lightgray;
 }
