@@ -40,28 +40,28 @@
       <RowConstraints />
   </rowConstraints>
    <children>
-      <HBox GridPane.columnSpan="5">
+      <HBox alignment="CENTER" GridPane.columnSpan="5">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="155.0" text="Search" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="87.0" text="Search" />
             <TextField fx:id="searchBox" prefHeight="26.0" prefWidth="260.0" />
             <ToggleSwitch fx:id="toggleSwitchWF" text="WF">
                <HBox.margin>
                   <Insets left="50.0" top="2.0" />
                </HBox.margin>
             </ToggleSwitch>
-            <Pane prefHeight="26.0" prefWidth="271.0" />
+            <Pane prefHeight="26.0" prefWidth="271.0" HBox.hgrow="ALWAYS" />
             <ToggleSwitch fx:id="darkMode" mnemonicParsing="false" text="Dark mode">
                <HBox.margin>
-                  <Insets top="2.0" />
+                  <Insets right="15.0" />
                </HBox.margin></ToggleSwitch>
             <Button fx:id="aboutButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0">
                <HBox.margin>
-                  <Insets left="70.0" />
+                  <Insets />
                </HBox.margin>
             </Button>
          </children>
          <GridPane.margin>
-            <Insets top="4.0" />
+            <Insets />
          </GridPane.margin>
       </HBox>
       <TableView fx:id="tableView" editable="true" prefHeight="675.0" GridPane.columnSpan="5" GridPane.rowIndex="7" GridPane.rowSpan="5">

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="173.0" prefWidth="260.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.runsearcher.AboutController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.runsearcher.AboutController">
    <children>
       <ImageView fx:id="runSearchIcon" fitHeight="119.0" fitWidth="125.0" layoutX="131.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
       <VBox layoutY="5.0" prefHeight="182.0" prefWidth="146.0">
@@ -28,7 +28,7 @@
                   <Insets left="50.0" top="10.0" />
                </VBox.margin>
             </Label>
-            <Label text="1.2.4">
+            <Label text="1.2.6">
                <VBox.margin>
                   <Insets left="57.0" />
                </VBox.margin>

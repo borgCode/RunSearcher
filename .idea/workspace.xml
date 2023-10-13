@@ -9,12 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="About dialog">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/questionmark.fxml" afterDir="false" />
+    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="Fixed dark mode for about button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/PrimaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/AboutDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/AboutDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/aboutDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/aboutDialog.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/questionmark.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/styles/dark-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/dark-theme.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +186,7 @@
       <workItem from="1696844689336" duration="1577000" />
       <workItem from="1696919326327" duration="4929000" />
       <workItem from="1696955663423" duration="22301000" />
-      <workItem from="1697202812960" duration="4466000" />
+      <workItem from="1697202812960" duration="7926000" />
     </task>
     <task id="LOCAL-00001" summary="simple filtered list function">
       <option name="closed" value="true" />
@@ -573,7 +572,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697204857201</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Fixed dark mode for about button">
+      <option name="closed" value="true" />
+      <created>1697208291947</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1697208291948</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -591,7 +598,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="checkbox unselects all others" />
     <MESSAGE value="implementd copy functionality" />
     <MESSAGE value="load file as resource" />
     <MESSAGE value="5 column implementation" />
@@ -616,6 +622,7 @@
     <MESSAGE value="jar file writing to roaming works" />
     <MESSAGE value="Implemented update to latest list" />
     <MESSAGE value="About dialog" />
-    <option name="LAST_COMMIT_MESSAGE" value="About dialog" />
+    <MESSAGE value="Fixed dark mode for about button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed dark mode for about button" />
   </component>
 </project>

@@ -35,6 +35,7 @@ public class AboutDialog implements EventHandler<ActionEvent> {
             dialogStage.setTitle("About");
             Image image = new Image("icon.png");
             dialogStage.getIcons().add(image);
+            dialogStage.setResizable(false);
 
             Scene scene = new Scene(root);
             dialogStage.setScene(scene);
