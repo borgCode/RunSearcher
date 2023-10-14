@@ -706,6 +706,9 @@ public class PrimaryController {
     private List<RadioButton> gameButtons;
     RestrictionsMap restrictions = new RestrictionsMap();
 
+    Image lightModeImage = new Image("question-mark.png");
+    Image darkModeImage = new Image("question-mark_black.png");
+
 
     public void initialize() {
 
@@ -757,30 +760,18 @@ public class PrimaryController {
         darkMode.selectedProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {
                 root.getScene().getStylesheets().add(getClass().getResource("/styles/dark-theme.css").toExternalForm());
+                aboutButton.setGraphic(getStyledImageView(darkModeImage));
+
             } else {
                 root.getScene().getStylesheets().remove(getClass().getResource("/styles/dark-theme.css").toExternalForm());
+                aboutButton.setGraphic(getStyledImageView(lightModeImage));
             }
         });
 
         updateButton.setOnAction(new UpdateDialog());
 
-        Node svgNode;
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("questionmark.fxml"));
-        try {
-            svgNode = loader.load();
-
-            double referenceWidth = 800;
-            double referenceHeight = 800;
-            svgNode.scaleXProperty().bind(aboutButton.widthProperty().divide(referenceWidth));
-            svgNode.scaleYProperty().bind(aboutButton.heightProperty().divide(referenceHeight));
-            svgNode.setStyle("-fx-fill: black;");
-            aboutButton.setGraphic(svgNode);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        svgNode.getStyleClass().add("about-button");
-
+        aboutButton.setGraphic(getStyledImageView(lightModeImage));
         aboutButton.setOnAction(new AboutDialog(aboutButton));
         aboutButton.setStyle("-fx-background-color: transparent;" +
                 " -fx-border-color: transparent; -fx-background-radius: " +
@@ -812,6 +803,14 @@ public class PrimaryController {
         filterRuns();
 
 
+    }
+
+    private Node getStyledImageView(Image image) {
+        ImageView imageView = new ImageView(image);
+        imageView.setPreserveRatio(true);
+        imageView.setFitHeight(aboutButton.getPrefHeight());
+        imageView.setFitWidth(aboutButton.getPrefWidth());
+        return imageView;
     }
 
 

@@ -52,11 +52,11 @@
             <Pane prefHeight="26.0" prefWidth="271.0" HBox.hgrow="ALWAYS" />
             <ToggleSwitch fx:id="darkMode" mnemonicParsing="false" text="Dark mode">
                <HBox.margin>
-                  <Insets right="15.0" />
+                  <Insets right="25.0" />
                </HBox.margin></ToggleSwitch>
-            <Button fx:id="aboutButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0">
+            <Button fx:id="aboutButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
                <HBox.margin>
-                  <Insets />
+                  <Insets right="15.0" />
                </HBox.margin>
             </Button>
          </children>

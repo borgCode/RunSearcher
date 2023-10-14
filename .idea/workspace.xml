@@ -9,8 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="non resizable aboutdialog">
+    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="fixed aboutdialog version length">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/PrimaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,8 +87,8 @@
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\resources\com\example\runsearcher" />
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\resources" />
+      <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\resources\com\example\runsearcher" />
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\testdir" />
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\out\artifacts\RunSearcher_jar" />
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src" />
@@ -182,15 +184,7 @@
       <workItem from="1696844689336" duration="1577000" />
       <workItem from="1696919326327" duration="4929000" />
       <workItem from="1696955663423" duration="22301000" />
-      <workItem from="1697202812960" duration="8830000" />
-    </task>
-    <task id="LOCAL-00002" summary="multiple tags filteredlist">
-      <option name="closed" value="true" />
-      <created>1695892748522</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1695892748522</updated>
+      <workItem from="1697202812960" duration="10873000" />
     </task>
     <task id="LOCAL-00003" summary="multiple tags filteredlist">
       <option name="closed" value="true" />
@@ -576,7 +570,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697225681105</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="fixed aboutdialog version length">
+      <option name="closed" value="true" />
+      <created>1697275141242</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1697275141245</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -594,7 +596,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="5 column implementation" />
     <MESSAGE value="all game filters" />
     <MESSAGE value="fixed subgame category unselection" />
     <MESSAGE value="all games restrictionboxes" />
@@ -619,6 +620,7 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="Fixed dark mode for about button" />
     <MESSAGE value="non resizable aboutdialog" />
-    <option name="LAST_COMMIT_MESSAGE" value="non resizable aboutdialog" />
+    <MESSAGE value="fixed aboutdialog version length" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed aboutdialog version length" />
   </component>
 </project>
