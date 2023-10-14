@@ -9,7 +9,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -705,12 +704,23 @@ public class PrimaryController {
     @FXML private Button aboutButton;
     private List<RadioButton> gameButtons;
     RestrictionsMap restrictions = new RestrictionsMap();
-
+    private ConfigLoader configLoader;
     Image lightModeImage = new Image("question-mark.png");
     Image darkModeImage = new Image("question-mark_black.png");
 
 
     public void initialize() {
+
+        configLoader = ConfigLoader.getInstance();
+        if (configLoader.isDarkmodeEnabled()) {
+            aboutButton.setGraphic(getStyledImageView(darkModeImage));
+            darkMode.setSelected(true);
+        } else {
+            aboutButton.setGraphic(getStyledImageView(lightModeImage));
+        }
+
+
+
 
         setMembersAndDate();
         runnerColumn.setCellValueFactory(new PropertyValueFactory<>("runner"));
@@ -761,23 +771,22 @@ public class PrimaryController {
             if (newValue) {
                 root.getScene().getStylesheets().add(getClass().getResource("/styles/dark-theme.css").toExternalForm());
                 aboutButton.setGraphic(getStyledImageView(darkModeImage));
+                configLoader.setDarkModePropertyTrue();
 
             } else {
                 root.getScene().getStylesheets().remove(getClass().getResource("/styles/dark-theme.css").toExternalForm());
                 aboutButton.setGraphic(getStyledImageView(lightModeImage));
+                configLoader.setDarkModePropertyFalse();
             }
         });
 
         updateButton.setOnAction(new UpdateDialog());
 
-
-        aboutButton.setGraphic(getStyledImageView(lightModeImage));
         aboutButton.setOnAction(new AboutDialog(aboutButton));
         aboutButton.setStyle("-fx-background-color: transparent;" +
                 " -fx-border-color: transparent; -fx-background-radius: " +
                 "0; -fx-border-radius: 0; -fx-padding: 5;" +
                 "-fx-cursor: hand;");
-
 
         tableView.getSelectionModel().setCellSelectionEnabled(true);
         tableView.setOnKeyPressed(e -> {
@@ -796,13 +805,8 @@ public class PrimaryController {
             }
         });
 
-
         restrictions.populateHashMap();
-
-
         filterRuns();
-
-
     }
 
     private Node getStyledImageView(Image image) {
@@ -812,7 +816,6 @@ public class PrimaryController {
         imageView.setFitWidth(aboutButton.getPrefWidth());
         return imageView;
     }
-
 
     public void handleUserSelection(ActionEvent event) {
         tableView.getScene().getAccelerators().put(new KeyCodeCombination(KeyCode.C, KeyCombination.CONTROL_DOWN), new Runnable() {
@@ -845,10 +848,7 @@ public class PrimaryController {
         for (String[] row : data) {
             runs.add(new Run(row[0], row[1], row[2], row[3], row[4]));
         }
-
-
         return runs;
-
     }
 
     private void filterRuns() {
@@ -863,7 +863,6 @@ public class PrimaryController {
         manager.addFilter(filterByText);
         tableView.setItems(manager.getSortedData());
 
-
         //Searchbox & WF filter
 
         searchBox.textProperty().addListener(new SearchFilter(manager));
@@ -871,7 +870,6 @@ public class PrimaryController {
 
 
         //Restriction lists
-
         ArrayList<CheckBox> demonsRestrictions = new ArrayList<>(List.of(
                 demonsSoulsSL1, demonsSoulsNGPlus, demonsSoulsNoDamage, demonsSoulsNoMagic,
                 demonsSoulsNoRoll, demonsSoulsNoUpgrades, demonsSoulsSorceryOnly

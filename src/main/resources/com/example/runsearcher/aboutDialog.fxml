@@ -28,7 +28,7 @@
                   <Insets left="50.0" top="10.0" />
                </VBox.margin>
             </Label>
-            <Label text="1.2.6">
+            <Label text="1.2.7">
                <VBox.margin>
                   <Insets left="57.0" />
                </VBox.margin>

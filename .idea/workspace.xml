@@ -9,10 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="fixed aboutdialog version length">
+    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="Fixed dark mode aboutButton image">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/ConfigLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/PrimaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/ResourceSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/ResourceSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/RunSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/RunSearcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/aboutDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/aboutDialog.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,11 +90,11 @@
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\resources\resources" />
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\resources" />
+      <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\resources\images" />
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src\main\resources\com\example\runsearcher" />
       <recent name="C:\Users\46735\IdeaProjects\RunSearcher\testdir" />
-      <recent name="C:\Users\46735\IdeaProjects\RunSearcher\out\artifacts\RunSearcher_jar" />
-      <recent name="C:\Users\46735\IdeaProjects\RunSearcher\src" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.runsearcher" />
@@ -184,15 +187,7 @@
       <workItem from="1696844689336" duration="1577000" />
       <workItem from="1696919326327" duration="4929000" />
       <workItem from="1696955663423" duration="22301000" />
-      <workItem from="1697202812960" duration="10873000" />
-    </task>
-    <task id="LOCAL-00003" summary="multiple tags filteredlist">
-      <option name="closed" value="true" />
-      <created>1695899035824</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1695899035824</updated>
+      <workItem from="1697202812960" duration="24200000" />
     </task>
     <task id="LOCAL-00004" summary="demons souls search fixed">
       <option name="closed" value="true" />
@@ -578,7 +573,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697275141245</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Fixed dark mode aboutButton image">
+      <option name="closed" value="true" />
+      <created>1697277122525</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1697277122525</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,7 +599,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="all game filters" />
     <MESSAGE value="fixed subgame category unselection" />
     <MESSAGE value="all games restrictionboxes" />
     <MESSAGE value="demon souls restrictionfilter" />
@@ -621,6 +623,7 @@
     <MESSAGE value="Fixed dark mode for about button" />
     <MESSAGE value="non resizable aboutdialog" />
     <MESSAGE value="fixed aboutdialog version length" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed aboutdialog version length" />
+    <MESSAGE value="Fixed dark mode aboutButton image" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed dark mode aboutButton image" />
   </component>
 </project>

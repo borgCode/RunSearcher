@@ -19,6 +19,11 @@ public class RunSearcher extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(RunSearcher.class.getResource("hello-view.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load());
+        ConfigLoader configLoader = ConfigLoader.getInstance();
+        if (configLoader.isDarkmodeEnabled()) {
+            scene.getStylesheets().add(getClass().getResource("/styles/dark-theme.css").toExternalForm());
+        }
+
         stage.setMinWidth(1157);
         stage.setMinHeight(720);
         stage.setTitle("Hitless runs");
