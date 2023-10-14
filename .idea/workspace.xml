@@ -9,12 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="Fixed dark mode for about button">
+    <list default="true" id="64c40502-0346-4d05-bcdf-f71a42289e38" name="Changes" comment="non resizable aboutdialog">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/AboutDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/runsearcher/AboutDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/aboutDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/aboutDialog.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/runsearcher/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/dark-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/dark-theme.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,15 +182,7 @@
       <workItem from="1696844689336" duration="1577000" />
       <workItem from="1696919326327" duration="4929000" />
       <workItem from="1696955663423" duration="22301000" />
-      <workItem from="1697202812960" duration="7926000" />
-    </task>
-    <task id="LOCAL-00001" summary="simple filtered list function">
-      <option name="closed" value="true" />
-      <created>1695887398917</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1695887398917</updated>
+      <workItem from="1697202812960" duration="8830000" />
     </task>
     <task id="LOCAL-00002" summary="multiple tags filteredlist">
       <option name="closed" value="true" />
@@ -580,7 +568,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697208291948</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="non resizable aboutdialog">
+      <option name="closed" value="true" />
+      <created>1697225681103</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1697225681105</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -598,8 +594,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implementd copy functionality" />
-    <MESSAGE value="load file as resource" />
     <MESSAGE value="5 column implementation" />
     <MESSAGE value="all game filters" />
     <MESSAGE value="fixed subgame category unselection" />
@@ -622,7 +616,9 @@
     <MESSAGE value="jar file writing to roaming works" />
     <MESSAGE value="Implemented update to latest list" />
     <MESSAGE value="About dialog" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="Fixed dark mode for about button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed dark mode for about button" />
+    <MESSAGE value="non resizable aboutdialog" />
+    <option name="LAST_COMMIT_MESSAGE" value="non resizable aboutdialog" />
   </component>
 </project>

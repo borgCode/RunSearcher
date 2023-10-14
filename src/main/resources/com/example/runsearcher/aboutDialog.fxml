@@ -10,8 +10,8 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.runsearcher.AboutController">
    <children>
-      <ImageView fx:id="runSearchIcon" fitHeight="119.0" fitWidth="125.0" layoutX="131.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
-      <VBox layoutY="5.0" prefHeight="182.0" prefWidth="146.0">
+      <ImageView fx:id="runSearchIcon" fitHeight="119.0" fitWidth="125.0" layoutX="155.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
+      <VBox layoutY="-3.0" prefHeight="190.0" prefWidth="156.0">
          <children>
             <Label text="Developed By:">
                <VBox.margin>
@@ -23,7 +23,7 @@
                   <Insets left="50.0" />
                </VBox.margin>
             </Label>
-            <Label prefHeight="0.0" prefWidth="42.0" text="Version:">
+            <Label prefHeight="18.0" prefWidth="46.0" text="Version:">
                <VBox.margin>
                   <Insets left="50.0" top="10.0" />
                </VBox.margin>
