@@ -55,8 +55,6 @@ public class ResourceSetup {
                 while((bytesRead = is.read(data)) != -1) {
                     os.write(data, 0, bytesRead);
                 }
-
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

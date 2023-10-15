@@ -719,9 +719,6 @@ public class PrimaryController {
             aboutButton.setGraphic(getStyledImageView(lightModeImage));
         }
 
-
-
-
         setMembersAndDate();
         runnerColumn.setCellValueFactory(new PropertyValueFactory<>("runner"));
         gameColumn.setCellValueFactory(new PropertyValueFactory<>("game"));
@@ -757,6 +754,10 @@ public class PrimaryController {
                 };
             }
         });
+
+        runColumn.setComparator((name1, name2) -> Integer.compare(name1.length(), name2.length()));
+        tableView.getSortOrder().add(runColumn);
+        tableView.sort();
 
         tableView.getItems().setAll((getRuns()));
 
@@ -1411,7 +1412,6 @@ public class PrimaryController {
                         }
                     }
                 }
-
                 manager.addFilter(run -> {
                     if (!multipleRadioButton.isSelected()) {
                         return true;
@@ -1425,12 +1425,9 @@ public class PrimaryController {
                     }
                 });
             }
-
         });
-
         for (CheckBox box : demonsRestrictions) {
             box.selectedProperty().addListener(new RestrictionFilter(manager, demonsRestrictions, restrictions));
-
         }
 
         for (CheckBox box : darkSoulsRestrictions) {
@@ -1450,11 +1447,8 @@ public class PrimaryController {
     }
 
     private void setMembersAndDate() {
-
         try {
-
             InputStream inputStream = new FileInputStream(ResourceSetup.getTXT());
-
             BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
             membersLabel.setText(br.readLine());
             dateLabel.setText(br.readLine());
